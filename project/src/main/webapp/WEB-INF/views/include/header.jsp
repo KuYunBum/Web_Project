@@ -42,7 +42,7 @@
 		});
 		
 		$(".bt_cancel").on("click", function() {
-			self.location = "/SPTest2/board/detail?bno=${boardDTO.bno}";
+			self.location = "/project/board/detail?bno=${boardDTO.bno}";
 		});
 		
 	});
