@@ -70,7 +70,7 @@
             <ul>
                 <!-- 메인 메뉴 -->
                 <li><a href="#">홈</a></li>
-                <li><a href="#">AI 운동 추천</a></li>
+                <li><a href="/project/content/ex_recomm">AI 운동 추천</a></li>
                 <li><a href="#">멤버쉽</a></li>
                 <li><a href="#">트레이너</a></li>
                 <li><a href="/project/board/select">자유게시판</a></li>
