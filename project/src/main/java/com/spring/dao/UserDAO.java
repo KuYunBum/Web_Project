@@ -1,5 +1,5 @@
 package com.spring.dao;
 
-public interface UserDTO {
+public interface UserDAO {
 
 }
