@@ -162,12 +162,13 @@
 }
 
 .logBtn input:hover{
-    background-color: aqua;
+    background-color: purple;
     cursor: pointer;
+    color: white;
 }
 
 .logBtn input{
-	background-color: yellow;
+	background-color: aqua;
 	width: 20%;
 	height: 40px;
 	color: black;
@@ -240,7 +241,7 @@
 
 .joinBox input[type=submit] {
   width: 100%;
-  background-color: black;
+  background-color: purple;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -251,8 +252,8 @@
 }
 
 .joinBox input[type=submit]:hover {
-  background-color: purple;
-  color:white;
+  background-color: aqua;
+  color:black;
 }
 
 .joinBox div {
