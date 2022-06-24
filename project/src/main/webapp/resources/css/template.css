@@ -1,7 +1,31 @@
+/* 메인 컨텐츠 */
 
+.main_content {
+	width: 1400px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
 
+.content_1 {
+	width: 690px;
+	height: 600px;
+	border: solid;
+	margin: 10px; 
+} 
 
+.content_2 {
+	width: 690px;
+	height: 600px;
+	border: solid;
+	margin: 10px;  
+} 
 
+.content_1 p, .content_2 p {
+	position: relative;
+ 	top: 50%;
+ 	font-size: 30px;
+}
 
 .main h1, .bt_box {
 	text-align: center;
@@ -102,4 +126,145 @@
 .content_ex button:hover{
 	background-color: aqua;
 	 cursor: pointer;
+}
+
+
+
+/* 로그인 */
+
+.logBox{
+	text-align: center;
+	margin: auto;
+    width: 30%;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.logBox h1{
+	margin: 50px auto;
+}
+
+.logInput{
+    margin-top: 50px;
+}
+
+.logInput input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.logBtn{
+    margin-top: 50px;
+}
+
+.logBtn input:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.logBtn input{
+	background-color: yellow;
+	width: 20%;
+	height: 40px;
+	color: black;
+}
+
+.join{
+    padding:20px 20px; 
+}
+.join > a{
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+.join>a:hover{
+    color: red;
+}
+
+
+
+/* 회원가입  */
+.joinBox label{
+    color:black;
+}
+.joinBox #title{
+    text-align:center;
+    color:black;
+}
+.joinBox input[type=text], 
+.joinBox input[type=password], 
+.joinBox input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.joinBox #logID{
+    width: 80%;
+}
+.joinBox select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.joinBox button{
+    width: 15%;
+    padding: 12px 1px;
+    margin: 8px 0;
+    margin-left:10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    cursor:pointer;
+    
+}
+
+.joinBox button:hover{
+	background-color: aqua;
+}
+
+.joinBox input[type=submit] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.joinBox input[type=submit]:hover {
+  background-color: purple;
+  color:white;
+}
+
+.joinBox div {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.joinBox div.sBox{
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.joinBox.cb{
+    color:white;
+}
+.joinBox {
+    margin: auto;
+    width: 30%;
+    height: auto;
 }

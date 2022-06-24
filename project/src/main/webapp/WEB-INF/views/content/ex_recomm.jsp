@@ -10,7 +10,7 @@
 
 	<div class="main">
 		<div class="content_ex">
-			<img src="/health/resources/image/health_1.jpg">
+			<img src="/project/resources/image/health_1.jpg">
 			<h1>AI 추천 플랜</h1>
 			<br>
 			<p>
