@@ -51,7 +51,7 @@
 </head>
 <body>
 
-  <div class="header">
+	<div class="header">
         <div class="navbar1">
 
             <a href="/project/">
@@ -60,8 +60,20 @@
 
             <ul>
                 <!-- 상단 메뉴 -->
+	<%
+		String userID = (String)session.getAttribute("userID");
+		if(userID==null){
+	%>	                
                 <li><a href="/project/user/login">로그인</a></li>
                 <li><a href="/project/user/join">회원가입</a></li>
+    <%
+		}else{
+    %>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="/project/user/logout">로그아웃</a></li>
+    <%
+		}
+    %>            
                 <li><a href="#">고객센터</a></li>
             </ul>
         </div>
@@ -89,3 +101,5 @@
             </ul>
         </div>
     </div>
+    
+    </body>

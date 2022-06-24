@@ -25,9 +25,8 @@ public class ContentController {
 	
 	
 	@RequestMapping(value = "/ex_recomm", method = RequestMethod.GET)
-	public String ex_recomm() throws Exception {
+	public void ex_recomm() throws Exception {
 
-		return "/content/ex_recomm";
 	}
 	
 	@RequestMapping(value = "/ex_recomm_start", method = RequestMethod.GET)
@@ -43,15 +42,13 @@ public class ContentController {
 	}
 	
 	@RequestMapping(value = "/trainer", method = RequestMethod.GET)
-	public String trainer() throws Exception {
+	public void trainer() throws Exception {
 		
-		return "/content/trainer";
 	}
 	
 	@RequestMapping(value = "/gym", method = RequestMethod.GET)
-	public String gym() throws Exception {
+	public void gym() throws Exception {
 		
-		return "/content/gym";
 	}
 	
 }
