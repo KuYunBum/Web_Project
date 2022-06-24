@@ -30,4 +30,22 @@ public class ContentController {
 		return "/content/ex_recomm";
 	}
 	
+	@RequestMapping(value = "/membership", method = RequestMethod.GET)
+	public String membership() throws Exception {
+		
+		return "/content/membership";
+	}
+	
+	@RequestMapping(value = "/trainer", method = RequestMethod.GET)
+	public String trainer() throws Exception {
+		
+		return "/content/trainer";
+	}
+	
+	@RequestMapping(value = "/gym", method = RequestMethod.GET)
+	public String gym() throws Exception {
+		
+		return "/content/gym";
+	}
+	
 }

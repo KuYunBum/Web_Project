@@ -1,27 +1,28 @@
 /* 메인 컨텐츠 */
 
 .main_content {
-	width: 1400px;
+	width: 1300px;
 	margin: auto;
 	display: flex;
 	position: relative;
 }
 
 .content_1 {
-	width: 690px;
+	width: 630px;
 	height: 600px;
 	border: solid;
 	margin: 10px; 
 } 
 
 .content_2 {
-	width: 690px;
+	width: 630px;
 	height: 600px;
 	border: solid;
 	margin: 10px;  
 } 
 
-.content_1 p, .content_2 p {
+.content_1 p, 
+.content_2 p {
 	position: relative;
  	top: 50%;
  	font-size: 30px;
@@ -39,7 +40,8 @@
 
 
 
-/*tableStart*/
+
+/* 게시판 */
 
 #customers {
   margin: 50px auto;
@@ -71,17 +73,17 @@
   color: white;
 }
 
-/*tableEnd*/
 
 
 
 
 
 /* ai 운동 추천 */
+
 .content_ex {
     margin: auto;
     width: 70%;
-    height: 1000px;
+    height: 900px;
     background-color: black;
     border-radius: 60px 60px;
 }
@@ -118,7 +120,7 @@
 	height: 50px;
 	background-color: gray; 
 	margin-left: -170px;
-	margin-top: 120px;
+	margin-top: 100px;
 	border-radius: 5px 5px;
 }
 
@@ -130,6 +132,7 @@
 
 
 
+
 /* 로그인 */
 
 .logBox{
@@ -137,16 +140,16 @@
 	margin: auto;
     width: 30%;
     height: 400px;
-    border: 1px solid black;
+    border: solid black;
 }
 
-.logBox h1{
-	margin: 50px auto;
-}
+/* .logBox h1{ */
+/* 	margin: 50px auto; */
+/* } */
 
-.logInput{
-    margin-top: 50px;
-}
+/* .logInput{ */
+/*     margin-top: 50px; */
+/* } */
 
 .logInput input{
     width: 300px;
@@ -184,14 +187,17 @@
 
 
 
+
 /* 회원가입  */
+
 .joinBox label{
     color:black;
 }
-.joinBox #title{
-    text-align:center;
-    color:black;
+
+.joinInput {
+	border: solid;
 }
+
 .joinBox input[type=text], 
 .joinBox input[type=password], 
 .joinBox input[type=date] {
@@ -267,4 +273,119 @@
     margin: auto;
     width: 30%;
     height: auto;
+}
+
+
+
+
+/* 멤버쉽 */
+
+.membership {
+	width: 1300px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+
+.membership_1 {
+	width: 410px;
+	height: 600px;
+	border: solid;
+	margin: 10px; 
+} 
+
+.membership_2 {
+	width: 410px;
+	height: 600px;
+	border: solid;
+	margin: 10px;  
+} 
+
+.membership_3 {
+	width: 410px;
+	height: 600px;
+	border: solid;
+	margin: 10px;  
+} 
+
+.membership_1 p,
+.membership_2 p, 
+.membership_3 p {
+	position: relative;
+ 	top: 50%;
+ 	font-size: 30px;
+}
+
+
+
+
+/* 트레이너 */
+
+.trainer {
+	width: 1300px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+
+.trainer_1 {
+	width: 305px;
+	height: 500px;
+	border: solid;
+	margin: 10px; 
+} 
+
+.trainer_2 {
+	width: 305px;
+	height: 500px;
+	border: solid;
+	margin: 10px;  
+} 
+
+.trainer_3 {
+	width: 305px;
+	height: 500px;
+	border: solid;
+	margin: 10px;  
+} 
+
+.trainer_4 {
+	width: 305px;
+	height: 500px;
+	border: solid;
+	margin: 10px;  
+} 
+
+.trainer_1 p, 
+.trainer_2 p, 
+.trainer_3 p, 
+.trainer_4 p {
+	position: relative;
+ 	top: 50%;
+ 	font-size: 30px;
+}
+
+
+
+
+/* 헬스장 찾기 */
+
+.gym {
+	width: 1300px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+
+.gym_1{
+	width: 1300px;
+	height: 800px;
+	border: solid;
+	margin: 10px; 
+} 
+
+.gym_1 p {
+	position: relative;
+ 	top: 50%;
+ 	font-size: 30px;
 }

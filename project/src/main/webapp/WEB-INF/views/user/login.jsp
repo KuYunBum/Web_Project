@@ -10,7 +10,9 @@
     
 	<div class="main">
 	    <div class="logBox">
-		    <h1>Log In</h1>
+		    <a href="/project/">
+                <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
+            </a>
 		    <form  method="post">
 		        <div class="logInput">
 		            ID : <input type="text" placeholder="ID 입력" onfocus="this.placeholder=''" onblur="this.placeholder='ID 입력'"><br>

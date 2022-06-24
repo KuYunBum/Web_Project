@@ -10,8 +10,10 @@
     
 	<div class="main">
 	    <div class="joinBox">
-	        <h1 id="title"> 회원가입 </h1><br> <!-- 이메일 추가 -->
-	        <div>
+	        <div class="joinInput">
+		        <a href="/project/">
+	                <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
+	            </a>
 		        <form method="post">
 		            <label for="logID"> 아이디 </label><br>
 		            <input type="text" id="logID" name="logID" placeholder="4~20자리 사이의 아이디를 입력해주세요.">
