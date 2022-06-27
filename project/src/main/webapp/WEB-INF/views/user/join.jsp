@@ -12,7 +12,7 @@
 		        <a href="/project/">
 	                <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
 	            </a>
-		        <form method="post">
+		        <form action="#" method="post">
 		            <label for="logID"> 아이디 </label><br>
 		            <input type="text" id="logID" name="logID" placeholder="4~20자리 사이의 아이디를 입력해주세요.">
 		            <button> 중복확인 </button><br>

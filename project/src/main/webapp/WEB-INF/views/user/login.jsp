@@ -12,7 +12,7 @@
 		    <a href="/project/">
                 <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
             </a>
-		    <form  method="post">
+		    <form action="login" method="post">
 		        <div class="logInput">
 		            ID : <input type="text" name="userID" placeholder="ID 입력"><br>
 		            PW: <input type="password" name="userPW" placeholder="PW 입력">

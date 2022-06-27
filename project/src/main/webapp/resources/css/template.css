@@ -80,7 +80,7 @@
 
 /* ai 운동 추천 */
 
-.content_ex {
+.ex_content {
     margin: auto;
     width: 70%;
     height: 900px;
@@ -88,7 +88,7 @@
     border-radius: 60px 60px;
 }
 
-.content_ex img {
+.ex_content img {
 /* 	position: absolute; */
 	width: 100%;
 	height: 70%;
@@ -96,7 +96,7 @@
 	border-radius: 60px 60px;
 }
 
-.content_ex h1 {
+.ex_content h1 {
 	position: absolute;
 	font-size: 50px;
 	color: white;
@@ -104,7 +104,7 @@
 	margin-top: -400px;
 }
 
-.content_ex p {
+.ex_content p {
 	position: absolute;
 	font-size: 30px;
 	color: white;
@@ -112,7 +112,7 @@
 	margin-top: -250px;
 }
 
-.content_ex button {
+.ex_content button {
 	position: absolute;
 	font-size: 20px;
 	color: white;
@@ -124,12 +124,30 @@
 	border-radius: 5px 5px;
 }
 
-
-.content_ex button:hover{
+.ex_content button:hover{
 	background-color: aqua;
-	 cursor: pointer;
+	cursor: pointer;
 }
 
+
+.ex_content_title p {
+	color: white;
+	position: relative;
+	margin: auto;
+	background-color: #008080;
+	width: 40%;
+	height: 50px;
+	border-radius: 10px;
+	top: 100px;
+}
+
+.ex_content_p1 p{
+	color: white;
+	position: relative;
+	margin: auto;
+	top: 250px;
+	margin-bottom: 50px;
+}
 
 
 

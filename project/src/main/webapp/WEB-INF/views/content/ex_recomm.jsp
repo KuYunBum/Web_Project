@@ -8,7 +8,7 @@
 	
 
 	<div class="main">
-		<div class="content_ex">
+		<div class="ex_content">
 			<img src="/project/resources/image/health_1.jpg">
 			<h1>AI 추천 플랜</h1>
 			<br>
