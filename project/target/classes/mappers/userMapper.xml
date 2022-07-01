@@ -5,13 +5,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.spring.dao.UserDAO">
 
-<insert id="insert">
+<insert id="userJoin">
+	insert into 
+		users (userID, userPW, userName, userGender, userBirth, userPhone, userEmail)
+	values (#{userID}, #{userPW}, #{userName}, #{userGender}, #{userBirth}, #{userPhone}, #{userEmail})
 </insert>
 
 
-<select id="detail" resultType="UserDTO"> 
+<select id="userLogin" resultType="UserDTO"> 
+	select 
+		userID, userPW
+	from 
+		users
+	where userID=#{userID} and userPW=#{userPW}
 </select>
 
+<select id="idCheck" resultType="int">
+	select
+		userID
+	from
+		users
+	where 
+		userID=#{userID}
+</select>
 
 <update id="update"> 
 </update>
@@ -21,7 +37,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </delete>
 
 
-<select id="select" resultType="com.spring.dto.UserDTO">
+<select id="userSelect" resultType="com.spring.dto.UserDTO">
 	<![CDATA[ 
  	]]> 
 </select>

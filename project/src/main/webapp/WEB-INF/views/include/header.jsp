@@ -15,7 +15,13 @@
 	if (result == 'success') {
 		alert("처리가 완료되었습니다.");
 	}
-
+	if (result == 'overlap') {
+		alert("중복되었습니다.");
+	}
+	if (result == 'fail') {
+		alert("실패! 다시 확인해주세요.");
+	}
+	
 	$(document).ready(function(){
 		
 		var formObj = $("form[role='form']");
@@ -61,16 +67,16 @@
             <ul>
                 <!-- 상단 메뉴 -->
 	<%
-		String userID = (String)session.getAttribute("userID");
-		if(userID==null){
+		String userID = String.valueOf(session.getAttribute("userID"));
+		if(userID!=null){
 	%>	                
-                <li><a href="/project/user/login">로그인</a></li>
-                <li><a href="/project/user/join">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}else{
     %>
-                <li><a href="#">마이페이지</a></li>
-                <li><a href="/project/user/logout">로그아웃</a></li>
+                <li><a href="/project/user/loginForm">로그인</a></li>
+                <li><a href="/project/user/joinForm">회원가입</a></li>
     <%
 		}
     %>            

@@ -11,7 +11,7 @@
 <body>
 	<%
 		session.removeAttribute("userID");
-		response.sendRedirect("/project/");
+    	out.print("<script>location.href = '/project/'; </script>");
 	%>
 </body>
 </html>

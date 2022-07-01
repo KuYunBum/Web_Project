@@ -12,28 +12,32 @@
 		        <a href="/project/">
 	                <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
 	            </a>
-		        <form action="#" method="post">
-		            <label for="logID"> 아이디 </label><br>
-		            <input type="text" id="logID" name="logID" placeholder="4~20자리 사이의 아이디를 입력해주세요.">
-		            <button> 중복확인 </button><br>
+		        <form  method="post">
+		            <label for="userID"> 아이디 </label><br>
+		            <input type="text" id="userID" name="userID" placeholder="4자리  숫자를 입력해주세요.">
+<!-- 		            <button> 중복확인 </button><br> -->
 		            
-		            <label for="logPW"> 비밀번호 </label>
-		            <input type="password" id="logPW" name="logPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요.">
+		            <label for="userPW"> 비밀번호 </label>
+		            <input type="password" id="userPW" name="userPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요.">
 		            
-		            <label for="logPWCheck"> 비밀번호 확인 </label>
-		            <input type="password" id="logPW" name="logPW" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+<!-- 		            <label for="userPWCheck"> 비밀번호 확인 </label> -->
+<!-- 		            <input type="password" id="userPWCheck" name="userPWCheck" placeholder="비밀번호를 다시 한 번 입력해주세요."> -->
 		            
-		            <label for="logName"> 이름 </label>
-		            <input type="text" id="logName" name="logName" placeholder="이름을 입력해주세요.">
+		            <label for="userName"> 이름 </label>
+		            <input type="text" id="userName" name="userName" placeholder="이름을 입력해주세요.">
 		            
-		            <label for="logBirth"> 생년월일 </label>
-		            <input type="date" id="logBirth" name="logBirth"><br>
+		            <label for="userGender"> 성별 </label><br>
+		            <input type="radio" name="userGender" value="남자">남자
+					<input type="radio" name="userGender" value="여자">여자<br><br>
 		            
-		            <label for="phoneNum"> 전화번호 </label><br>
-		            <input type="text" id="phoneNum" name="phoneNum" placeholder="핸드폰 번호를 입력해주세요.">
+		            <label for="userBirth"> 생년월일 </label>
+		            <input type="date" id="userBirth" name="userBirth"><br>
 		            
-		            <label for="email"> 이메일 </label><br>
-		            <input type="text" id="email" name="email" placeholder="이메일을 입력해주세요.">
+		            <label for="userPhone"> 전화번호 </label><br>
+		            <input type="text" id="userPhone" name="userPhone" placeholder="핸드폰 번호를 입력해주세요.">
+		            
+		            <label for="userEmail"> 이메일 </label><br>
+		            <input type="text" id="userEmail" name="userEmail" placeholder="이메일을 입력해주세요.">
 		
 <!-- 		            <div class="sBox">fieldset/ legend 로 변경 -->
 <!-- 			            <div> -->

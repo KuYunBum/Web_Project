@@ -29,8 +29,9 @@ public class HomeController {
 	public String home(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
-		String userID = (String)session.getAttribute("userID");
 		
+		String userID = String.valueOf(session.getAttribute("userID"));
+
 		return "main";
 	}
 	

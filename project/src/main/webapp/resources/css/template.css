@@ -228,9 +228,9 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
-.joinBox #logID{
-    width: 80%;
-}
+/* .joinBox #userID{ */
+/*     width: 80%; */
+/* } */
 .joinBox select{
     width: 100%;
     padding: 12px 20px;

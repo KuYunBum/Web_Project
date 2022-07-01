@@ -5,6 +5,7 @@ import java.lang.reflect.Parameter;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.tools.DocumentationTool.Location;
 
 import org.apache.ibatis.annotations.Param;
 import org.omg.CORBA.Request;
@@ -16,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.spring.dto.UserDTO;
 import com.spring.service.UserService;
 
 @Controller
@@ -29,34 +32,52 @@ public class UserController {
 	private UserService service;
 
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public void loginGET() throws Exception {
+	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
+	public void loginFormGET() throws Exception {
 
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginPOST(@RequestParam("userID") int userID, HttpServletRequest request) throws Exception {
+	@RequestMapping(value = "/loginForm", method = RequestMethod.POST)
+	public String loginFormPOST(UserDTO dto, @RequestParam("userID") int userID, @RequestParam("userPW") String userPW, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("userID", userID);
+		UserDTO dtos = service.userLogin(dto);
+		if(dtos.getUserID()==userID && dtos.getUserPW().equals(userPW)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("userID", dtos.getUserID());
+			System.out.println(session.getAttribute("userID"));
+			rttr.addFlashAttribute("msg", "success");
+		}else if(dtos.equals(null)) {
+			rttr.addFlashAttribute("msg", "fail");
+			return  "redirect:/user/loginForm";
+		}else {
+			rttr.addFlashAttribute("msg", "fail");
+			return  "redirect:/user/loginForm";
+			
+		}
 		
-		return "/main";
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public void logout() throws Exception {
-		
+	public void logout(RedirectAttributes rttr) throws Exception {
+		rttr.addFlashAttribute("msg", "success");
 	}
 	
-	@RequestMapping(value = "/join", method = RequestMethod.GET)
-	public String joinGET() throws Exception {
+	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
+	public void joinFormGET() throws Exception {
 
-		return "/user/join";
 	}
 	
-	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String joinPOST() throws Exception {
+	@RequestMapping(value = "/joinForm", method = RequestMethod.POST)
+	public String joinFormPOST(@RequestParam("userID") int userID, UserDTO dto, RedirectAttributes rttr) throws Exception {
 		
-		return "/user/join";
+		if(dto.getUserID()==userID) {
+			rttr.addFlashAttribute("msg", "overlap");
+		}else {
+			service.userJoin(dto);
+			rttr.addFlashAttribute("msg", "success");
+		}
+		
+		return "redirect:/";
 	}
 }
