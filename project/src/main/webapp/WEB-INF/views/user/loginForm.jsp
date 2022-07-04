@@ -12,7 +12,7 @@
 		    <a href="/project/">
                 <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
             </a><br><br>
-		    <form method="post">
+		    <form action="/project/user/loginForm" method="post">
 		        <div class="logInput">
 		            ID : <input type="text" name="userID" placeholder=" ID 입력"><br>
 		            PW: <input type="password" name="userPW" placeholder=" PW 입력">
@@ -23,7 +23,7 @@
 	        </form>
 	        <div class="join">
 	            <a href="#">ID 찾기/ PW 찾기</a>
-	            <a href="join">회원가입</a>
+	            <a href="joinForm">회원가입</a>
 	        </div>
 	    </div>
 	</div>

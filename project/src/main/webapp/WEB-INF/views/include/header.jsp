@@ -5,13 +5,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>Page Title</title>
+<title>Human Health Gym</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="/project/resources/css/include_template.css">
 <link rel="stylesheet" href="/project/resources/css/template.css" />
+<script src="/project/resources/js/include.js"></script>
 <script>
 	var result = '${msg}';
 	if (result == 'success') {
@@ -32,49 +33,6 @@
 	if (result == 'logout') {
 		alert("로그아웃 되었습니다.");
 	}
-	
-	$(document).ready(function(){
-		
-		$('#searchBtn').on("click",function(event){
-// 		  alert("select"+'${pageMaker.makePage(1)}'
-// 				  +'&searchType='+$("select option:selected").val()
-// 				  +"&keyword="+$('#keywordInput').val());
-		  
-		  self.location="select"+'${pageMaker.makePage(1)}'
-		  +'&searchType='+$("select option:selected").val()
-		  +"&keyword="+$('#keywordInput').val();
-		  
-		});
-		
-		var formObj = $("form[role='form']");
-
-		$(".bt_save").on("click", function() {
-			formObj.submit();
-		});
-		
-		$(".bt_list").on("click", function(){
-			self.location = "/project/board/select";
-		});
-		
-		$(".bt_insert").on("click", function() {
-			location.href = "/project/board/insert"
-		});
-		
-		$(".bt_update").on("click", function(){
-			self.location = "update?bno=${boardDTO.bno}";
-		});
-		
-		$(".bt_delete").on("click", function(){
-			formObj.attr("action", "/project/board/delete");
-			formObj.submit();
-		});
-		
-		$(".bt_cancel").on("click", function() {
-			self.location = "/project/board/detail?bno=${boardDTO.bno}";
-		});
-		
-	});
-	
 </script>
 </head>
 <body>

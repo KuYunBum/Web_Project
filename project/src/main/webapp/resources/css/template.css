@@ -138,6 +138,20 @@ border-radius: 5px;
 	margin-top: -250px;
 }
 
+.ex_content_p1_1,
+.ex_content_p1_2,
+.ex_content_p1_3,
+.ex_content_p1_4{
+	opacity: 0;
+}
+
+/* .ex_content_p2 { */
+/* } */
+
+.ex_content_p2_1 {
+	opacity: 0;
+}
+
 .ex_content button {
 	position: absolute;
 	font-size: 20px;
