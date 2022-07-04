@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public UserDTO idCheck(int userID) throws Exception {
+	public UserDTO idCheck(String userID) throws Exception {
 		UserDAO dao = sqlSession.getMapper(UserDAO.class);
 		
 		return dao.idCheck(userID);

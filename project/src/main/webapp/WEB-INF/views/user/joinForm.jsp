@@ -14,7 +14,7 @@
 	            </a>
 		        <form  method="post">
 		            <label for="userID"> 아이디 </label><br>
-		            <input type="text" id="userID" name="userID" placeholder="4자리  숫자를 입력해주세요.">
+		            <input type="text" id="userID" name="userID" placeholder="사용할 아이디를 입력해주세요.">
 <!-- 		            <button> 중복확인 </button><br> -->
 		            
 		            <label for="userPW"> 비밀번호 </label>

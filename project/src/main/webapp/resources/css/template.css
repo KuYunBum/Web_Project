@@ -74,6 +74,32 @@
 }
 
 
+/*pagination*/
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  border-radius: 5px;
+  color: black;
+  float: left;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+border-radius: 5px;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
 
 
 
@@ -157,7 +183,7 @@
 	text-align: center;
 	margin: auto;
     width: 30%;
-    height: 400px;
+    height: 450px;
     border: solid black;
 }
 
@@ -404,6 +430,30 @@
 } 
 
 .gym_1 p {
+	position: relative;
+ 	top: 50%;
+ 	font-size: 30px;
+}
+
+
+
+/* 고객센터 */
+
+.help {
+	width: 1300px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+
+.help_1{
+	width: 1300px;
+	height: 800px;
+	border: solid;
+	margin: 10px; 
+} 
+
+.help_1 p {
 	position: relative;
  	top: 50%;
  	font-size: 30px;

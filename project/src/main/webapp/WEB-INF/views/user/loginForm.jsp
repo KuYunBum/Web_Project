@@ -11,7 +11,7 @@
 	    <div class="logBox">
 		    <a href="/project/">
                 <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
-            </a>
+            </a><br><br>
 		    <form method="post">
 		        <div class="logInput">
 		            ID : <input type="text" name="userID" placeholder=" ID 입력"><br>

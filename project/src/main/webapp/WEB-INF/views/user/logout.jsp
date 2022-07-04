@@ -10,8 +10,11 @@
 </head>
 <body>
 	<%
-		session.removeAttribute("userID");
-    	out.print("<script>location.href = '/project/'; </script>");
+		session.removeAttribute("user");
+		out.print("<script>");
+		out.print("alert('로그아웃 되었습니다.');");
+    	out.print("location.href = '/project/';");
+		out.print("</script>");
 	%>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.spring.service;
 
 import java.util.List;
 
+import com.spring.vo.PageMaker;
 import com.spring.dto.BoardDTO;
 
 public interface BoardService {
@@ -17,5 +18,9 @@ public interface BoardService {
 	public List<BoardDTO> select() throws Exception;
 	
 	public void viewcnt(Integer bno) throws Exception;
+	
+	public List<BoardDTO> listSearchCriteria(PageMaker pm) throws Exception;
+	
+	public int listSearchCount(PageMaker pm) throws Exception;
 
 }

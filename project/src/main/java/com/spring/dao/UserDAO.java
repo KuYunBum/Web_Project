@@ -8,5 +8,5 @@ public interface UserDAO {
 	
 	public UserDTO userLogin(UserDTO dto) throws Exception;
 	
-	public UserDTO idCheck(int userID) throws Exception;
+	public UserDTO idCheck(String userID) throws Exception;
 }

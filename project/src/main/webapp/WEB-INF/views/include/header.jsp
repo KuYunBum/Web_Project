@@ -1,5 +1,7 @@
+<%@page import="com.spring.dto.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,11 +20,31 @@
 	if (result == 'overlap') {
 		alert("중복되었습니다.");
 	}
-	if (result == 'fail') {
-		alert("실패! 다시 확인해주세요.");
+	if (result == 'fail1') {
+		alert("로그인 실패! 다시 확인해주세요.");
+	}
+	if (result == 'fail2') {
+		alert("입력안된 사항이 있습니다.");
+	}
+	if (result == 'login') {
+		alert("로그인 되었습니다.");
+	}
+	if (result == 'logout') {
+		alert("로그아웃 되었습니다.");
 	}
 	
 	$(document).ready(function(){
+		
+		$('#searchBtn').on("click",function(event){
+// 		  alert("select"+'${pageMaker.makePage(1)}'
+// 				  +'&searchType='+$("select option:selected").val()
+// 				  +"&keyword="+$('#keywordInput').val());
+		  
+		  self.location="select"+'${pageMaker.makePage(1)}'
+		  +'&searchType='+$("select option:selected").val()
+		  +"&keyword="+$('#keywordInput').val();
+		  
+		});
 		
 		var formObj = $("form[role='form']");
 
@@ -67,20 +89,28 @@
             <ul>
                 <!-- 상단 메뉴 -->
 	<%
-		String userID = String.valueOf(session.getAttribute("userID"));
-		if(userID!=null){
+		UserDTO dto = new UserDTO();
+		String user = String.valueOf(session.getAttribute("user"));
+		if(session.getAttribute("user")==null){
 	%>	                
-                <li><a href="#">마이페이지</a></li>
-                <li><a href="/project/user/logout">로그아웃</a></li>
-    <%
-		}else{
-    %>
                 <li><a href="/project/user/loginForm">로그인</a></li>
                 <li><a href="/project/user/joinForm">회원가입</a></li>
     <%
+		}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
+		out.print(String.valueOf(session.getAttribute("user"))+" 님");
+    %>
+                <li><a href="#">회원 관리</a></li>
+                <li><a href="/project/user/logout">로그아웃</a></li>
+    <%
+		}else{
+		out.print(String.valueOf(session.getAttribute("user"))+" 님");
+    %>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="/project/user/logout">로그아웃</a></li>
+    <%
 		}
     %>            
-                <li><a href="#">고객센터</a></li>
+                <li><a href="/project/content/help">고객센터</a></li>
             </ul>
         </div>
 

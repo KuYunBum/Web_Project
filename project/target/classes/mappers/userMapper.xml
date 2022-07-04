@@ -7,14 +7,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="userJoin">
 	insert into 
-		users (userID, userPW, userName, userGender, userBirth, userPhone, userEmail)
-	values (#{userID}, #{userPW}, #{userName}, #{userGender}, #{userBirth}, #{userPhone}, #{userEmail})
+		users (userNum, userID, userPW, userName, userGender, userBirth, userPhone, userEmail)
+	values (user_counter.nextval, #{userID}, #{userPW}, #{userName}, #{userGender}, #{userBirth}, #{userPhone}, #{userEmail})
 </insert>
 
 
 <select id="userLogin" resultType="UserDTO"> 
 	select 
-		userID, userPW
+		userNum, userID, userPW
 	from 
 		users
 	where userID=#{userID} and userPW=#{userPW}

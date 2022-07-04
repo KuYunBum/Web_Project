@@ -2,6 +2,7 @@ package com.spring.dao;
 
 import java.util.List;
 
+import com.spring.vo.PageMaker;
 import com.spring.dto.BoardDTO;
 
 public interface BoardDAO {
@@ -17,5 +18,9 @@ public interface BoardDAO {
 	public List<BoardDTO> select() throws Exception;
 	
 	public void viewcnt(Integer bno) throws Exception;
+	
+	public List<BoardDTO> listSearch(PageMaker pm) throws Exception;
+	  
+	public int listSearchCount(PageMaker pm)throws Exception;
 
 }

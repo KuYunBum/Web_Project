@@ -1,22 +1,16 @@
 package com.spring.project;
 
-import java.lang.reflect.Parameter;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.tools.DocumentationTool.Location;
 
-import org.apache.ibatis.annotations.Param;
-import org.omg.CORBA.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.dto.UserDTO;
@@ -38,29 +32,32 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/loginForm", method = RequestMethod.POST)
-	public String loginFormPOST(UserDTO dto, @RequestParam("userID") int userID, @RequestParam("userPW") String userPW, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
+	public String loginFormPOST(UserDTO dto, @RequestParam("userID") String userID, @RequestParam("userPW") String userPW, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 		
 		UserDTO dtos = service.userLogin(dto);
-		if(dtos.getUserID()==userID && dtos.getUserPW().equals(userPW)) {
+		if(dtos==null) {
+			rttr.addFlashAttribute("msg", "fail1");
+			return  "redirect:/user/loginForm";
+		}
+		
+		if(dtos.getUserID().equals(userID) && dtos.getUserPW().equals(userPW)) {
 			HttpSession session = request.getSession();
-			session.setAttribute("userID", dtos.getUserID());
-			System.out.println(session.getAttribute("userID"));
-			rttr.addFlashAttribute("msg", "success");
-		}else if(dtos.equals(null)) {
-			rttr.addFlashAttribute("msg", "fail");
-			return  "redirect:/user/loginForm";
+			session.setAttribute("user", dtos.getUserID());
+			session.setAttribute("userNum", dtos.getUserNum());
+			System.out.println(session.getAttribute("user"));
+			System.out.println(dtos.getUserNum());
+			rttr.addFlashAttribute("msg", "login");
 		}else {
-			rttr.addFlashAttribute("msg", "fail");
+			rttr.addFlashAttribute("msg", "fail1");
 			return  "redirect:/user/loginForm";
-			
 		}
 		
 		return "redirect:/";
 	}
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public void logout(RedirectAttributes rttr) throws Exception {
-		rttr.addFlashAttribute("msg", "success");
+	public void logout() throws Exception {
+		
 	}
 	
 	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
@@ -69,13 +66,23 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/joinForm", method = RequestMethod.POST)
-	public String joinFormPOST(@RequestParam("userID") int userID, UserDTO dto, RedirectAttributes rttr) throws Exception {
+	public String joinFormPOST(@RequestParam("userID") String userID, UserDTO dto, RedirectAttributes rttr) throws Exception {
 		
-		if(dto.getUserID()==userID) {
-			rttr.addFlashAttribute("msg", "overlap");
+		if(dto.getUserID()!=null&&dto.getUserPW()!=null&&dto.getUserName()!=null&&dto.getUserGender()!=null&&dto.getUserBirth()!=null&&
+				dto.getUserPhone()!=null&&dto.getUserEmail()!=null) {
+			
+			UserDTO dtos = service.idCheck(userID);
+			
+			if(dtos.getUserID()!=null) {
+				System.out.println(dtos);
+				rttr.addFlashAttribute("msg", "overlap");
+			}else {
+				service.userJoin(dto);
+				rttr.addFlashAttribute("msg", "success");
+			}
 		}else {
-			service.userJoin(dto);
-			rttr.addFlashAttribute("msg", "success");
+			rttr.addFlashAttribute("msg", "fail2");
+			return "redirect:/user/joinForm";
 		}
 		
 		return "redirect:/";

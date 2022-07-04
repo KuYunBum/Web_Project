@@ -6,7 +6,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class UserDTO {
 	
-	private int userID;
+	
+	private int userNum;
+	private String userID;
 	private String userPW;
 //	private String userPWCheck;
 	private String userName;
@@ -17,10 +19,17 @@ public class UserDTO {
 	private Date userBirth;
 //	private String membershipCode;
 	
-	public int getUserID() {
+	
+	public int getUserNum() {
+		return userNum;
+	}
+	public void setUserNum(int userNum) {
+		this.userNum = userNum;
+	}
+	public String getUserID() {
 		return userID;
 	}
-	public void setUserID(int userID) {
+	public void setUserID(String userID) {
 		this.userID = userID;
 	}
 	public String getUserPW() {
@@ -74,9 +83,10 @@ public class UserDTO {
 //	
 	@Override
 	public String toString() {
-		return "UserDTO [userID=" + userID + ", userPW=" + userPW + ", userName=" + userName + ", userGender="
-				+ userGender + ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", userBirth=" + userBirth
-				+ "]";
+		return "UserDTO [userNum=" + userNum + ", userID=" + userID + ", userPW=" + userPW + ", userName=" + userName
+				+ ", userGender=" + userGender + ", userEmail=" + userEmail + ", userPhone=" + userPhone
+				+ ", userBirth=" + userBirth + "]";
 	}
 
+	
 }

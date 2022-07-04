@@ -51,4 +51,9 @@ public class ContentController {
 		
 	}
 	
+	@RequestMapping(value = "/help", method = RequestMethod.GET)
+	public void help() throws Exception {
+		
+	}
+	
 }
