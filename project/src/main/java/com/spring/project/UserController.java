@@ -68,12 +68,13 @@ public class UserController {
 	@RequestMapping(value = "/joinForm", method = RequestMethod.POST)
 	public String joinFormPOST(@RequestParam("userID") String userID, UserDTO dto, RedirectAttributes rttr) throws Exception {
 		
+		
 		if(dto.getUserID()!=null&&dto.getUserPW()!=null&&dto.getUserName()!=null&&dto.getUserGender()!=null&&dto.getUserBirth()!=null&&
 				dto.getUserPhone()!=null&&dto.getUserEmail()!=null) {
 			
 			UserDTO dtos = service.idCheck(userID);
 			
-			if(dtos.getUserID()!=null) {
+			if(dtos!=null) {
 				System.out.println(dtos);
 				rttr.addFlashAttribute("msg", "overlap");
 			}else {
