@@ -14,30 +14,30 @@
 	            </a>
 		        <form  action="/project/user/joinForm" method="post">
 		            <label for="userID"> 아이디 </label><br>
-		            <input type="text" id="userID" name="userID" placeholder="사용할 아이디를 입력해주세요.">
+		            <input type="text" name="userID" placeholder="사용할 아이디를 입력해주세요.">
 <!-- 		            <button> 중복확인 </button><br> -->
 		            
 		            <label for="userPW"> 비밀번호 </label>
-		            <input type="password" id="userPW" name="userPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요.">
+		            <input type="password" name="userPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요.">
 		            
 <!-- 		            <label for="userPWCheck"> 비밀번호 확인 </label> -->
 <!-- 		            <input type="password" id="userPWCheck" name="userPWCheck" placeholder="비밀번호를 다시 한 번 입력해주세요."> -->
 		            
 		            <label for="userName"> 이름 </label>
-		            <input type="text" id="userName" name="userName" placeholder="이름을 입력해주세요.">
+		            <input type="text" name="userName" placeholder="이름을 입력해주세요.">
 		            
 		            <label for="userGender"> 성별 </label><br>
-		            <input type="radio" name="userGender" value="남자">남자
-					<input type="radio" name="userGender" value="여자">여자<br><br>
+		            <input type="radio" name="userGender" value="남자"> 남자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="userGender" value="여자"> 여자<br><br>
 		            
 		            <label for="userBirth"> 생년월일 </label>
-		            <input type="date" id="userBirth" name="userBirth"><br>
+		            <input type="date" name="userBirth"><br>
 		            
 		            <label for="userPhone"> 전화번호 </label><br>
-		            <input type="text" id="userPhone" name="userPhone" placeholder="핸드폰 번호를 입력해주세요.">
+		            <input type="text" name="userPhone" placeholder="핸드폰 번호를 입력해주세요.">
 		            
 		            <label for="userEmail"> 이메일 </label><br>
-		            <input type="text" id="userEmail" name="userEmail" placeholder="이메일을 입력해주세요.">
+		            <input type="text" name="userEmail" placeholder="이메일을 입력해주세요.">
 		
 <!-- 		            <div class="sBox">fieldset/ legend 로 변경 -->
 <!-- 			            <div> -->

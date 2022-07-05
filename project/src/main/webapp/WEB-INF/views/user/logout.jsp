@@ -11,6 +11,7 @@
 <body>
 	<%
 		session.removeAttribute("user");
+		session.removeAttribute("userNum");
 		out.print("<script>");
 		out.print("alert('로그아웃 되었습니다.');");
     	out.print("location.href = '/project/';");
