@@ -37,8 +37,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </delete>
 
 
-<select id="userSelect" resultType="com.spring.dto.UserDTO">
+<select id="memberList" resultType="com.spring.dto.UserDTO">
 	<![CDATA[ 
+		select *
+		from
+			users
+		where  
+ 			userNum > 1  
+ 		order by  
+ 			userNum desc  	
  	]]> 
 </select>
 

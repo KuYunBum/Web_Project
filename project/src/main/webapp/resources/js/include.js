@@ -20,24 +20,24 @@
 			formObj.submit();
 		});
 		
-		$(".bt_list").on("click", function(){
+		$(".board_list").on("click", function(){
 			self.location = "/project/board/select";
 		});
 		
-		$(".bt_insert").on("click", function() {
+		$(".board_insert").on("click", function() {
 			location.href = "/project/board/insert"
 		});
 		
-		$(".bt_update").on("click", function(){
+		$(".board_update").on("click", function(){
 			self.location = "update?bno=${boardDTO.bno}";
 		});
 		
-		$(".bt_delete").on("click", function(){
+		$(".board_delete").on("click", function(){
 			formObj.attr("action", "/project/board/delete");
 			formObj.submit();
 		});
 		
-		$(".bt_cancel").on("click", function() {
+		$(".board_cancel").on("click", function() {
 			self.location = "/project/board/detail?bno=${boardDTO.bno}";
 		});
 		
@@ -65,8 +65,53 @@
           });
         });
         
-//        $( '.ex_content_p1_2' ).animate( {
-//            opacity: '1'
-//          }, 1000)
+        
+        
+        
+        
+        function phoneFomatter(num,type){
+        	
+            var formatNum = '';
+            
+            if(num.length==11){
+                if(type==0){
+                    formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-****-$3');
+                }else{
+                    formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+                }
+            }else if(num.length==8){
+                formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
+            }else{
+                if(num.indexOf('02')==0){
+                    if(type==0){
+                        formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-****-$3');
+                    }else{
+                        formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
+                    }
+                }else{
+                    if(type==0){
+                        formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-***-$3');
+                    }else{
+                        formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+                    }
+                }
+            }
+            return formatNum;
+        }
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 	});

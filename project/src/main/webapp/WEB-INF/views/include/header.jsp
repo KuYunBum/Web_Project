@@ -57,7 +57,7 @@
 		}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="#">회원 관리</a></li>
+                <li><a href="/project/user/memberList">회원 관리</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}else{

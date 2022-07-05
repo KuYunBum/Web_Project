@@ -38,8 +38,8 @@
 			</table>
 		</form>
 		<div class="bt_box">
-			<button type="submit" class="bt_save">저장</button>
-			<button type="submit" class="bt_cancel">취소</button>
+			<button type="submit" class="board_save">저장</button>
+			<button type="submit" class="board_cancel">취소</button>
 		</div>
 	</div>
 	

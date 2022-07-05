@@ -1,5 +1,7 @@
 package com.spring.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +33,13 @@ public class UserServiceImpl implements UserService{
 		UserDAO dao = sqlSession.getMapper(UserDAO.class);
 		
 		return dao.idCheck(userID);
+	}
+
+	@Override
+	public List<UserDTO> memberList() throws Exception {
+		UserDAO dao = sqlSession.getMapper(UserDAO.class);
+		List<UserDTO> dtos = dao.memberList();
+		return dtos;
 	}
 
 }

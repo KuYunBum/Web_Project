@@ -43,13 +43,13 @@ public class BoardServiceImpl implements BoardService{
 		dao.delete(bno);
 	};
 
-	public List<BoardDTO> select() throws Exception{
-		
-		BoardDAO dao = sqlSession.getMapper(BoardDAO.class);
-		List<BoardDTO> dtos = dao.select();
-		
-		return dtos;
-	};
+//	public List<BoardDTO> select() throws Exception{
+//		
+//		BoardDAO dao = sqlSession.getMapper(BoardDAO.class);
+//		List<BoardDTO> dtos = dao.select();
+//		
+//		return dtos;
+//	};
 
 	public void viewcnt(Integer bno) throws Exception{
 		

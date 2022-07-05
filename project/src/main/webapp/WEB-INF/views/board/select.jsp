@@ -46,7 +46,7 @@
 		</table>
 		<br>
 		<div class="bt_box">
-		<button class="bt_insert">글쓰기</button>
+		<button class="board_insert">글쓰기</button>
 		</div><br>
 		<div class="pagination">
 	    	<c:if test="${pageMaker.page !=1}">

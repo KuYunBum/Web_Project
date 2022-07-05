@@ -38,9 +38,9 @@
 				</tr>
 			</table>
 		<div class="bt_box">
-			<button type="submit" class="bt_update">수정</button>
-			<button type="submit" class="bt_delete">삭제</button>
-			<button type="button" class="bt_list">목록</button>
+			<button type="submit" class="board_update">수정</button>
+			<button type="submit" class="board_delete">삭제</button>
+			<button type="button" class="board_list">목록</button>
 		</div>
 	</div>
 	
