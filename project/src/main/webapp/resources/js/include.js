@@ -57,16 +57,16 @@
 	          }, 1000, function(){
 	        	  $( '.ex_content_p1' ).animate( {
 	  	        	opacity: '0'
-		          }, 1000, function(){
-		        	  $( '.ex_content_p2_1' ).animate( {
-		        		  opacity: '1'
-		          }, 1000)
-		          
+		          }, 1000, function(){ 
+		        	  self.location = "/project/content/ex_recomm/ex_recomm2"
 		          });
 	          });
 	        });
           });
         });
         
+//        $( '.ex_content_p1_2' ).animate( {
+//            opacity: '1'
+//          }, 1000)
         
 	});

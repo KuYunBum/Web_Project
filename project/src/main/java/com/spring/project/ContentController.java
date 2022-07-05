@@ -24,15 +24,19 @@ public class ContentController {
 	
 	
 	
-	@RequestMapping(value = "/ex_recomm", method = RequestMethod.GET)
+	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.GET)
 	public void ex_recomm() throws Exception {
 
 	}
 	
-	@RequestMapping(value = "/ex_recomm_start", method = RequestMethod.GET)
-	public String ex_recomm_start() throws Exception {
+	@RequestMapping(value = "/ex_recomm/ex_recomm_start", method = RequestMethod.GET)
+	public void ex_recomm_start() throws Exception {
 		
-		return "/content/ex_recomm_start";
+	}
+	
+	@RequestMapping(value = "/ex_recomm/ex_recomm2", method = RequestMethod.GET)
+	public void ex_recomm2() throws Exception {
+		
 	}
 	
 	@RequestMapping(value = "/membership", method = RequestMethod.GET)
