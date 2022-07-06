@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -33,6 +34,20 @@
 	if (result == 'logout') {
 		alert("로그아웃 되었습니다.");
 	}
+	
+	$(document).ready(function(){
+		
+		$('#searchBtn').on("click",function(event){
+// 		  alert("select"+'${pageMaker.makePage(1)}'
+// 				  +'&searchType='+$("select option:selected").val()
+// 				  +"&keyword="+$('#keywordInput').val());
+		  
+		  self.location="select"+'${pageMaker.makePage(1)}'
+		  +'&searchType='+$("select option:selected").val()
+		  +"&keyword="+$('#keywordInput').val();
+		  
+		});
+	});
 </script>
 </head>
 <body>

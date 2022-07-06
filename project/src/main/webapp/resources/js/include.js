@@ -3,16 +3,6 @@
  */
 	$(document).ready(function(){
 		
-		$('#searchBtn').on("click",function(event){
-// 		  alert("select"+'${pageMaker.makePage(1)}'
-// 				  +'&searchType='+$("select option:selected").val()
-// 				  +"&keyword="+$('#keywordInput').val());
-		  
-		  self.location="select"+'${pageMaker.makePage(1)}'
-		  +'&searchType='+$("select option:selected").val()
-		  +"&keyword="+$('#keywordInput').val();
-		  
-		});
 		
 		var formObj = $("form[role='form']");
 
