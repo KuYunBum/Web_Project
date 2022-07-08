@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	update 
 		users 
 	set 
-		userID = #{userID}, userPW = #{userPW}, userName = #{userName}, userGender = #{userGender}, 
+		userPW = #{userPW}, userName = #{userName}, userGender = #{userGender}, 
 		userBirth = #{userBirth}, userPhone =  #{userPhone}, userEmail = #{userEmail}
 	where 
 		userNum = #{userNum} 

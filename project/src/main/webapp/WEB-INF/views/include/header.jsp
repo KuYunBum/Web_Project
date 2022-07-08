@@ -47,6 +47,50 @@
 		  +"&keyword="+$('#keywordInput').val();
 		  
 		});
+		
+		var formObj = $("form[role='form']");
+
+		$(".bt_save").on("click", function() {
+			formObj.submit();
+		});
+		
+		$(".board_list").on("click", function(){
+			self.location = "/project/board/select";
+		});
+		
+		$(".board_insert").on("click", function() {
+			location.href = "/project/board/insert"
+		});
+		
+		$(".board_update").on("click", function(){
+			self.location = "update?bno=${boardDTO.bno}";
+		});
+		
+		$(".board_delete").on("click", function(){
+			formObj.attr("action", "/project/board/delete");
+			formObj.submit();
+		});
+		
+		$(".board_cancel").on("click", function() {
+			self.location = "/project/board/detail?bno=${boardDTO.bno}";
+		});
+		
+		$(".user_insert").on("click", function() {
+			location.href = "/project/user/userInsert"
+		});
+		$(".user_update").on("click", function() {
+			self.location = "userUpdate?userNum=${userDTO.userNum}";
+		});
+		$(".user_delete").on("click", function() {
+			formObj.attr("action", "/project/user/userDelete");
+			formObj.submit();
+		});
+		$(".user_cancel").on("click", function() {
+			location.href = "/project/user/userList"
+		});
+		$(".user_list").on("click", function() {
+			location.href = "/project/user/userList"
+		});
 	});
 </script>
 </head>

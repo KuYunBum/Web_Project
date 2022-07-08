@@ -96,8 +96,31 @@ public class UserController {
 		model.addAttribute("list", service.userList());
 	}
 	
+	@RequestMapping(value = "/userDelete", method = RequestMethod.POST)
+	public String userDelete(int userNum, RedirectAttributes rttr) throws Exception {
+		
+		service.userDelete(userNum);
+		rttr.addFlashAttribute("msg", "success");
+		
+		return "redirect:/user/userList";
+	}
+	
 	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
 	public void userDetail(int userNum, Model model) throws Exception {
 		model.addAttribute(service.userDetail(userNum));
+	}
+	
+	@RequestMapping(value = "/userUpdate", method = RequestMethod.GET)
+	public void userUpdateGET(int userNum, Model model) throws Exception {
+		model.addAttribute(service.userDetail(userNum));
+	}		
+	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
+	public String userUpdatePOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
+		
+		service.userUpdate(dto);
+		
+		rttr.addFlashAttribute("msg", "success");
+
+		return "redirect:/user/userList";
 	}
 }

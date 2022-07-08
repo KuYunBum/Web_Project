@@ -11,7 +11,7 @@
  		<form role="form" method="post">
 			<input type='hidden' name='userNum' value="${userDTO.userNum}">
 		</form>
-			<table id='customers' border="1">
+			<table id='customers' border="1" style="width: 500px;">
 				<tr>
 					<th>회원번호</th>
 				</tr>

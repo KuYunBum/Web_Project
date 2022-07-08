@@ -10,35 +10,59 @@
 	<div class="main">
 		<h1>내용 수정</h1>
 		<form role="form" method="post">
-			<table id='customers' border="1">
+			<table id='customers' border="1" style="width: 500px;">
 				<tr>
-					<th>번호</th>
+					<th>회원번호</th>
 				</tr>
 				<tr>
-					<td>${boardDTO.bno}</td>
+					<td>${userDTO.userNum}</td>
 				</tr>
 				<tr>
-					<th>작성자</th>
+					<th>아이디</th>
 				</tr>
 				<tr>
-					<td>${boardDTO.writer}</td>
+					<td>${userDTO.userID}</td>
 				</tr>
 				<tr>
-					<th>제목</th>
+					<th>비밀번호</th>
 				</tr>
 				<tr>
-					<td><input type="text" name='title'  style="width:100%" value="${boardDTO.title}"></td>
+					<td ><input style="width:80%" type="text" name="userPW" value="${userDTO.userPW}"></td>
 				</tr>
 				<tr>
-					<th>내용</th>
+					<th>이름</th>
 				</tr>
 				<tr>
-					<td><textarea  style="width:100%" name="content" rows="3">${boardDTO.content}</textarea></td>
+					<td><input style="width:80%" type="text" name="userName" value="${userDTO.userName}"></td>
+				</tr>
+				<tr>
+					<th>성별</th>
+				</tr>
+				<tr>
+					<td><input style="width:80%" type="text" name="userGender" value="${userDTO.userGender}"></td>
+				</tr>
+				<tr>
+					<th>생년월일</th>
+				</tr>
+				<tr>
+					<td><input style="width:80%" type="text" name="userBirth" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}"/>"></td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+				</tr>
+				<tr>
+					<td><input style="width:80%" type="text" name="userPhone" value="${userDTO.userPhone}"></td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+				</tr>
+				<tr>
+					<td><input style="width:80%" type="text" name="userEmail" value="${userDTO.userEmail}"></td>
 				</tr>
 			</table>
 		</form>
 		<div class="bt_box">
-			<button type="submit" class="user_save">저장</button>
+			<button type="submit" class="bt_save">저장</button>
 			<button type="submit" class="user_cancel">취소</button>
 		</div>
 	</div>

@@ -3,7 +3,8 @@
  */
 	$(document).ready(function(){
 		
-		
+
+/*
 		var formObj = $("form[role='form']");
 
 		$(".bt_save").on("click", function() {
@@ -44,7 +45,7 @@
 		$(".user_list").on("click", function() {
 			location.href = "/project/user/userList"
 		});
-		
+*/		
 		
 		
         $( '.ex_content_p1_1' ).animate( {
