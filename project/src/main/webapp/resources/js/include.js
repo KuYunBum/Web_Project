@@ -31,6 +31,20 @@
 			self.location = "/project/board/detail?bno=${boardDTO.bno}";
 		});
 		
+		$(".user_insert").on("click", function() {
+			location.href = "/project/user/userInsert"
+		});
+		$(".user_update").on("click", function() {
+			self.location = "userUpdate?userNum=${userDTO.userNum}";
+		});
+		$(".user_delete").on("click", function() {
+			formObj.attr("action", "/project/user/userDelete");
+			formObj.submit();
+		});
+		$(".user_list").on("click", function() {
+			location.href = "/project/user/userList"
+		});
+		
 		
 		
         $( '.ex_content_p1_1' ).animate( {
@@ -58,36 +72,6 @@
         
         
         
-        
-        function phoneFomatter(num,type){
-        	
-            var formatNum = '';
-            
-            if(num.length==11){
-                if(type==0){
-                    formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-****-$3');
-                }else{
-                    formatNum = num.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
-                }
-            }else if(num.length==8){
-                formatNum = num.replace(/(\d{4})(\d{4})/, '$1-$2');
-            }else{
-                if(num.indexOf('02')==0){
-                    if(type==0){
-                        formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-****-$3');
-                    }else{
-                        formatNum = num.replace(/(\d{2})(\d{4})(\d{4})/, '$1-$2-$3');
-                    }
-                }else{
-                    if(type==0){
-                        formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-***-$3');
-                    }else{
-                        formatNum = num.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
-                    }
-                }
-            }
-            return formatNum;
-        }
 
 
         

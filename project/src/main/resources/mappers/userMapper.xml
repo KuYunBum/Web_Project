@@ -29,15 +29,36 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		userID=#{userID}
 </select>
 
-<update id="update"> 
+<update id="userUpdate"> 
+	update 
+		users 
+	set 
+		userID = #{userID}, userPW = #{userPW}, userName = #{userName}, userGender = #{userGender}, 
+		userBirth = #{userBirth}, userPhone =  #{userPhone}, userEmail = #{userEmail}
+	where 
+		userNum = #{userNum} 
 </update>
 
 
-<delete id="delete"> 
+<select id="userDetail" resultType="com.spring.dto.UserDTO"> 
+	select 
+		* 
+	from 
+		users 
+	where 
+		userNum = #{userNum}
+</select>
+
+
+<delete id="userDelete"> 
+	delete from 
+		users 
+	where 
+		userNum = #{userNum}
 </delete>
 
 
-<select id="memberList" resultType="com.spring.dto.UserDTO">
+<select id="userList" resultType="com.spring.dto.UserDTO">
 	<![CDATA[ 
 		select *
 		from

@@ -13,5 +13,11 @@ public interface UserService {
 	
 	public UserDTO idCheck(String userID) throws Exception;
 	
-	public List<UserDTO> memberList() throws Exception;
+	public List<UserDTO> userList() throws Exception;
+	
+	public UserDTO userDetail(int userNum) throws Exception;
+	
+	public  void userUpdate(UserDTO dto) throws Exception;
+	
+	public void userDelete(int userNum) throws Exception;
 }

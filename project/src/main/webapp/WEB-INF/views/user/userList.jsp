@@ -26,18 +26,17 @@
 					<td>${userDTO.userNum}</td>
 					<td>${userDTO.userID}</td>
 					<td>${userDTO.userPW}</td>
-					<td><a href='/project/user/detail?userNum=${userDTO.userNum}'>${userDTO.userName}</a></td>
+					<td><a href='/project/user/userDetail?userNum=${userDTO.userNum}'>${userDTO.userName}</a></td>
 					<td>${userDTO.userGender}</td>
 					<td><fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}" /></td>
 					<td>${userDTO.userPhone}</td>
-<%-- 					<td>phoneFommatter(${userDTO.userPhone})</td> --%>
 					<td>${userDTO.userEmail}</td>
 				</tr>
 			</c:forEach>
 		</table>
 		<br>
 		<div class="bt_box">
-		<button class="member_insert">회원 추가</button>
+		<button class="user_insert">회원 추가</button>
 		</div><br>
 	</div>
 

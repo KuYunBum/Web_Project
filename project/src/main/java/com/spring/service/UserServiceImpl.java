@@ -36,10 +36,28 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<UserDTO> memberList() throws Exception {
+	public List<UserDTO> userList() throws Exception {
 		UserDAO dao = sqlSession.getMapper(UserDAO.class);
-		List<UserDTO> dtos = dao.memberList();
+		List<UserDTO> dtos = dao.userList();
 		return dtos;
+	}
+
+	@Override
+	public void userUpdate(UserDTO dto) throws Exception {
+		UserDAO dao = sqlSession.getMapper(UserDAO.class);
+		dao.userUpdate(dto);
+	}
+
+	@Override
+	public void userDelete(int userNum) throws Exception {
+		UserDAO dao = sqlSession.getMapper(UserDAO.class);
+		dao.userDelete(userNum);
+	}
+
+	@Override
+	public UserDTO userDetail(int userNum) throws Exception {
+		UserDAO dao = sqlSession.getMapper(UserDAO.class);
+		return dao.userDetail(userNum);
 	}
 
 }

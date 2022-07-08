@@ -90,9 +90,14 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value = "/memberList", method = RequestMethod.GET)
-	public void memberList(Model model) throws Exception {
+	@RequestMapping(value = "/userList", method = RequestMethod.GET)
+	public void userList(Model model) throws Exception {
 		
-		model.addAttribute("list", service.memberList());
+		model.addAttribute("list", service.userList());
+	}
+	
+	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
+	public void userDetail(int userNum, Model model) throws Exception {
+		model.addAttribute(service.userDetail(userNum));
 	}
 }
