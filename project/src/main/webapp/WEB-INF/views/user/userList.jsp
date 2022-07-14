@@ -35,9 +35,9 @@
 			</c:forEach>
 		</table>
 		<br>
-		<div class="bt_box">
+<!-- 		<div class="bt_box">
 		<button class="user_insert">회원 추가</button>
-		</div><br>
+		</div><br> -->
 	</div>
 
 	<%@include file="../include/footer.jsp"%>

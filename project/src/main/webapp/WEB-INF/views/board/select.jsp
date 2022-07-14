@@ -44,7 +44,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<br>
 		<div class="bt_box">
 		<button class="board_insert">글쓰기</button>
 		</div><br>
