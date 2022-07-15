@@ -1,6 +1,11 @@
 package com.spring.project;
 
+import java.lang.ProcessBuilder.Redirect;
+
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,8 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.service.ContentService;
+
+import oracle.net.nt.SdpNTAdapter;
 
 
 @Controller
@@ -25,8 +33,22 @@ public class ContentController {
 	
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.GET)
-	public void ex_recomm() throws Exception {
+	public void ex_recommGET() throws Exception {
 
+	}
+	
+	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.POST)
+	public void ex_recommPOST(HttpServletRequest request, HttpServletResponse response, RedirectAttributes rttr) throws Exception {
+		
+		HttpSession session = request.getSession();
+		System.out.println(session.getAttribute("user"));
+		
+		if(session.getAttribute("user")!= null) {
+			response.sendRedirect("/project/content//ex_recomm/ex_recomm_start");
+		}else {
+			rttr.addFlashAttribute("msg", "fail1");
+			response.sendRedirect("/project/user/loginForm");
+		}
 	}
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm_start", method = RequestMethod.GET)

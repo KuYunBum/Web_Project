@@ -15,7 +15,9 @@
 			<p>
 				사용자의 정보 신체 조건운동,<br> 장소 등을 고려한 맞춤 운동
 			</p>
-			<button onclick="location.href = '/project/content/ex_recomm/ex_recomm_start'">시작하기</button>
+			<form method="post">
+				<button>시작하기</button>
+			</form>
 		</div>
 	</div>
 
