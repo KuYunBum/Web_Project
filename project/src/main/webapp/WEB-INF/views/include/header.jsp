@@ -50,7 +50,7 @@
 		
 		var formObj = $("form[role='form']");
 
-		$(".bt_save").on("click", function() {
+		$(".board_save").on("click", function() {
 			formObj.submit();
 		});
 		
