@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.spring.vo.PageMaker;
 import com.spring.dto.BoardDTO;
+import com.spring.dto.ReplyDTO;
 
 public interface BoardService {
 	
@@ -22,5 +23,9 @@ public interface BoardService {
 	public List<BoardDTO> listSearchCriteria(PageMaker pm) throws Exception;
 	
 	public int listSearchCount(PageMaker pm) throws Exception;
+
+	public List<ReplyDTO> replyList(Integer bno)throws Exception;
+
+	public void replyInsert(ReplyDTO dto)throws Exception;
 
 }

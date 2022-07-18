@@ -3,7 +3,7 @@ package com.spring.dto;
 import java.util.Date;
 
 
-public class UserRecord {
+public class UserRecordDTO {
 	private int userNum;
 	private Date startTime;
 	private Date endTime;

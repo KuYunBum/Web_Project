@@ -51,45 +51,15 @@
 		  
 		});
 		
-		var formObj = $("form[role='form']");
-
-		$(".bt_save").on("click", function() {
-			formObj.submit();
-		});
-		
-		$(".board_list").on("click", function(){
-			self.location = "/project/board/select";
-		});
-		
-		$(".board_insert").on("click", function() {
-			location.href = "/project/board/insert"
-		});
 		
 		$(".board_update").on("click", function(){
 			self.location = "update?bno=${boardDTO.bno}";
 		});
-		
-		$(".board_delete").on("click", function(){
-			formObj.attr("action", "/project/board/delete");
-			formObj.submit();
-		});
-		
 		$(".board_cancel").on("click", function() {
-			self.location = "/project/board/detail?bno=${boardDTO.bno}";
-		});
-		
-		$(".admin_insert").on("click", function() {
-			location.href = "/project/user/adminInsert"
+			self.location = "detail?bno=${boardDTO.bno}";
 		});
 		$(".admin_update").on("click", function() {
 			self.location = "adminUpdate?userNum=${userDTO.userNum}";
-		});
-		$(".admin_delete").on("click", function() {
-			formObj.attr("action", "/project/user/adminDelete");
-			formObj.submit();
-		});
-		$(".admin_list").on("click", function() {
-			location.href = "/project/user/adminList"
 		});
 		$(".user_update").on("click", function() {
 			self.location = "userUpdate?userNum=${userDTO.userNum}";

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.dao.BoardDAO;
 import com.spring.dto.BoardDTO;
+import com.spring.dto.ReplyDTO;
 import com.spring.vo.PageMaker;
 
 @Service
@@ -68,6 +69,18 @@ public class BoardServiceImpl implements BoardService{
 	public int listSearchCount(PageMaker pm) throws Exception {
 		BoardDAO dao=sqlSession.getMapper(BoardDAO.class);
 		return dao.listSearchCount(pm);
+	}
+
+	@Override
+	public List<ReplyDTO> replyList(Integer bno) throws Exception {
+		BoardDAO dao=sqlSession.getMapper(BoardDAO.class);
+		return dao.replyList(bno);
+	}
+
+	@Override
+	public void replyInsert(ReplyDTO dto) throws Exception {
+		BoardDAO dao=sqlSession.getMapper(BoardDAO.class);
+		dao.replyInsert(dto);
 	}
 
 }

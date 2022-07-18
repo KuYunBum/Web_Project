@@ -4,7 +4,6 @@
 	$(document).ready(function(){
 		
 
-/*
 		var formObj = $("form[role='form']");
 
 		$(".bt_save").on("click", function() {
@@ -19,34 +18,29 @@
 			location.href = "/project/board/insert"
 		});
 		
-		$(".board_update").on("click", function(){
-			self.location = "update?bno=${boardDTO.bno}";
-		});
-		
 		$(".board_delete").on("click", function(){
 			formObj.attr("action", "/project/board/delete");
 			formObj.submit();
 		});
 		
-		$(".board_cancel").on("click", function() {
-			self.location = "/project/board/detail?bno=${boardDTO.bno}";
+		$(".admin_insert").on("click", function() {
+			location.href = "/project/user/adminInsert"
 		});
 		
-		$(".user_insert").on("click", function() {
-			location.href = "/project/user/userInsert"
-		});
-		$(".user_update").on("click", function() {
-			self.location = "userUpdate?userNum=${userDTO.userNum}";
-		});
-		$(".user_delete").on("click", function() {
-			formObj.attr("action", "/project/user/userDelete");
+		$(".admin_delete").on("click", function() {
+			formObj.attr("action", "/project/user/adminDelete");
 			formObj.submit();
 		});
-		$(".user_list").on("click", function() {
-			location.href = "/project/user/userList"
-		});
-*/		
 		
+		$(".admin_list").on("click", function() {
+			location.href = "/project/user/adminList"
+		});
+		
+		
+		
+
+		
+//		ex_recomm
 		
         $( '.ex_content_p1_1' ).animate( {
           opacity: '1'
@@ -74,10 +68,6 @@
         
         
 
-
-        
-        
-        
         
         
         
