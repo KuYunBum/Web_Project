@@ -28,6 +28,9 @@
 	if (result == 'fail2') {
 		alert("입력안된 사항이 있습니다.");
 	}
+	if (result == 'LoginRequired') {
+		alert("로그인이 필요합니다.");
+	}
 	if (result == 'login') {
 		alert("로그인 되었습니다.");
 	}

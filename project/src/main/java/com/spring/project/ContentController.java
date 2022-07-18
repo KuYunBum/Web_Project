@@ -38,17 +38,16 @@ public class ContentController {
 	}
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.POST)
-	public void ex_recommPOST(HttpServletRequest request, HttpServletResponse response, RedirectAttributes rttr) throws Exception {
+	public String ex_recommPOST(HttpServletRequest request, HttpServletResponse response, RedirectAttributes rttr) throws Exception {
 		
 		HttpSession session = request.getSession();
 		System.out.println(session.getAttribute("user"));
 		
 		if(session.getAttribute("user")!= null) {
 			response.sendRedirect("/project/content//ex_recomm/ex_recomm_start");
-		}else {
-			rttr.addFlashAttribute("msg", "fail1");
-			response.sendRedirect("/project/user/loginForm");
 		}
+		rttr.addFlashAttribute("msg", "LoginRequired");
+		return "redirect:/user/loginForm";
 	}
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm_start", method = RequestMethod.GET)
