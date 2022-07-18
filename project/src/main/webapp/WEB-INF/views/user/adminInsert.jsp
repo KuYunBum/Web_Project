@@ -32,8 +32,8 @@
 			</table>
 		</form>
 		<div class="bt_box">
-			<button type="button" class="user_save">저장</button>
-			<button type="button" class="user_list">목록</button>
+			<button type="button" class="bt_save">저장</button>
+			<button type="button" class="admin_list">목록</button>
 		</div>
 	</div>
 	

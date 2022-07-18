@@ -63,7 +63,7 @@
 		</form>
 		<div class="bt_box">
 			<button type="submit" class="bt_save">저장</button>
-			<button onclick="location.href='/project/user/userDetail?userNum=${userNum }'">취소</button>
+			<button type="submit" class="admin_list">목록</button>
 		</div>
 	</div>
 	

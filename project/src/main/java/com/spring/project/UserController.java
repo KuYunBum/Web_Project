@@ -90,23 +90,43 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value = "/userList", method = RequestMethod.GET)
-	public void userList(Model model) throws Exception {
+	@RequestMapping(value = "/adminList", method = RequestMethod.GET)
+	public void adminList(Model model) throws Exception {
 		
 		model.addAttribute("list", service.userList());
 	}
 	
-	@RequestMapping(value = "/userDelete", method = RequestMethod.POST)
-	public String userDelete(int userNum, RedirectAttributes rttr) throws Exception {
+	@RequestMapping(value = "/adminDelete", method = RequestMethod.POST)
+	public String adminDelete(int userNum, RedirectAttributes rttr) throws Exception {
 		
 		service.userDelete(userNum);
 		rttr.addFlashAttribute("msg", "success");
 		
-		return "redirect:/user/userList";
+		return "redirect:/user/adminList";
 	}
 	
-	@RequestMapping(value = "/userDetail", method = RequestMethod.GET)
-	public void userDetail(int userNum, Model model) throws Exception {
+	@RequestMapping(value = "/adminDetail", method = RequestMethod.GET)
+	public void adminDetail(int userNum, Model model) throws Exception {
+		model.addAttribute(service.userDetail(userNum));
+	}
+	
+	@RequestMapping(value = "/adminUpdate", method = RequestMethod.GET)
+	public void adminUpdateGET(int userNum, Model model) throws Exception {
+		model.addAttribute(service.userDetail(userNum));
+	}		
+	@RequestMapping(value = "/adminUpdate", method = RequestMethod.POST)
+	public String adminUpdatePOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
+		
+		service.userUpdate(dto);
+		
+		rttr.addFlashAttribute("msg", "success");
+
+		return "redirect:/user/adminList";
+	}
+	
+	@RequestMapping(value = "/userPage", method = RequestMethod.GET)
+	public void userPage(int userNum, Model model) throws Exception {
+		
 		model.addAttribute(service.userDetail(userNum));
 	}
 	
@@ -114,14 +134,14 @@ public class UserController {
 	public void userUpdateGET(int userNum, Model model) throws Exception {
 		model.addAttribute(service.userDetail(userNum));
 	}		
+	
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
-	public String userUpdatePOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
+	public String userUpdatePOST(UserDTO dto,int userNum, Model model, RedirectAttributes rttr) throws Exception {
 		
 		service.userUpdate(dto);
-		
 		rttr.addFlashAttribute("msg", "success");
 
-		return "redirect:/user/userList";
+		return "redirect:/user/userPage?userNum="+userNum;
 	}
 	
 }

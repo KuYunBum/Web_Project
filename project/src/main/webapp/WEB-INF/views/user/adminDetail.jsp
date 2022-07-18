@@ -4,12 +4,13 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-
 	<%@include file="../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>내용 수정</h1>
-		<form role="form" method="post">
+		<h1>상세 내용</h1>
+ 		<form role="form" method="post">
+			<input type='hidden' name='userNum' value="${userDTO.userNum}">
+		</form>
 			<table id='customers' border="1" style="width: 500px;">
 				<tr>
 					<th>회원번호</th>
@@ -27,43 +28,43 @@
 					<th>비밀번호</th>
 				</tr>
 				<tr>
-					<td ><input style="width:80%" type="text" name="userPW" value="${userDTO.userPW}"></td>
+					<td>${userDTO.userPW}</td>
 				</tr>
 				<tr>
 					<th>이름</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userName" value="${userDTO.userName}"></td>
+					<td>${userDTO.userName}</td>
 				</tr>
 				<tr>
 					<th>성별</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userGender" value="${userDTO.userGender}"></td>
+					<td>${userDTO.userGender}</td>
 				</tr>
 				<tr>
 					<th>생년월일</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userBirth" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}"/>"></td>
+					<td><fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}"/></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userPhone" value="${userDTO.userPhone}"></td>
+					<td>${userDTO.userPhone}</td>
 				</tr>
 				<tr>
 					<th>이메일</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userEmail" value="${userDTO.userEmail}"></td>
+					<td>${userDTO.userEmail}</td>
 				</tr>
 			</table>
-		</form>
 		<div class="bt_box">
-			<button type="submit" class="bt_save">저장</button>
-			<button onclick="location.href='/project/user/userDetail?userNum=${userNum }'">취소</button>
+			<button type="submit" class="admin_update">수정</button>
+			<button type="submit" class="admin_delete">삭제</button>
+			<button type="button" class="admin_list">목록</button>
 		</div>
 	</div>
 	

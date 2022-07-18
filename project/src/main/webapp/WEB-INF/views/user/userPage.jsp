@@ -7,7 +7,7 @@
 	<%@include file="../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>상세 내용</h1>
+		<h1>마이페이지</h1>
  		<form role="form" method="post">
 			<input type='hidden' name='userNum' value="${userDTO.userNum}">
 		</form>
@@ -63,8 +63,7 @@
 			</table>
 		<div class="bt_box">
 			<button type="submit" class="user_update">수정</button>
-			<button type="submit" class="user_delete">삭제</button>
-			<button type="button" class="user_list">목록</button>
+			<button onclick="location.href='/project/'">홈</button>
 		</div>
 	</div>
 	

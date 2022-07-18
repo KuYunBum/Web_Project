@@ -50,7 +50,7 @@
 		
 		var formObj = $("form[role='form']");
 
-		$(".board_save").on("click", function() {
+		$(".bt_save").on("click", function() {
 			formObj.submit();
 		});
 		
@@ -75,21 +75,21 @@
 			self.location = "/project/board/detail?bno=${boardDTO.bno}";
 		});
 		
-		$(".user_insert").on("click", function() {
-			location.href = "/project/user/userInsert"
+		$(".admin_insert").on("click", function() {
+			location.href = "/project/user/adminInsert"
+		});
+		$(".admin_update").on("click", function() {
+			self.location = "adminUpdate?userNum=${userDTO.userNum}";
+		});
+		$(".admin_delete").on("click", function() {
+			formObj.attr("action", "/project/user/adminDelete");
+			formObj.submit();
+		});
+		$(".admin_list").on("click", function() {
+			location.href = "/project/user/adminList"
 		});
 		$(".user_update").on("click", function() {
 			self.location = "userUpdate?userNum=${userDTO.userNum}";
-		});
-		$(".user_delete").on("click", function() {
-			formObj.attr("action", "/project/user/userDelete");
-			formObj.submit();
-		});
-		$(".user_cancel").on("click", function() {
-			location.href = "/project/user/userList"
-		});
-		$(".user_list").on("click", function() {
-			location.href = "/project/user/userList"
 		});
 	});
 </script>
@@ -116,13 +116,13 @@
 		}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="/project/user/userList">회원 관리</a></li>
+                <li><a href="/project/user/adminList">회원 관리</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}else{
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="#">마이페이지</a></li>
+                <li><a href="/project/user/userPage?userNum=${userNum }">마이페이지</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}

@@ -26,7 +26,7 @@
 					<td>${userDTO.userNum}</td>
 					<td>${userDTO.userID}</td>
 					<td>${userDTO.userPW}</td>
-					<td><a href='/project/user/userDetail?userNum=${userDTO.userNum}'>${userDTO.userName}</a></td>
+					<td><a href='/project/user/adminDetail?userNum=${userDTO.userNum}'>${userDTO.userName}</a></td>
 					<td>${userDTO.userGender}</td>
 					<td><fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}" /></td>
 					<td>${userDTO.userPhone}</td>
