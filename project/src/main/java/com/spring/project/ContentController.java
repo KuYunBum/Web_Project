@@ -38,13 +38,13 @@ public class ContentController {
 	}
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.POST)
-	public String ex_recommPOST(HttpServletRequest request, HttpServletResponse response, RedirectAttributes rttr) throws Exception {
+	public String ex_recommPOST(HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 		
 		HttpSession session = request.getSession();
 		System.out.println(session.getAttribute("user"));
 		
 		if(session.getAttribute("user")!= null) {
-			response.sendRedirect("/project/content//ex_recomm/ex_recomm_start");
+			return "/content/ex_recomm/ex_recomm_start";
 		}
 		rttr.addFlashAttribute("msg", "LoginRequired");
 		return "redirect:/user/loginForm";
