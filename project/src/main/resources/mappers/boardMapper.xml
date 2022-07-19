@@ -95,22 +95,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </select>
 
 
-<select id="replyList" resultType="com.spring.dto.ReplyDTO">
-	select *
-	from 
-		tbl_reply
-	where 
-		bno = #{bno}
-	order by
-		rno desc
-</select>
-
-<insert id="replyInsert" parameterType="com.spring.dto.ReplyDTO">
-	insert into 
-		tbl_reply
-	values 
-		(seq_reply.nextval, #{bno}, #{replyer}, #{replytext})
-
-</insert>
 
 </mapper>

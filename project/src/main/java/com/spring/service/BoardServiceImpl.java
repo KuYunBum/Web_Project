@@ -71,16 +71,4 @@ public class BoardServiceImpl implements BoardService{
 		return dao.listSearchCount(pm);
 	}
 
-	@Override
-	public List<ReplyDTO> replyList(Integer bno) throws Exception {
-		BoardDAO dao=sqlSession.getMapper(BoardDAO.class);
-		return dao.replyList(bno);
-	}
-
-	@Override
-	public void replyInsert(ReplyDTO dto) throws Exception {
-		BoardDAO dao=sqlSession.getMapper(BoardDAO.class);
-		dao.replyInsert(dto);
-	}
-
 }

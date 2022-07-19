@@ -100,8 +100,35 @@ border-radius: 5px;
 .pagination a:hover:not(.active) {background-color: #ddd;}
 
 
+/* 댓글 관련 */
 
+#modDiv{
+	width:400px;
+	height:150px;
+	background-color:aqua;
+	position:fixed;
+	top:20%;
+	left:40%; 
+	margin-top:-50px; 
+	padding:30px;
+	z-index:1000; 
+	border: 1px solid;
+}
+	
+#replytext2 {
+	width : 250px;
+}
 
+.reply_box {
+	width: 500px;
+	height: 300px;
+	margin: auto;
+}
+
+.reply_box ul {
+	list-style:none;
+	text-align: left;
+}
 
 
 /* ai 운동 추천 */

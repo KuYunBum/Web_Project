@@ -2,47 +2,163 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@include file="../include/header.jsp"%>
 
-<script type="text/javascript">
-$(document).ready(function(){
-	var bno="${boardDTO.bno}";
-	var page=1;
+<style>
+
+</style>
+
+<script>
+var bno="${boardDTO.bno}";
+var page=1;
+
+$(document).ready(function() {
+		
+	getPageList(page);
 	
-	function replyList() {
+	$("#replyModBtn").on("click",function(){
 		
- 		$.getJSON("/project/board/replyList"+bno+"/"+page,function(data){
-			console.log(data);
-			$(data.list).each(function(){
-				str+="<li data-rno='"+this.rno+"' class='replyLi'>"
-				+this.rno+":"+this.replytext+" <button>Mod</button></li>"
-				
-			})
-			$("#replies").html(str);
-		}) 
-		
-		
-/* 		$.ajax({
-			type : 'GET',
-			url : '/project/board/replyList',
-			data : {bno},
-			success : function (result) {
-				for(var i=0; i<result.lenth; i++){
-					var str = "<div class=\"replies\">"
-					str += result[i].reply+"</div><hr>"
-					$("replies").append(str);
+		var rno=$(".modal-title").html();
+		var replytext = $("#replytext2").val();
+	
+		$.ajax({
+			type:'put',
+			url:'/project/replies/'+rno,
+			headers:{
+				"Content-Type":"application/json"
+			},
+			data:JSON.stringify({replytext:replytext}),
+			dataType:'text',
+			success:function(result){
+				if(result=='SUCCESS'){
+					alert("수정 되었습니다.");
+					$("#modDiv").hide("slow");
+					getPageList(page);
 				}
-			},
-			error : function(result) {
-			},
-			complete : function() {
 			}
-		}) */
+		})
+	})
+	
+	
+	$("#replyDelBtn").on("click",function(){
+		var rno=$(".modal-title").html();
+		$.ajax({
+			type:'delete',
+			url:'/project/replies/'+rno,
+			headers:{
+				"Content-Type":"application/json"
+			},
+			dataType:'text',
+			success:function(result){
+				if(result=='SUCCESS'){
+					alert("삭제 되었습니다.");
+					$("#modDiv").hide("slow");
+					getPageList(page);
+				}
+			}
 			
-	}
+		})
+	})
+	
+	$("#closeBtn").on("click",function(){
+		$("#modDiv").hide("slow");
+	})
+	$("#replies").on("click",".replyLi button",function(){
+		var rno=$(this).parent().attr("data-rno");
+		var replytext=$(this).parent().text();
+		$(".modal-title").html(rno);
+// 		$("#replytext").val(replytext);
+		$("#modDiv").show("slow");
+	})
+	
+	
+	var fObject=$(".form");
+	$(".pagination").on("click","a",function(event){
+		event.preventDefault();
+		page=$(this).attr("href");
+		getPageList(page);
+		
+	})
+	
+	$(".btnList").on("click",function(){
+
+		fObject.attr("method","get");
+		fObject.attr("action","/project/board/select");
+		fObject.submit();
+		
+	})			
+	$(".btnRemove").on("click",function(){
+		fObject.attr("action","/project/board/delete");
+		fObject.submit();
+	})
+	$(".btnModify").on("click",function(){
+		fObject.attr("method","get");
+		fObject.attr("action","//project/board/update");
+		fObject.submit();
+	})
+	
+	$("#replyAddBtn").on("click",function(){		
+		var replyer=$("#replyer").val();
+		var replytext=$("#replytext").val();
+		
+		$.ajax({
+			type:'post',
+			url:'/project/replies',
+			headers:{
+				"Content-Type":"application/json"
+			},
+			dataType:'text',
+			data:JSON.stringify({
+				bno:bno,
+				replyer:replyer,
+				replytext:replytext
+			}),
+			success:function(result){
+				if(result == 'SUCCESS'){
+					alert("등록 되었습니다.");
+					//화면에 찍는 작업
+					getPageList(page);
+				}
+			}
+		})
+	})
+});
+
+function getPageList(page){
+	var str="";
+	
+	$.getJSON("/project/replies/"+bno+"/"+page,function(data){
+		console.log(data);
+		$(data.list).each(function(){
+			str+="<li data-rno='"+this.rno+"' class='replyLi'>"
+			+this.rno+". &nbsp;&nbsp;"+this.replyer
+			+"  &nbsp;&nbsp;:&nbsp;&nbsp;"
+			+this.replytext+"&nbsp; <button>수정</button></li>"
+			
+		})
+		$("#replies").html(str);
+		str="";
+		/* console.log(data.pageMaker)
+		console.log(data)
+		alert(data.pageMaker.prev); */
+		if(data.pageMaker.prev){
+			str+="<a href='"+(data.pageMaker.startPage-1)+"'> << </a>";
+		}
+		
+		for(var i=data.pageMaker.startPage;i<data.pageMaker.endPage;i++){
+			var strClass=data.pageMaker.page==i?'class=active':'';
+			
+			str+="<a "+strClass+" href='"+i+"'>"+i+"</a>";
+		}
+		if(data.pageMaker.next){
+			str+="<a href='"+(data.pageMaker.endPage+1)+"'> << </a>";
+		}
+		//alert(str);
+		$(".pagination").html(str);
+		
+	})
 }
 </script>
-
-	<%@include file="../include/header.jsp"%>
 	
 	<div class="main">
 		<h1>상세 내용</h1>
@@ -82,23 +198,34 @@ $(document).ready(function(){
 		</div>
 		<br><br><br>
 		
-		
+		<div id='modDiv' style="display:none">
+			<div class="modal-title"></div><br>내용
+			<div>
+				<input type='text' id='replytext2'>
+			</div><br>
+			<div>
+				<button type="button" id="replyModBtn">수정</button>
+				<button type="button" id="replyDelBtn">삭제</button>
+				<button type="button" id="closeBtn">닫기</button>
+			</div>
+		</div>
 		<div>
 			<h2>Reply</h2><br>
 			<div>
-				<form action="/project/board/replyWrite" method="post">
 				<div>
-					<input type="hidden" name="bno" th:value="*{bno}" />
-					REPLYER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='replyer'>
+					작성자 <input type='text' name='replyer' id='replyer'>
 				</div>
 				<div>
-					REPLY TEXT <input type='text' name="replyText" >
+					내용  &nbsp;&nbsp;&nbsp;<input type='text' name="replytext" id='replytext'>
 				</div><br>
-				<button type="submit" value="확인">확인</button>
-				</form>
+				<button id="replyAddBtn">확인</button>
 			</div>
+		</div><br>
+		<div class="reply_box">
+			<ul id="replies"></ul>
 		</div>
-		<ul id="replies"></ul>
+		<div class="pagination"></div>
+		
 	</div>
 	
 	<%@include file="../include/footer.jsp"%>

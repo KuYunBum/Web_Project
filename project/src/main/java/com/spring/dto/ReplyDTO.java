@@ -3,31 +3,37 @@ package com.spring.dto;
 import java.util.Date;
 
 public class ReplyDTO {
-	
-	private int rno;
-	private int bno;
-	private String replyText;
+	private Integer rno;
+	private Integer bno;
+	private String replytext;
 	private String replyer;
+
 	private Date regdate;
-	private Date updateDate;
+	private Date updatedate;
 	
-	public int getRno() {
+	
+	@Override
+	public String toString() {
+		return "ReplyDTO [rno=" + rno + ", bno=" + bno + ", replytext=" + replytext + ", replyer=" + replyer
+				+ ", regdate=" + regdate + ", updatedate=" + updatedate + "]";
+	}
+	public Integer getRno() {
 		return rno;
 	}
-	public void setRno(int rno) {
+	public void setRno(Integer rno) {
 		this.rno = rno;
 	}
-	public int getBno() {
+	public Integer getBno() {
 		return bno;
 	}
-	public void setBno(int bno) {
+	public void setBno(Integer bno) {
 		this.bno = bno;
 	}
-	public String getReplyText() {
-		return replyText;
+	public String getReplytext() {
+		return replytext;
 	}
-	public void setReplyText(String replyText) {
-		this.replyText = replyText;
+	public void setReplytext(String replytext) {
+		this.replytext = replytext;
 	}
 	public String getReplyer() {
 		return replyer;
@@ -41,17 +47,12 @@ public class ReplyDTO {
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	public Date getUpdateDate() {
-		return updateDate;
+	public Date getUpdatedate() {
+		return updatedate;
 	}
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
-	}
-	@Override
-	public String toString() {
-		return "ReplyDTO [rno=" + rno + ", bno=" + bno + ", replyText=" + replyText + ", replyer=" + replyer
-				+ ", regdate=" + regdate + ", updateDate=" + updateDate + "]";
+	public void setUpdatedate(Date updatedate) {
+		this.updatedate = updatedate;
 	}
 	
-	
+
 }

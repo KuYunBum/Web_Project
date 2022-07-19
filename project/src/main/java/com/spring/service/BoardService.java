@@ -24,8 +24,4 @@ public interface BoardService {
 	
 	public int listSearchCount(PageMaker pm) throws Exception;
 
-	public List<ReplyDTO> replyList(Integer bno)throws Exception;
-
-	public void replyInsert(ReplyDTO dto)throws Exception;
-
 }

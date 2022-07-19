@@ -9,7 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +24,7 @@ import com.spring.dto.BoardDTO;
 import com.spring.dto.ReplyDTO;
 import com.spring.project.BoardController;
 import com.spring.service.BoardService;
+import com.spring.service.ReplyService;
 
 
 @Controller
@@ -31,6 +35,7 @@ public class BoardController {
 	
 	@Inject
 	private BoardService service;
+	private ReplyService rs;
 
 	
 	@RequestMapping(value = "/select", method = RequestMethod.GET)
@@ -102,34 +107,4 @@ public class BoardController {
 	}
 	
 	
-	
-	@RequestMapping(value = "/replyList", method = RequestMethod.GET)
-	@ResponseBody
-	private ResponseEntity<List<ReplyDTO>> replyList(int bno) throws Exception {
-		
-		ResponseEntity<List<ReplyDTO>> entity=null;
-
-	    try {
-	     
-	    	entity = new ResponseEntity<>(service.replyList(bno), HttpStatus.OK);
-
-	    } catch (Exception e) {
-	      e.printStackTrace();
-	      entity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-	    }
-		return entity;
-	}
-	
-	@RequestMapping(value = "/replyWrite", method = RequestMethod.POST)
-	public String replyWrite(int bno, @RequestParam("replyer") String replyer, @RequestParam("replyText") String replyText, RedirectAttributes rttr) throws Exception {
-		
-		ReplyDTO dto = new ReplyDTO();
-		dto.setBno(bno);
-		dto.setReplyer(replyer);
-		dto.setReplyText(replyText);
-		service.replyInsert(dto);
-		String redirect_url = "redirect:/board/detail?bno="+Integer.toString(bno);
-		return redirect_url;
-	
-	}
 }
