@@ -10,16 +10,20 @@
 	<div class="main">
 		<div class="trainer">
 			<div class="trainer_1">
-				<p>trainer 1</p>
+				<img src="/project/resources/image/arnold.jpeg" style="width: 305px;height: 300px;">
+				<br><br><br><br><big>arnold</big>
 			</div>	
 			<div class="trainer_2">
-				<p>trainer 2</p>
+				<img src="/project/resources/image/bigRamy.jpeg" style="width: 305px;height: 300px;">
+				<br><br><br><br><big>bigRamy</big>
 			</div>	
 			<div class="trainer_3">
-				<p>trainer 3</p>
+				<img src="/project/resources/image/Billy.jpeg" style="width: 305px;height: 300px;">
+				<br><br><br><br><big>Billy</big>
 			</div>	
 			<div class="trainer_4">
-				<p>trainer 4</p>
+				<img src="/project/resources/image/ronnieWidth.jpeg" style="width: 305px;height: 300px;">
+				<br><br><br><br><big>ronnie</big>
 			</div>	
 		</div>
 	</div>

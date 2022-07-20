@@ -10,7 +10,7 @@
 	<div class="main">
 		<div class="gym">
 			<div class="gym_1">
-				<p>주변 헬스장</p>
+				<img src="/project/resources/image/gym.JPG" style="width: 1300px;height: 800px;"> 
 			</div>
 		</div>
 	</div>

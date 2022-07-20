@@ -10,7 +10,7 @@
 	<div class="main">
 		<div class="help">
 			<div class="help_1">
-				<p>고객센터</p>
+				<img src="/project/resources/image/help.JPG" style="width: 1300px;height: 800px;">
 			</div>
 		</div>
 	</div>

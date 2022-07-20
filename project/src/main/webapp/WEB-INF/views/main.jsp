@@ -10,10 +10,10 @@
 	<div class="main">
 		<div class="main_content">
 			<div class="content_1">
-				<p>메인컨텐츠1</p>
+				<img src="/project/resources/image/main1.JPG" style="width: 630px;height: 600px;">
 			</div>	
 			<div class="content_2">
-				<p>메인컨텐츠2</p>
+				<img src="/project/resources/image/main2.JPG" style="width: 630px;height: 600px;">
 			</div>	
 		</div>
 	</div>

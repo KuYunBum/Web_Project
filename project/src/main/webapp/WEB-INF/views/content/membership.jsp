@@ -10,13 +10,13 @@
 	<div class="main">
 		<div class="membership">
 			<div class="membership_1">
-				<p>membership 1</p>
+				<img src="/project/resources/image/membership1.JPG" style="width: 410px;height: 600px;"> 
 			</div>	
 			<div class="membership_2">
-				<p>membership 2</p>
+				<img src="/project/resources/image/membership2.JPG" style="width: 410px;height: 600px;"> 
 			</div>	
 			<div class="membership_3">
-				<p>membership 3</p>
+				<img src="/project/resources/image/membership3.JPG" style="width: 410px;height: 600px;"> 
 			</div>	
 		</div>
 	</div>

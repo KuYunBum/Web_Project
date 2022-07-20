@@ -10,14 +10,14 @@
 .content_1 {
 	width: 630px;
 	height: 600px;
-	border: solid;
+/* 	border: 0.5px solid; */
 	margin: 10px; 
 } 
 
 .content_2 {
 	width: 630px;
 	height: 600px;
-	border: solid;
+/* 	border: 0.5px solid; */
 	margin: 10px;  
 } 
 
@@ -550,7 +550,7 @@ border-radius: 5px;
 .gym_1{
 	width: 1300px;
 	height: 800px;
-	border: solid;
+/* 	border: solid; */
 	margin: 10px; 
 } 
 
@@ -574,7 +574,7 @@ border-radius: 5px;
 .help_1{
 	width: 1300px;
 	height: 800px;
-	border: solid;
+/* 	border: solid; */
 	margin: 10px; 
 } 
 
