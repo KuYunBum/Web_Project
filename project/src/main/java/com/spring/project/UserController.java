@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -133,6 +134,7 @@ public class UserController {
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.GET)
 	public void userUpdateGET(int userNum, Model model) throws Exception {
 		model.addAttribute(service.userDetail(userNum));
+		System.out.println(userNum);
 	}		
 	
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
@@ -142,6 +144,20 @@ public class UserController {
 		rttr.addFlashAttribute("msg", "success");
 
 		return "redirect:/user/userPage?userNum="+userNum;
+	}
+	
+	@RequestMapping(value = "/userDelete", method = RequestMethod.POST)
+	public String userDelete(int userNum, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
+		
+		service.userDelete(userNum);
+		
+		HttpSession session = request.getSession();
+		session.removeAttribute("user");
+		session.removeAttribute("userNum");
+		
+		rttr.addFlashAttribute("msg", "success");
+		
+		return "redirect:/";
 	}
 	
 }

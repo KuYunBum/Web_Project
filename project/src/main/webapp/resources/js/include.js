@@ -36,6 +36,10 @@
 			location.href = "/project/user/adminList"
 		});
 		
+		$(".user_delete").on("click", function() {
+			formObj.attr("action", "/project/user/userDelete");
+			formObj.submit();
+		});
 		
 		
 
