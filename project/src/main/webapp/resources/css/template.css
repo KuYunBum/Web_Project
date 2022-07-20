@@ -10,14 +10,14 @@
 .content_1 {
 	width: 630px;
 	height: 600px;
-/* 	border: 0.5px solid; */
+	border: 0.5px solid;
 	margin: 10px; 
 } 
 
 .content_2 {
 	width: 630px;
 	height: 600px;
-/* 	border: 0.5px solid; */
+	border: 0.5px solid;
 	margin: 10px;  
 } 
 
@@ -309,7 +309,7 @@ border-radius: 5px;
 	margin: auto;
     width: 30%;
     height: 450px;
-    border: solid black;
+    border: 0.5px solid;
 }
 
 /* .logBox h1{ */
@@ -365,7 +365,7 @@ border-radius: 5px;
 }
 
 .joinInput {
-	border: solid;
+	border: 0.5px solid;
 }
 
 .joinBox input[type=text], 
@@ -460,21 +460,21 @@ border-radius: 5px;
 .membership_1 {
 	width: 410px;
 	height: 600px;
-	border: solid;
+	border: 0.5px solid;
 	margin: 10px; 
 } 
 
 .membership_2 {
 	width: 410px;
 	height: 600px;
-	border: solid;
+	border: 0.5px solid;
 	margin: 10px;  
 } 
 
 .membership_3 {
 	width: 410px;
 	height: 600px;
-	border: solid;
+	border: 0.5px solid;
 	margin: 10px;  
 } 
 
@@ -550,7 +550,7 @@ border-radius: 5px;
 .gym_1{
 	width: 1300px;
 	height: 800px;
-/* 	border: solid; */
+	border: 0.5px solid;
 	margin: 10px; 
 } 
 
@@ -574,7 +574,7 @@ border-radius: 5px;
 .help_1{
 	width: 1300px;
 	height: 800px;
-/* 	border: solid; */
+	border: 0.5px solid;
 	margin: 10px; 
 } 
 
