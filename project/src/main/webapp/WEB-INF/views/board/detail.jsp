@@ -16,87 +16,8 @@ $(document).ready(function() {
 		
 	getPageList(page);
 	
-	$("#replyModBtn").on("click",function(){
-		
-		var rno=$(".modal-title").html();
-		var replytext = $("#replytext2").val();
 	
-		$.ajax({
-			type:'put',
-			url:'/project/replies/'+rno,
-			headers:{
-				"Content-Type":"application/json"
-			},
-			data:JSON.stringify({replytext:replytext}),
-			dataType:'text',
-			success:function(result){
-				if(result=='SUCCESS'){
-					alert("수정 되었습니다.");
-					$("#modDiv").hide("slow");
-					getPageList(page);
-				}
-			}
-		})
-	})
-	
-	
-	$("#replyDelBtn").on("click",function(){
-		var rno=$(".modal-title").html();
-		$.ajax({
-			type:'delete',
-			url:'/project/replies/'+rno,
-			headers:{
-				"Content-Type":"application/json"
-			},
-			dataType:'text',
-			success:function(result){
-				if(result=='SUCCESS'){
-					alert("삭제 되었습니다.");
-					$("#modDiv").hide("slow");
-					getPageList(page);
-				}
-			}
-			
-		})
-	})
-	
-	$("#closeBtn").on("click",function(){
-		$("#modDiv").hide("slow");
-	})
-	$("#replies").on("click",".replyLi button",function(){
-		var rno=$(this).parent().attr("data-rno");
-		var replytext=$(this).parent().text();
-		$(".modal-title").html(rno);
-// 		$("#replytext").val(replytext);
-		$("#modDiv").show("slow");
-	})
-	
-	
-	var fObject=$(".form");
-	$(".pagination").on("click","a",function(event){
-		event.preventDefault();
-		page=$(this).attr("href");
-		getPageList(page);
-		
-	})
-	
-	$(".btnList").on("click",function(){
-
-		fObject.attr("method","get");
-		fObject.attr("action","/project/board/select");
-		fObject.submit();
-		
-	})			
-	$(".btnRemove").on("click",function(){
-		fObject.attr("action","/project/board/delete");
-		fObject.submit();
-	})
-	$(".btnModify").on("click",function(){
-		fObject.attr("method","get");
-		fObject.attr("action","//project/board/update");
-		fObject.submit();
-	})
-	
+// 	댓글 달기
 	$("#replyAddBtn").on("click",function(){		
 		var replyer=$("#replyer").val();
 		var replytext=$("#replytext").val();
@@ -122,19 +43,102 @@ $(document).ready(function() {
 			}
 		})
 	})
+	
+	
+// 	댓글 수정창 열기
+	$("#replies").on("click",".replyLi button",function(){
+		var rno=$(this).parent().attr("data-rno");
+		var replytext=$(this).parent().text();
+		$(".modal-title").html(rno);
+// 		$("#replytext").val(replytext);
+		$("#modDiv").show("slow");
+	})
+	
+// 	댓글 수정창 닫기
+	$("#closeBtn").on("click",function(){
+		$("#modDiv").hide("slow");
+	})
+	
+// 	댓글 수정하기
+	$("#replyModBtn").on("click",function(){
+		
+		var rno=$(".modal-title").html();
+		var replytext = $("#replytext2").val();
+	
+		$.ajax({
+			type:'put',
+			url:'/project/replies/'+rno,
+			headers:{
+				"Content-Type":"application/json"
+			},
+			data:JSON.stringify({replytext:replytext}),
+			dataType:'text',
+			success:function(result){
+				if(result=='SUCCESS'){
+					alert("수정 되었습니다.");
+					$("#modDiv").hide("slow");
+					getPageList(page);
+				}
+			}
+		})
+	})
+	
+// 	댓글 삭제하기
+	$("#replyDelBtn").on("click",function(){
+		var rno=$(".modal-title").html();
+		$.ajax({
+			type:'delete',
+			url:'/project/replies/'+rno,
+			headers:{
+				"Content-Type":"application/json"
+			},
+			dataType:'text',
+			success:function(result){
+				if(result=='SUCCESS'){
+					alert("삭제 되었습니다.");
+					$("#modDiv").hide("slow");
+					getPageList(page);
+				}
+			}
+			
+		})
+	})
+	
+// 	댓글 페이지 이동
+	var fObject=$(".form");
+	$(".pagination").on("click","a",function(event){
+		event.preventDefault();
+		page=$(this).attr("href");
+		getPageList(page);
+		
+	})
+	
+	
 });
+
 
 function getPageList(page){
 	var str="";
 	
+// 	댓글 리스트 가져오기
 	$.getJSON("/project/replies/"+bno+"/"+page,function(data){
 		console.log(data);
 		$(data.list).each(function(){
 			str+="<li data-rno='"+this.rno+"' class='replyLi'>"
 			+this.rno+". &nbsp;&nbsp;"+this.replyer
 			+"  &nbsp;&nbsp;:&nbsp;&nbsp;"
-			+this.replytext+"&nbsp; <button>수정</button></li>"
-			
+			+this.replytext+
+		<%
+			if(session.getAttribute("user")!=null){
+		%>
+			"&nbsp; <button>수정</button></li>"
+		<%
+			}else{
+		%>
+				"</li>"
+		<%
+			}
+		%>
 		})
 		$("#replies").html(str);
 		str="";
@@ -192,8 +196,14 @@ function getPageList(page){
 				</tr>
 			</table>
 		<div class="bt_box">
+		<%
+			if(session.getAttribute("user")!=null){
+		%>	    
 			<button type="submit" class="board_update">수정</button>
 			<button type="submit" class="board_delete">삭제</button>
+		<%
+			}
+		%>
 			<button type="button" class="board_list">목록</button>
 		</div>
 		<br><br><br>
@@ -212,6 +222,9 @@ function getPageList(page){
 		<div>
 			<h2>Reply</h2><br>
 			<div>
+		<%
+			if(session.getAttribute("user")!=null){
+		%>
 				<div>
 					작성자 <input type='text' name='replyer' id='replyer'>
 				</div>
@@ -219,6 +232,9 @@ function getPageList(page){
 					내용  &nbsp;&nbsp;&nbsp;<input type='text' name="replytext" id='replytext'>
 				</div><br>
 				<button id="replyAddBtn">확인</button>
+		<%
+			}
+		%>
 			</div>
 		</div><br>
 		<div class="reply_box">

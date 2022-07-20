@@ -44,9 +44,15 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<%
+			if(session.getAttribute("user")!=null){
+		%>	       
 		<div class="bt_box">
 		<button class="board_insert">글쓰기</button>
 		</div><br>
+		<%
+			}
+		%>
 		<div class="pagination">
 	    	<c:if test="${pageMaker.page !=1}">
 	    		<a href='select${pageMaker.makeSearch(1)}'>&laquo;</a>
