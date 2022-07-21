@@ -449,6 +449,10 @@ border-radius: 5px;
 
 /* 마이페이지 */
 
+.myPage a{
+	text-decoration: none;
+}
+
 /* .myPage1,
 .myPage2 {
 	width: 1100px;

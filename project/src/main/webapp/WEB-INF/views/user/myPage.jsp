@@ -7,12 +7,17 @@
 	<%@include file="../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>마이페이지</h1><br>
-		<ul>
-			<li><a href="/project/user/information?userNum=${userNum }">내 정보</a></li>
-			<li><a href="/project/content/inbody?userNum=${userNum }">인바디</a></li>
-		</ul>
-		
+		<h1>마이페이지</h1>
+		<div class="myPage">
+			<table id='customers' border="1" style="width: 500px;">
+				<tr>
+					<td><a href="/project/user/information?userNum=${userNum }">내 정보</a></td>
+				</tr>
+				<tr>
+					<td><a href="/project/content/inbody?userNum=${userNum }">인바디</a></td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	
 	<%@include file="../include/footer.jsp"%>
