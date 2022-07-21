@@ -91,63 +91,29 @@ public class UserController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value = "/adminList", method = RequestMethod.GET)
-	public void adminList(Model model) throws Exception {
-		
-		model.addAttribute("list", service.userList());
-	}
-	
-	@RequestMapping(value = "/adminDelete", method = RequestMethod.POST)
-	public String adminDelete(int userNum, RedirectAttributes rttr) throws Exception {
-		
-		service.userDelete(userNum);
-		rttr.addFlashAttribute("msg", "success");
-		
-		return "redirect:/user/adminList";
-	}
-	
-	@RequestMapping(value = "/adminDetail", method = RequestMethod.GET)
-	public void adminDetail(int userNum, Model model) throws Exception {
-		model.addAttribute(service.userDetail(userNum));
-	}
-	
-	@RequestMapping(value = "/adminUpdate", method = RequestMethod.GET)
-	public void adminUpdateGET(int userNum, Model model) throws Exception {
-		model.addAttribute(service.userDetail(userNum));
-	}		
-	@RequestMapping(value = "/adminUpdate", method = RequestMethod.POST)
-	public String adminUpdatePOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
-		
-		service.userUpdate(dto);
-		
-		rttr.addFlashAttribute("msg", "success");
-
-		return "redirect:/user/adminList";
-	}
-	
-	@RequestMapping(value = "/userPage", method = RequestMethod.GET)
-	public void userPage(int userNum, Model model) throws Exception {
+	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
+	public void myPage(int userNum, Model model) throws Exception {
 		
 		model.addAttribute(service.userDetail(userNum));
 	}
 	
-	@RequestMapping(value = "/userUpdate", method = RequestMethod.GET)
-	public void userUpdateGET(int userNum, Model model) throws Exception {
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public void updateGET(int userNum, Model model) throws Exception {
 		model.addAttribute(service.userDetail(userNum));
 		System.out.println(userNum);
 	}		
 	
-	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
-	public String userUpdatePOST(UserDTO dto,int userNum, Model model, RedirectAttributes rttr) throws Exception {
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public String updatePOST(UserDTO dto,int userNum, Model model, RedirectAttributes rttr) throws Exception {
 		
 		service.userUpdate(dto);
 		rttr.addFlashAttribute("msg", "success");
 
-		return "redirect:/user/userPage?userNum="+userNum;
+		return "redirect:/user/myPage?userNum="+userNum;
 	}
 	
-	@RequestMapping(value = "/userDelete", method = RequestMethod.POST)
-	public String userDelete(int userNum, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public String delete(int userNum, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 		
 		service.userDelete(userNum);
 		

@@ -59,10 +59,10 @@
 			self.location = "detail?bno=${boardDTO.bno}";
 		});
 		$(".admin_update").on("click", function() {
-			self.location = "adminUpdate?userNum=${userDTO.userNum}";
+			self.location = "update?userNum=${userDTO.userNum}";
 		});
 		$(".user_update").on("click", function() {
-			self.location = "userUpdate?userNum=${userDTO.userNum}";
+			self.location = "update?userNum=${userDTO.userNum}";
 		});
 	});
 </script>
@@ -89,13 +89,13 @@
 		}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="/project/user/adminList">회원 관리</a></li>
+                <li><a href="/project/admin/list">회원 관리</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}else{
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="/project/user/userPage?userNum=${userNum }">마이페이지</a></li>
+                <li><a href="/project/user/myPage?userNum=${userNum }">마이페이지</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}
@@ -111,7 +111,7 @@
                 <li><a href="/project/content/ex_recomm/ex_recomm">AI 운동 추천</a></li>
                 <li><a href="/project/content/membership">멤버쉽</a></li>
                 <li><a href="/project/content/trainer">트레이너</a></li>
-                <li><a href="/project/board/select">자유게시판</a></li>
+                <li><a href="/project/board/list">자유게시판</a></li>
                 <li><a href="/project/content/gym">내 주변 헬스장 찾기</a></li>
                 <li>
                     <div class="searchBox">

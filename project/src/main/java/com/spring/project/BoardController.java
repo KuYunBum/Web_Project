@@ -38,8 +38,8 @@ public class BoardController {
 	private ReplyService rs;
 
 	
-	@RequestMapping(value = "/select", method = RequestMethod.GET)
-	public void select(PageMaker pm, Model model) throws Exception {
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public void list(PageMaker pm, Model model) throws Exception {
 
 	model.addAttribute("list",service.listSearchCriteria(pm));
 	pm.setTotalCount(service.listSearchCount(pm));
@@ -59,7 +59,7 @@ public class BoardController {
 		service.insert(dto);
 		
 		rttr.addFlashAttribute("msg", "success");
-		return "redirect:/board/select";
+		return "redirect:/board/list";
 	}
 	
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
@@ -88,7 +88,7 @@ public class BoardController {
 		
 		rttr.addFlashAttribute("msg", "success");
 	
-		return "redirect:/board/select";
+		return "redirect:/board/list";
 	}
 	
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -103,7 +103,7 @@ public class BoardController {
 	
 		rttr.addFlashAttribute("msg", "success");
 	
-		return "redirect:/board/select";
+		return "redirect:/board/list";
 	}
 	
 	

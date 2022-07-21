@@ -55,26 +55,26 @@
 		%>
 		<div class="pagination">
 	    	<c:if test="${pageMaker.page !=1}">
-	    		<a href='select${pageMaker.makeSearch(1)}'>&laquo;</a>
+	    		<a href='list${pageMaker.makeSearch(1)}'>&laquo;</a>
 	    	</c:if>
 	    	<c:if test="${pageMaker.prev }">
-	    		<a href='select${pageMaker.makeSearch(pageMaker.startPage-1)}'>&lt;</a>
+	    		<a href='list${pageMaker.makeSearch(pageMaker.startPage-1)}'>&lt;</a>
 	    	</c:if>
 	    	
 	    	<c:forEach begin="${pageMaker.startPage }" end="${ pageMaker.endPage}" var="idx">
-	    		<a href='select${pageMaker.makeSearch(idx)}' 
+	    		<a href='list${pageMaker.makeSearch(idx)}' 
 	    		 <c:out value="${pageMaker.page==idx?' class=active ':'' }"/> >
 	    		 ${idx}</a>
 	    	</c:forEach>
 	    	
 	    	<c:if test="${pageMaker.next }">
-	    		<a href='select${pageMaker.makeSearch(pageMaker.endPage+1)}'>&gt;</a>
+	    		<a href='list${pageMaker.makeSearch(pageMaker.endPage+1)}'>&gt;</a>
 	    		
 	    	</c:if>
 	    	
 	    	
 	    	<c:if test="${pageMaker.page != pageMaker.totalEndPage}">
-	    		<a href='select${pageMaker.makeSearch(pageMaker.totalEndPage)}'>&raquo;</a>
+	    		<a href='list${pageMaker.makeSearch(pageMaker.totalEndPage)}'>&raquo;</a>
 	    	</c:if>
 	    	
 	    </div>

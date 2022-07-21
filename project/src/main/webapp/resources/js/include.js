@@ -11,7 +11,7 @@
 		});
 		
 		$(".board_list").on("click", function(){
-			self.location = "/project/board/select";
+			self.location = "/project/board/list";
 		});
 		
 		$(".board_insert").on("click", function() {
@@ -24,20 +24,20 @@
 		});
 		
 		$(".admin_insert").on("click", function() {
-			location.href = "/project/user/adminInsert"
+			location.href = "/project/admin/insert"
 		});
 		
 		$(".admin_delete").on("click", function() {
-			formObj.attr("action", "/project/user/adminDelete");
+			formObj.attr("action", "/project/admin/delete");
 			formObj.submit();
 		});
 		
 		$(".admin_list").on("click", function() {
-			location.href = "/project/user/adminList"
+			location.href = "/project/admin/list"
 		});
 		
 		$(".user_delete").on("click", function() {
-			formObj.attr("action", "/project/user/userDelete");
+			formObj.attr("action", "/project/user/delete");
 			formObj.submit();
 		});
 		
@@ -67,17 +67,6 @@
 	        });
           });
         });
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
         
         
         
