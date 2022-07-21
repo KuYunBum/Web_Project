@@ -7,19 +7,19 @@ public class InbodyDTO {
 	private	String userGender;
 	private	Date userBirth;
 	private	Date inbodyDate;
-	private	double height;
-	private	double weight;
-	private	double skeletalMuscleMass;
-	private	double bodyFatMass;
-	private	double bodyWater;
-	private	double protein;
-	private	double muscleMass;
-	private	double leanBodyMass;
-	private	double minerals;
-	private	double BMI;
-	private	double waistHipRatio;
-	private	double BMR;
-	private String bodyShape;
+	private	double height;				//키
+	private	double weight;				//몸무게
+	private	double skeletalMuscleMass;	//골격근량
+	private	double bodyFatMass;			//체지방량
+	private	double bodyWater;			//체수분
+	private	double protein;				//단백질
+	private	double muscleMass;			//근육량
+	private	double leanBodyMass;		//제지방량
+	private	double minerals;			//무기질
+	private	double BMI;					//체질량지수
+	private	double waistHipRatio;		//복부지방률
+	private	double BMR;					//기초대사량
+	private String bodyShape;			//체형
 	
 	public int getUserNum() {
 		return userNum;

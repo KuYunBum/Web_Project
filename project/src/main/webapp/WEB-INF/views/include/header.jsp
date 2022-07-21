@@ -95,7 +95,7 @@
 		}else{
 		out.print(String.valueOf(session.getAttribute("user"))+" 님");
     %>
-                <li><a href="/project/user/myPage?userNum=${userNum }">마이페이지</a></li>
+                <li><a href="/project/user/myPage">마이페이지</a></li>
                 <li><a href="/project/user/logout">로그아웃</a></li>
     <%
 		}

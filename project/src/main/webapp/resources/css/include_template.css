@@ -116,7 +116,7 @@
     padding: 30px;
     width: 85%;
     height: 200px;
-/*     background-color: aqua; */
+    clear:left;
 }
 .topBtn, .btn{
     position: fixed;

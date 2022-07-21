@@ -81,4 +81,9 @@ public class ContentController {
 		
 	}
 	
+	@RequestMapping(value = "/inbody", method = RequestMethod.GET)
+	public void inbodyGET() throws Exception {
+
+	}
+	
 }
