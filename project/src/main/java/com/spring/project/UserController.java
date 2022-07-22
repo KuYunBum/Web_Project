@@ -1,6 +1,9 @@
 package com.spring.project;
 
 
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -8,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -70,23 +74,33 @@ public class UserController {
 	@RequestMapping(value = "/joinForm", method = RequestMethod.POST)
 	public String joinFormPOST(@RequestParam("userID") String userID, UserDTO dto, RedirectAttributes rttr) throws Exception {
 		
-		
-		if(dto.getUserID()!=null&&dto.getUserPW()!=null&&dto.getUserName()!=null&&dto.getUserGender()!=null&&dto.getUserBirth()!=null&&
-				dto.getUserPhone()!=null&&dto.getUserEmail()!=null) {
-			
-			UserDTO dtos = service.idCheck(userID);
-			
-			if(dtos!=null) {
-				System.out.println(dtos);
-				rttr.addFlashAttribute("msg", "overlap");
-			}else {
-				service.userJoin(dto);
-				rttr.addFlashAttribute("msg", "success");
+		try {
+			if (dto.getUserID() == null || dto.getUserPW() == null || dto.getUserName() == null
+					|| dto.getUserGender() == null || dto.getUserBirth() == null || dto.getUserPhone() == null
+					|| dto.getUserEmail() == null) {
+	
+				rttr.addFlashAttribute("msg", "fail2");
+				return "redirect:/user/joinForm";
+				
+			} else {
+				UserDTO dtos = service.idCheck(userID);
+				if (dtos!=null) {
+					rttr.addFlashAttribute("msg", "overlap");
+				} else {
+					service.userJoin(dto);
+					rttr.addFlashAttribute("msg", "success");
+				}
 			}
-		}else {
+		}catch (DataIntegrityViolationException e) {
+			System.out.println("입력안된 사항");
 			rttr.addFlashAttribute("msg", "fail2");
 			return "redirect:/user/joinForm";
+		}catch (Exception e) {
+			System.out.println("아이디 중복");
+			rttr.addFlashAttribute("msg", "overlap");
+			return "redirect:/user/joinForm";
 		}
+		
 		
 		return "redirect:/";
 	}
