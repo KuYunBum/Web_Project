@@ -19,6 +19,12 @@
 					<td>${inbodyDTO.inbodyDate}</td>
 				</tr>
 				<tr>
+					<th>성별</th>
+				</tr>
+				<tr>
+					<td>${inbodyDTO.gender}</td>
+				</tr>
+				<tr>
 					<th>키</th>
 				</tr>
 				<tr>
