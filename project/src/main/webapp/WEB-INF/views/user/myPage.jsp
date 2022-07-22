@@ -14,7 +14,7 @@
 					<td><a href="/project/user/information?userNum=${userNum }">내 정보</a></td>
 				</tr>
 				<tr>
-					<td><a href="/project/content/inbody?userNum=${userNum }">인바디</a></td>
+					<td><a href="/project/content/inbody/detail?userNum=${userNum }">인바디</a></td>
 				</tr>
 			</table>
 		</div>

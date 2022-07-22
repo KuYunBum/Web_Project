@@ -66,6 +66,12 @@
 		$(".user_update").on("click", function() {
 			self.location = "update?userNum=${userDTO.userNum}";
 		});
+		$(".inbody_update").on("click", function() {
+			self.location = "update?userNum=${userNum}";
+		});
+		$(".inbody_insert").on("click", function() {
+			location.href = "/project/content/inbody/insert?userNum=${userNum}"
+		});
 	});
 </script>
 </head>

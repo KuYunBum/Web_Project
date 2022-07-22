@@ -40,7 +40,7 @@
 			formObj.attr("action", "/project/user/delete");
 			formObj.submit();
 		});
-		
+
 		
 
 		

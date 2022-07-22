@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
-	<%@include file="../include/header.jsp"%>
+	<%@include file="../../include/header.jsp"%>
 	
 	<div class="main">
 		<h1>인바디</h1>
@@ -104,10 +104,10 @@
 				</tr>
 			</table>
 		<div class="bt_box">
-			<button type="submit" class="">입력</button>
-			<button type="button" class="">수정</button>
-			<button onclick="location.href='/project/'">홈</button>
+			<button type="submit" class="inbody_insert">입력</button>
+			<button type="button" class="inbody_update">수정</button>
+			<button onclick="location.href='/project/user/myPage'">뒤로</button>
 		</div>
 	</div>
 		
-	<%@include file="../include/footer.jsp"%>
+	<%@include file="../../include/footer.jsp"%>
