@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="/project/resources/css/include_template.css">
 <link rel="stylesheet" href="/project/resources/css/template.css" />
+<!-- <link rel="stylesheet" href="/project/resources/css/bootstrap.css"> -->
+<script src="/project/resources/js/bootstrap.js"></script>
 <script src="/project/resources/js/include.js"></script>
 <script>
 	var result = '${msg}';
