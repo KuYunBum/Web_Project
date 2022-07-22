@@ -9,7 +9,7 @@
 	<div class="main">
 		<h1>마이페이지</h1>
 		<div class="myPage">
-			<table id='customers' border="1" style="width: 500px;">
+			<table id='customers' border="1" style="width: 300px;">
 				<tr>
 					<td><a href="/project/user/information?userNum=${userNum }">내 정보</a></td>
 				</tr>
