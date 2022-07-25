@@ -30,6 +30,9 @@
 	if (result == 'fail2') {
 		alert("입력안된 사항이 있습니다.");
 	}
+	if (result == 'fail3') {
+		alert("이미 입력 하셨습니다.");
+	}
 	if (result == 'LoginRequired') {
 		alert("로그인이 필요합니다.");
 	}
@@ -70,7 +73,7 @@
 			self.location = "update?userNum=${userNum}";
 		});
 		$(".inbody_insert").on("click", function() {
-			location.href = "/project/content/inbody/insert?userNum=${userNum}"
+			self.location = "insert?userNum=${userNum}"
 		});
 	});
 </script>

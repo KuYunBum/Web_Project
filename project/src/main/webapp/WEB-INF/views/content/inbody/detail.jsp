@@ -16,13 +16,14 @@
 					<th>측정 날짜</th>
 				</tr>
 				<tr>
-					<td>${inbodyDTO.inbodyDate}</td>
+					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+							value="${inbodyDTO.inbodyDate}" /></td>
 				</tr>
 				<tr>
 					<th>성별</th>
 				</tr>
 				<tr>
-					<td>${inbodyDTO.gender}</td>
+					<td>${inbodyDTO.userGender}</td>
 				</tr>
 				<tr>
 					<th>키</th>

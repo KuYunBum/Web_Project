@@ -1,6 +1,5 @@
 package com.spring.project;
 
-import java.lang.ProcessBuilder.Redirect;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -15,12 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.spring.dto.BoardDTO;
 import com.spring.dto.InbodyDTO;
 import com.spring.service.ContentService;
-import com.spring.vo.PageMaker;
+import com.spring.service.UserService;
 
-import oracle.net.nt.SdpNTAdapter;
 
 
 @Controller
@@ -32,7 +29,8 @@ public class ContentController {
 	
 	@Inject
 	private ContentService service;
-	
+	@Inject
+	private UserService us;
 	
 	
 	@RequestMapping(value = "/ex_recomm/ex_recomm", method = RequestMethod.GET)
@@ -64,9 +62,8 @@ public class ContentController {
 	}
 	
 	@RequestMapping(value = "/membership", method = RequestMethod.GET)
-	public String membership() throws Exception {
+	public void membership() throws Exception {
 		
-		return "/content/membership";
 	}
 	
 	@RequestMapping(value = "/trainer", method = RequestMethod.GET)
@@ -86,14 +83,18 @@ public class ContentController {
 	
 	// 인바디
 	@RequestMapping(value = "/inbody/detail", method = RequestMethod.GET)
-	public void inbodyGET() throws Exception {
+	public void inbodyGET(int userNum, Model model) throws Exception {
+		
+		if((service.detail(userNum))!=null) {
+			model.addAttribute(service.detail(userNum));
+		}
 		
 	}
 	
 	@RequestMapping(value = "/inbody/insert", method = RequestMethod.GET)
-	public void inbodyInsertGET() throws Exception {
+	public void inbodyInsertGET(int userNum, Model model) throws Exception {
 		
-		
+			model.addAttribute(us.userDetail(userNum));
 	}
 	
 	@RequestMapping(value = "/inbody/insert", method = RequestMethod.POST)
@@ -102,13 +103,15 @@ public class ContentController {
 		service.insert(dto);
 		rttr.addFlashAttribute("msg", "success");
 		
-		return "redirect:/inbody/detail?userNum=" + userNum;
+		return "redirect:/content/inbody/detail?userNum=" + userNum;
 	}
 	
 	@RequestMapping(value = "/inbody/update", method = RequestMethod.GET)
 	public void inbodyUpdateGET(int userNum, Model model) throws Exception {
 		
-		model.addAttribute(service.detail(userNum));
+		if((service.detail(userNum))!=null) {
+			model.addAttribute(service.detail(userNum));
+		}
 	}
 	
 	@RequestMapping(value = "/inbody/update", method = RequestMethod.POST)
@@ -117,7 +120,7 @@ public class ContentController {
 		service.update(dto);
 		rttr.addFlashAttribute("msg", "success");
 		
-		return "redirect:/inbody/detail?userNum=" + userNum;
+		return "redirect:/content/inbody/detail?userNum=" + userNum;
 	}
 	
 	

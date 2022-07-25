@@ -5,7 +5,7 @@ import java.util.Date;
 public class InbodyDTO {
 	private	int userNum;
 	private	String userGender;
-	private	Date userBirth;
+//	private	Date userBirth;
 	private	Date inbodyDate;
 	private	double height;				//키
 	private	double weight;				//몸무게
@@ -33,12 +33,12 @@ public class InbodyDTO {
 	public void setUserGender(String userGender) {
 		this.userGender = userGender;
 	}
-	public Date getUserBirth() {
-		return userBirth;
-	}
-	public void setUserBirth(Date userBirth) {
-		this.userBirth = userBirth;
-	}
+//	public Date getUserBirth() {
+//		return userBirth;
+//	}
+//	public void setUserBirth(Date userBirth) {
+//		this.userBirth = userBirth;
+//	}
 	public Date getInbodyDate() {
 		return inbodyDate;
 	}
@@ -125,7 +125,7 @@ public class InbodyDTO {
 	}
 	@Override
 	public String toString() {
-		return "InbodyDTO [userNum=" + userNum + ", userGender=" + userGender + ", userBirth=" + userBirth
+		return "InbodyDTO [userNum=" + userNum + ", userGender=" + userGender
 				+ ", inbodyDate=" + inbodyDate + ", height=" + height + ", weight=" + weight + ", skeletalMuscleMass="
 				+ skeletalMuscleMass + ", bodyFatMass=" + bodyFatMass + ", bodyWater=" + bodyWater + ", protein="
 				+ protein + ", muscleMass=" + muscleMass + ", leanBodyMass=" + leanBodyMass + ", minerals=" + minerals

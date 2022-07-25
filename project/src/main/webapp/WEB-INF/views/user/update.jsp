@@ -27,37 +27,37 @@
 					<th>비밀번호</th>
 				</tr>
 				<tr>
-					<td ><input style="width:80%" type="text" name="userPW" value="${userDTO.userPW}"></td>
+					<td ><input style="width:80%; height:30px;" type="text" name="userPW" value="${userDTO.userPW}"></td>
 				</tr>
 				<tr>
 					<th>이름</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userName" value="${userDTO.userName}"></td>
+					<td><input style="width:80%; height:30px;" type="text" name="userName" value="${userDTO.userName}"></td>
 				</tr>
 				<tr>
 					<th>성별</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userGender" value="${userDTO.userGender}"></td>
+					<td><input style="width:80%; height:30px;" type="text" name="userGender" value="${userDTO.userGender}"></td>
 				</tr>
 				<tr>
 					<th>생년월일</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userBirth" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}"/>"></td>
+					<td><input style="width:80%; height:30px;" type="text" name="userBirth" value="<fmt:formatDate pattern="yyyy-MM-dd" value="${userDTO.userBirth}"/>"></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userPhone" value="${userDTO.userPhone}"></td>
+					<td><input style="width:80%; height:30px;" type="text" name="userPhone" value="${userDTO.userPhone}"></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
 				</tr>
 				<tr>
-					<td><input style="width:80%" type="text" name="userEmail" value="${userDTO.userEmail}"></td>
+					<td><input style="width:80%; height:30px;" type="text" name="userEmail" value="${userDTO.userEmail}"></td>
 				</tr>
 			</table>
 		</form>

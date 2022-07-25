@@ -35,7 +35,6 @@ public class BoardController {
 	
 	@Inject
 	private BoardService service;
-	private ReplyService rs;
 
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)

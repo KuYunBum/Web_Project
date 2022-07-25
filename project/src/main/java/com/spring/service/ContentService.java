@@ -11,5 +11,4 @@ public interface ContentService {
 	
 	public void update(InbodyDTO dto) throws Exception;
 	
-
 }

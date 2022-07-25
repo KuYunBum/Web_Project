@@ -10,5 +10,4 @@ public interface ContentDAO {
 	
 	public void update(InbodyDTO dto) throws Exception;
 	
-
 }

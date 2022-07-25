@@ -1,14 +1,11 @@
 package com.spring.project;
 
 
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;

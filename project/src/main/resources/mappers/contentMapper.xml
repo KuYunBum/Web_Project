@@ -7,12 +7,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <insert id="insert">
 	insert into 
-		inbody (userNum, userGender, userBirth, inbodyDate, height,
-			weight, skseletalMuscleMass, bodyFatMass, bodyWater,
+		inbody (userNum, userGender, height,
+			weight, skeletalMuscleMass, bodyFatMass, bodyWater,
 			protein, muscleMass, leanBodyMass, minerals, BMI,
 			waistHipRatio, BMR, bodyShape)
-	values (#{userNum}, #{userGender}, #{userBirth}, #{inbodyDate},
-			#{height}, #{weight}, #{skseletalMuscleMass}, #{bodyFatMass},
+	values (#{userNum}, #{userGender},
+			#{height}, #{weight}, #{skeletalMuscleMass}, #{bodyFatMass},
 			#{bodyWater}, #{protein}, #{muscleMass}, #{leanBodyMass}, #{minerals},
 			#{BMI}, #{waistHipRatio}, #{BMR}, #{bodyShape})
 </insert>
@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select 
 		* 
 	from 
-		inbody 
+		inbody
 	where 
 		userNum = #{userNum} 
 </select>
@@ -31,8 +31,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	update 
 		inbody 
 	set 
-		userGender = #{userGender}, userBirth = #{userBirth}, inbodyDate = #{inbodyDate},
-			height = #{height}, weight = #{weight}, skseletalMuscleMass = #{skseletalMuscleMass}, 
+			height = #{height}, weight = #{weight}, skeletalMuscleMass = #{skeletalMuscleMass}, 
 			bodyFatMass= #{bodyFatMass}, bodyWater = #{bodyWater}, protein = #{protein}, 
 			muscleMass = #{muscleMass}, leanBodyMass = #{leanBodyMass}, minerals = #{minerals},
 			BMI = #{BMI}, waistHipRatio = #{waistHipRatio}, BMR = #{BMR}, bodyShape = #{bodyShape}

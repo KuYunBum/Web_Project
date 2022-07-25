@@ -10,24 +10,90 @@
 		<h1>글 쓰기</h1>
 		<!-- action에 경로가 없으면 현재 페이지 주소로 이동한다.-->
 		<form role="form" method="post">
-			<table id='customers' border="1">
+			<table id='customers' border="1" style="width: 500px;">
 				<tr>
-					<th>작성자</th>
+					<th>성별</th>
 				</tr>
 				<tr>
-					<td><input type="text" name="writer" placeholder="내용 입력"	style="width: 100%; height: 30px;"></td>
+					<td><input type="text" name='userGender' style="width:80%" value="${userDTO.userGender}"></td>
 				</tr>
 				<tr>
-					<th>제목</th>
+					<th>키</th>
 				</tr>
 				<tr>
-					<td><input type="text" name='title' placeholder="내용 입력" style="width: 100%; height: 30px;"></td>
+					<td><input type="text" name='height' placeholder="내용 입력" style="width:80%"></td>
 				</tr>
 				<tr>
-					<th>내용</th>
+					<th>몸무게</th>
 				</tr>
 				<tr>
-					<td><textarea name="content" rows="8" style="width: 100%" placeholder="내용 입력"></textarea></td>
+					<td><input type="text" name='weight' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>골격근량</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='skeletalMuscleMass' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>체지방량</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='bodyFatMass' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>체수분</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='bodyWater' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>단백질</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='protein' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>근육량</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='muscleMass' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>제지방량</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='leanBodyMass' placeholder="내용 입력"	style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>무기질</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='minerals' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>체질량지수(BMI)</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='BMI' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>복부지방률</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='waistHipRatio' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>기초대사량(BMR)</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='BMR' placeholder="내용 입력" style="width:80%"></td>
+				</tr>
+				<tr>
+					<th>체형</th>
+				</tr>
+				<tr>
+					<td><input type="text" name='bodyShape' placeholder="내용 입력" style="width:80%"></td>
 				</tr>
 			</table>
 		</form>
