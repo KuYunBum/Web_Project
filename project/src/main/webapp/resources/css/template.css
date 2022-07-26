@@ -880,20 +880,53 @@ border-radius: 5px;
 
 .help {
 	width: 1300px;
+	height: 800px;
 	margin: auto;
 	display: flex;
 	position: relative;
+	border: 0.5px solid;
 }
 
-.help_1{
-	width: 1300px;
-	height: 800px;
-	border: 0.5px solid;
-	margin: 10px; 
-} 
+.help_service_title {
+	overflow: hidden;
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
 
-.help_1 p {
-	position: relative;
- 	top: 50%;
- 	font-size: 30px;
+.help_service_title h3 {
+	line-height: 3rem;
+	color: #222;
+	font-size: 2.6rem;
+	letter-spacing: -.81px
+}
+
+.help_service_list {
+	display: inline-block;
+	width: 16.66%;
+	margin-top: 36px;
+	vertical-align: top;
+}
+
+.help_service_list a {
+	text-decoration: none;
+}
+
+.help_service_list a:visited { 
+	color: #c71d44;
+}
+
+.help_service_list img {
+	width: 96px;
+	height: 96px;
+}
+
+.help_service_list .help_service_list_text {
+	display: block;
+	padding: 16px 4px 0;
+	line-height: 20px;
+	text-align: center;
+	font-size: 18px;
+	color: #222;
+	letter-spacing: -.5px
 }
