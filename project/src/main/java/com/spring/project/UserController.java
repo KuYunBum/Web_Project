@@ -59,8 +59,14 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public void logout() throws Exception {
+	public String logout(HttpServletRequest request, RedirectAttributes rttr) throws Exception {
 		
+		HttpSession session = request.getSession();
+		session.removeAttribute("user");
+		session.removeAttribute("userNum");
+		rttr.addFlashAttribute("msg", "logout");
+		
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
