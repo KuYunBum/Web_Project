@@ -825,6 +825,10 @@ border-radius: 5px;
 
 /* 헬스장 찾기 */
 
+.center {
+	margin-top: 150px;
+}
+
 .gym {
 	width: 1300px;
 	margin: auto;
