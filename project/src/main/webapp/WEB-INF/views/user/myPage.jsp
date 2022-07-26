@@ -7,7 +7,7 @@
 	<%@include file="../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>마이페이지</h1>
+		<h1>마이페이지</h1><br><br>
  		<form role="form" method="post">
 			<input type='hidden' name='userNum' value="${userDTO.userNum}">
 		</form>
