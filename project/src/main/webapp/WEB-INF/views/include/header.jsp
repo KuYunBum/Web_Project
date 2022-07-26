@@ -125,15 +125,15 @@
                 <li><a href="/project/board/list">자유게시판</a></li>
                 <li><a href="/project/content/gym">내 주변 헬스장 찾기</a></li>
                 <li>
-                    <div class="searchBox">
-                        <!-- 수정해야함 -->
-                        <div class="search">
-                            <label>
-                                <input type="text" name="searchBar " placeholder="검색어 입력">
-                                <span class="material-symbols-outlined">search</span>
-                            </label>
-                        </div>
-                    </div>
+<!--                     <div class="searchBox"> -->
+<!--                         수정해야함 -->
+<!--                         <div class="search"> -->
+<!--                             <label> -->
+<!--                                 <input type="text" name="searchBar " placeholder="검색어 입력"> -->
+<!--                                 <span class="material-symbols-outlined">search</span> -->
+<!--                             </label> -->
+<!--                         </div> -->
+<!--                     </div> -->
                 </li>
             </ul>
         </div>

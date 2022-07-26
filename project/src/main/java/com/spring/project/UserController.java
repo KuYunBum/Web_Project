@@ -119,6 +119,11 @@ public class UserController {
 		model.addAttribute(service.userDetail(userNum));
 	}
 	
+	@RequestMapping(value = "/routineBox", method = RequestMethod.GET)
+	public void routineBox() throws Exception {
+		
+	}
+	
 	@RequestMapping(value = "/update", method = RequestMethod.GET)
 	public void updateGET(int userNum, Model model) throws Exception {
 		model.addAttribute(service.userDetail(userNum));
