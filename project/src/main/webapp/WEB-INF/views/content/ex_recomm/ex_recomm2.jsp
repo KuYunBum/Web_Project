@@ -17,10 +17,10 @@
 			</div>
 			<div class="ex_content_p2">
 				<div class=ex_content_p2_1>
-					<img src="/project/resources/image/health_2.JPG"><br>
+					<img src="/project/resources/image/ex/health_2.JPG"><br>
 				</div>
 				<div class=ex_content_p2_2>
-					<img src="/project/resources/image/health_3.JPG"><br>
+					<img src="/project/resources/image/ex/health_3.JPG"><br>
 				</div>
 				<button>시작하기</button>
 			</div>

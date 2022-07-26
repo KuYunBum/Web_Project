@@ -23,84 +23,84 @@
 						</li>
 						<li class="help_service_list">
 							<a href="#">
-								<img src="/project/resources/image/help/member_img.png" alt="메일">
-								<span class="help_service_list_text">메일</span>
+								<img src="/project/resources/image/help/medium.png" alt="medium">
+								<span class="help_service_list_text">medium</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a	href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="블로그">
+								<img src="/project/resources/image/help/houzz.png" alt="블로그">
 								<span class="help_service_list_text">블로그</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a	href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="카페">
-								<span class="help_service_list_text">카페</span>
+								<img src="/project/resources/image/help/instagram.png" alt="인스타그램">
+								<span class="help_service_list_text">인스타그램</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="지식iN">
-								<span class="help_service_list_text">지식iN</span>
+								<img src="/project/resources/image/help/google-play.png" alt="구글플레이">
+								<span class="help_service_list_text">구글플레이</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="eXpert">
-								<span class="help_service_list_text">eXpert</span>
+								<img src="/project/resources/image/help/skype.png" alt="스카이프">
+								<span class="help_service_list_text">스카이프</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="통합검색">
-								<span class="help_service_list_text">통합검색</span>
+								<img src="/project/resources/image/help/24_soundcould.png" alt="사운드클라우드">
+								<span class="help_service_list_text">사운드클라우드</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="MYBOX">
+								<img src="/project/resources/image/help/17_windows8.png" alt="MYBOX">
 								<span class="help_service_list_text">MYBOX</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="VIBE">
-								<span class="help_service_list_text">VIBE</span>
+								<img src="/project/resources/image/help/16_flickr.png" alt="flickr">
+								<span class="help_service_list_text">flickr</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png"	alt="네이버플러스 멤버십"> 
-								<span class="help_service_list_text">네이버플러스 멤버십</span></a></li>
+								<img src="/project/resources/image/help/04_dribbble.png" alt="드리블"> 
+								<span class="help_service_list_text">드리블</span></a></li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="시리즈">
-								<span class="help_service_list_text">시리즈</span>
+								<img src="/project/resources/image/help/behance.png" alt="behance">
+								<span class="help_service_list_text">behance</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="시리즈온">
-								<span class="help_service_list_text">시리즈온</span>
+								<img src="/project/resources/image/help/git.png" alt="깃">
+								<span class="help_service_list_text">깃</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="웹툰">
-								<span class="help_service_list_text">웹툰</span>
+								<img src="/project/resources/image/help/github.png" alt="깃허브">
+								<span class="help_service_list_text">깃허브</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png"	alt="스마트플레이스"> 
-								<span class="help_service_list_text">스마트플레이스</span>
+								<img src="/project/resources/image/help/medium2.png"	alt="미디움"> 
+								<span class="help_service_list_text">미디움</span>
 							</a>
 						</li>
 						<li class="help_service_list">
 							<a href="#"> 
-								<img src="/project/resources/image/help/member_img.png" alt="지도">
-								<span class="help_service_list_text">지도</span>
+								<img src="/project/resources/image/help/v-live.png" alt="브이라이브">
+								<span class="help_service_list_text">브이라이브</span>
 							</a>
 						</li>
 					</ul>

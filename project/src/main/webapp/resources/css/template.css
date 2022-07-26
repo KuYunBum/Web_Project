@@ -598,14 +598,6 @@ border-radius: 5px;
     border: 0.5px solid;
 }
 
-/* .logBox h1{ */
-/* 	margin: 50px auto; */
-/* } */
-
-/* .logInput{ */
-/*     margin-top: 50px; */
-/* } */
-
 .logInput input{
     width: 300px;
     height: 30px;
@@ -629,15 +621,15 @@ border-radius: 5px;
 	color: black;
 }
 
-.join{
+.login{
     padding:20px 20px; 
 }
-.join > a{
+.login > a{
     margin: 0 10px;
     color: black;
     text-decoration: none;
 }
-.join>a:hover{
+.login>a:hover{
     color: red;
 }
 
@@ -732,6 +724,22 @@ border-radius: 5px;
 }
 
 
+
+/* ID/PW 찾기 */
+
+.findAccountBox {
+	text-align: center;
+	margin: auto;
+    width: 30%;
+    height: 400px;
+    border: 0.5px solid;
+}
+
+.findAccount input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 
 
 /* 마이페이지 */

@@ -18,6 +18,8 @@
 <script src="/project/resources/js/include.js"></script>
 <script>
 	var result = '${msg}';
+	var ID = '${findID}';
+	var PW = '${findPW}';
 	if (result == 'success') {
 		alert("처리가 완료되었습니다.");
 	}
@@ -25,7 +27,7 @@
 		alert("중복되었습니다.");
 	}
 	if (result == 'fail1') {
-		alert("로그인 실패! 다시 확인해주세요.");
+		alert("다시 확인해주세요.");
 	}
 	if (result == 'fail2') {
 		alert("입력안된 사항이 있습니다.");
@@ -42,6 +44,10 @@
 	if (result == 'logout') {
 		alert("로그아웃 되었습니다.");
 	}
+	if (result == 'findAccount') {
+		alert(ID);
+	}
+	
 	
 	$(document).ready(function(){
 		

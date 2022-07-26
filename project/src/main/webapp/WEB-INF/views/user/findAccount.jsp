@@ -8,23 +8,21 @@
 	<%@include file="../include/header.jsp"%>
     
 	<div class="main">
-	    <div class="logBox">
+	    <div class="findAccountBox">
 		    <a href="/project/">
                 <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
             </a><br><br>
-		    <form action="/project/user/loginForm" method="post">
-		        <div class="logInput">
-		            ID : <input type="text" name="userID" placeholder=" ID 입력"><br>
-		            PW: <input type="password" name="userPW" placeholder=" PW 입력">
+		   <form action="/project/user/findAccount" method="post">
+		        <div class="findAccount">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        	<label for="userName">이름 :</label>
+		     		<input type="text" name="userName" placeholder=" 이름 입력"><br>
+		        	<label for="userPhone">전화번호 :</label>
+		           	<input type="password" name="userPhone" placeholder=" 전화번호 입력">
 		        </div>
 		        <div class="logBtn">
-		        	<input type="submit" value="로그인">
+		        	<input type="submit" value="ID/PW찾기">
 		        </div>
 	        </form>
-	        <div class="login">
-	            <a href="findAccount">ID 찾기/ PW 찾기</a>
-	            <a href="joinForm">회원가입</a>
-	        </div>
 	    </div>
 	</div>
 	

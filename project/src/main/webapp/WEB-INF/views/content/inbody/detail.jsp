@@ -86,7 +86,7 @@
 					</div><br><br>
 					<div class="ab3p">
 						<div class="ab3q"><h4>무기질</h4></div>
-						<div class="ab3t">$${inbodyDTO.minerals}</div>
+						<div class="ab3t">${inbodyDTO.minerals}</div>
 					</div><br><br>
 					<div class="ab3p">
 						<div class="ab3q"><h4>체질량지수(BMI)</h4></div>

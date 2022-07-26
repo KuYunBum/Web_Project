@@ -108,6 +108,31 @@ public class UserController {
 		return "redirect:/";
 	}
 	
+	
+	@RequestMapping(value = "/findAccount", method = RequestMethod.GET)
+	public void findAccountGET() throws Exception {
+
+	}
+	
+	@RequestMapping(value = "/findAccount", method = RequestMethod.POST)
+	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr, HttpServletRequest rq) throws Exception {
+		
+		UserDTO find = service.findAccount(dto);
+		if((find)!=null) {
+			System.out.println(find.getUserID());
+			System.out.println(find.getUserPW());
+			model.addAttribute("findID", find.getUserID());
+			model.addAttribute("findPW", find.getUserPW());
+			System.out.println(rq.getAttribute("findID"));
+			rttr.addFlashAttribute("msg", "findAccount");
+		}else {
+			rttr.addFlashAttribute("msg", "fail1");
+		}
+		
+		return "redirect:/user/loginForm";
+		
+	}
+	
 	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
 	public void myPage(int userNum, Model model) throws Exception {
 		

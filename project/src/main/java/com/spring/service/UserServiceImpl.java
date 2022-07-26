@@ -60,4 +60,10 @@ public class UserServiceImpl implements UserService{
 		return dao.userDetail(userNum);
 	}
 
+	@Override
+	public UserDTO findAccount(UserDTO dto) throws Exception {
+		UserDAO dao = sqlSession.getMapper(UserDAO.class);
+		return dao.findAccount(dto);
+	}
+
 }

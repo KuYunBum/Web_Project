@@ -8,102 +8,108 @@
 	<%@include file="../../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>내용 수정</h1>
+		<h1>인바디 수정</h1>
+		
+		<div class="myPageNav">
+			<ul>
+				<li>
+					<a href="/project/user/information?userNum=${userNum }">내 프로필</a>
+				</li>
+				<li>
+					<a href="/project/content/inbody/detail?userNum=${userNum }">인바디</a>
+				</li>
+				<li>
+					<a href="/project/user/routineBox?userNum=${userNum }">내 루틴 커스텀</a>
+				</li>
+				<li>
+					<a href="#">내 루틴 커스텀</a>
+				</li>
+			</ul>
+		</div>
+		
+		<hr style="width: 1300px; margin:auto;">
+		
 		<form role="form" method="post">
-			<table id='customers' border="1" style="width: 500px;">
-				<tr>
-					<th>측정 날짜</th>
-				</tr>
-				<tr>
-					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-							value="${inbodyDTO.inbodyDate}" /></td>
-				</tr>
-				<tr>
-					<th>성별</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.userGender}</td>
-				</tr>
-				<tr>
-					<th>키</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='height' style="width:80%; height:30px;" value="${inbodyDTO.height}"></td>
-				</tr>
-				<tr>
-					<th>몸무게</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='weight' style="width:80%; height:30px;" value="${inbodyDTO.weight}"></td>
-				</tr>
-				<tr>
-					<th>골격근량</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='skeletalMuscleMass' style="width:80%; height:30px;" value="${inbodyDTO.skeletalMuscleMass}"></td>
-				</tr>
-				<tr>
-					<th>체지방량</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='bodyFatMass' style="width:80%; height:30px;" value="${inbodyDTO.bodyFatMass}"></td>
-				</tr>
-				<tr>
-					<th>체수분</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='bodyWater' style="width:80%; height:30px;" value="${inbodyDTO.bodyWater}"></td>
-				</tr>
-				<tr>
-					<th>단백질</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='protein' style="width:80%; height:30px;" value="${inbodyDTO.protein}"></td>
-				</tr>
-				<tr>
-					<th>근육량</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='muscleMass' style="width:80%; height:30px;" value="${inbodyDTO.muscleMass}"></td>
-				</tr>
-				<tr>
-					<th>제지방량</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='leanBodyMass' style="width:80%; height:30px;" value="${inbodyDTO.leanBodyMass}"></td>
-				</tr>
-				<tr>
-					<th>무기질</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='minerals' style="width:80%; height:30px;" value="${inbodyDTO.minerals}"></td>
-				</tr>
-				<tr>
-					<th>체질량지수(BMI)</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='BMI' style="width:80%; height:30px;" value="${inbodyDTO.BMI}"></td>
-				</tr>
-				<tr>
-					<th>복부지방률</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='waistHipRatio' style="width:80%; height:30px;" value="${inbodyDTO.waistHipRatio}"></td>
-				</tr>
-				<tr>
-					<th>기초대사량(BMR)</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='BMR' style="width:80%; height:30px;" value="${inbodyDTO.BMR}"></td>
-				</tr>
-				<tr>
-					<th>체형</th>
-				</tr>
-				<tr>
-					<td><input type="text" name='bodyShape' style="width:80%; height:30px;" value="${inbodyDTO.bodyShape}"></td>
-				</tr>
-			</table>
+			<div class="myPageNav2">
+				<div class="leftContainer" >
+					<h3>프로필 사진</h3>
+					<div class="profillePhoto">
+						<img src="/project/resources/image/arnold.jpeg" >
+					</div>
+				</div>
+						
+				<div class="heightLine" ></div>
+				
+				<div class="rightContainer" >
+					<div class="rcText" >
+						<div class="ab3p">
+							<div class="ab3q"><h4>측정 날짜</h4></div>
+							<div class="ab3t"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+								value="${inbodyDTO.inbodyDate}" /></div>
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>성별</h4></div>
+							<div class="ab3t">${inbodyDTO.userGender}</div>
+						</div><br><br>
+						
+						<div class="ab3p">
+							<div class="ab3q"><h4>키</h4></div>
+							<input class="ab3t"  type="text" name='height' value="${inbodyDTO.height}">
+						</div><br><br>
+						
+						<div class="ab3p">
+							<div class="ab3q"><h4>몸무게</h4></div>
+							<input  class="ab3t" type="text" name='weight' value="${inbodyDTO.weight}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>골격근량</h4></div>
+							<input class="ab3t"  type="text" name='skeletalMuscleMass'  value="${inbodyDTO.skeletalMuscleMass}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>체지방량</h4></div>
+							<input class="ab3t"  type="text" name='bodyFatMass' value="${inbodyDTO.bodyFatMass}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>체수분</h4></div>
+							<input class="ab3t"  type="text" name='bodyWater' value="${inbodyDTO.bodyWater}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>단백질</h4></div>
+							<input class="ab3t"  type="text" name='protein' value="${inbodyDTO.protein}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>근육량</h4></div>
+							<input class="ab3t"  type="text" name='muscleMass' value="${inbodyDTO.muscleMass}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>제지방량</h4></div>
+							<input class="ab3t"  type="text" name='leanBodyMass' value="${inbodyDTO.leanBodyMass}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>무기질</h4></div>
+							<input class="ab3t"  type="text" name='minerals' value="${inbodyDTO.minerals}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>체질량지수(BMI)</h4></div>
+							<input class="ab3t"  type="text" name='BMI' value="${inbodyDTO.BMI}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>복부지방률</h4></div>
+							<input class="ab3t"  type="text" name='waistHipRatio' value="${inbodyDTO.waistHipRatio}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>기초대사량(BMR)</h4></div>
+							<input class="ab3t"  type="text" name='BMR' value="${inbodyDTO.BMR}">
+						</div><br><br>
+						<div class="ab3p">
+							<div class="ab3q"><h4>체형</h4></div>
+							<input class="ab3t"  type="text" name='bodyShape' value="${inbodyDTO.bodyShape}">
+						</div><br><br>
+					</div>
+				</div>
+			</div>
 		</form>
+			<hr style="width: 1300px; margin:auto;">
 		<div class="bt_box">
 			<button type="submit" class="bt_save">저장</button>
 			<button type="button" onclick="location.href='/project/content/inbody/detail?userNum=${userNum}'">뒤로</button>

@@ -27,13 +27,13 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="/project/resources/image/css.png">
+					<img src="/project/resources/image/ex/h1.jpg">
 				</div>
 				<div class="item">
-					<img src="/project/resources/image/javascript.png">
+					<img src="/project/resources/image/ex/h2.jpg">
 				</div>
 				<div class="item">
-					<img src="/project/resources/image/bootstrap.png">
+					<img src="/project/resources/image/ex/h3.jpg">
 				</div>
 			</div>
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">

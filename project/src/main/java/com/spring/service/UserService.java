@@ -20,4 +20,6 @@ public interface UserService {
 	public  void userUpdate(UserDTO dto) throws Exception;
 	
 	public void userDelete(int userNum) throws Exception;
+	
+	public UserDTO findAccount(UserDTO dto) throws Exception;
 }
