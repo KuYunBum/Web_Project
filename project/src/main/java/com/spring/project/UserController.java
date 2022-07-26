@@ -109,12 +109,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
-	public void myPage() throws Exception {
-		
-	}
-	
-	@RequestMapping(value = "/information", method = RequestMethod.GET)
-	public void information(int userNum, Model model) throws Exception {
+	public void myPage(int userNum, Model model) throws Exception {
 		
 		model.addAttribute(service.userDetail(userNum));
 	}

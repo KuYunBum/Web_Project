@@ -7,108 +7,115 @@
 	<%@include file="../../include/header.jsp"%>
 	
 	<div class="main">
-		<h1>인바디</h1>
-		<form role="form" method="post">
+		<h1>마이페이지</h1>
+ 		<form role="form" method="post">
 			<input type='hidden' name='userNum' value="${userDTO.userNum}">
 		</form>
-			<table id='customers' border="1" style="width: 500px;">
-				<tr>
-					<th>측정 날짜</th>
-				</tr>
-				<tr>
-					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-							value="${inbodyDTO.inbodyDate}" /></td>
-				</tr>
-				<tr>
-					<th>성별</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.userGender}</td>
-				</tr>
-				<tr>
-					<th>키</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.height}</td>
-				</tr>
-				<tr>
-					<th>몸무게</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.weight}</td>
-				</tr>
-				<tr>
-					<th>골격근량</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.skeletalMuscleMass}</td>
-				</tr>
-				<tr>
-					<th>체지방량</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.bodyFatMass}</td>
-				</tr>
-				<tr>
-					<th>체수분</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.bodyWater}</td>
-				</tr>
-				<tr>
-					<th>단백질</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.protein}</td>
-				</tr>
-				<tr>
-					<th>근육량</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.muscleMass}</td>
-				</tr>
-				<tr>
-					<th>제지방량</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.leanBodyMass}</td>
-				</tr>
-				<tr>
-					<th>무기질</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.minerals}</td>
-				</tr>
-				<tr>
-					<th>체질량지수(BMI)</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.BMI}</td>
-				</tr>
-				<tr>
-					<th>복부지방률</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.waistHipRatio}</td>
-				</tr>
-				<tr>
-					<th>기초대사량(BMR)</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.BMR}</td>
-				</tr>
-				<tr>
-					<th>체형</th>
-				</tr>
-				<tr>
-					<td>${inbodyDTO.bodyShape}</td>
-				</tr>
-			</table>
+		
+		<div class="myPageNav">
+			<ul>
+				<li>
+					<a href="/project/user/myPage?userNum=${userNum }">내 프로필</a>
+				</li>
+				<li>
+					<a href="/project/content/inbody/detail?userNum=${userNum }">인바디</a>
+				</li>
+				<li>
+					<a href="/project/user/routineBox?userNum=${userNum }">내 루틴 커스텀</a>
+				</li>
+				<li>
+					<a href="#">운동기록</a>
+				</li>
+			</ul>
+		</div>
+		
+		<hr style="width: 1300px; margin:auto;">
+
+		<div class="myPageNav2">
+			<div class="leftContainer" >
+				<h3>프로필 사진</h3>
+				<div class="profillePhoto">
+					<img src="/project/resources/image/arnold.jpeg" >
+				</div>
+			</div>
+					
+			<div class="heightLine" ></div>
+				
+			<div class="rightContainer" >
+				<div class="rcText" >
+					<div class="ab3p">
+						<div class="ab3q"><h4>측정 날짜</h4></div>
+						<div class="ab3t"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+							value="${inbodyDTO.inbodyDate}" /></div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>성별</h4></div>
+						<div class="ab3t">${inbodyDTO.userGender}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>키</h4></div>
+						<div class="ab3t">${inbodyDTO.height}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>몸무게</h4></div>
+						<div class="ab3t">${inbodyDTO.weight}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>골격근량</h4></div>
+						<div class="ab3t">${inbodyDTO.skeletalMuscleMass}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>체지방량</h4></div>
+						<div class="ab3t">${inbodyDTO.bodyFatMass}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>체수분</h4></div>
+						<div class="ab3t">${inbodyDTO.bodyWater}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>단백질</h4></div>
+						<div class="ab3t">${inbodyDTO.protein}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>근육량</h4></div>
+						<div class="ab3t">${inbodyDTO.muscleMass}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>제지방량</h4></div>
+						<div class="ab3t">${inbodyDTO.leanBodyMass}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>무기질</h4></div>
+						<div class="ab3t">$${inbodyDTO.minerals}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>체질량지수(BMI)</h4></div>
+						<div class="ab3t">${inbodyDTO.BMI}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>복부지방률</h4></div>
+						<div class="ab3t">${inbodyDTO.waistHipRatio}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>기초대사량(BMR)</h4></div>
+						<div class="ab3t">${inbodyDTO.BMR}</div>
+					</div><br><br>
+					<div class="ab3p">
+						<div class="ab3q"><h4>체형</h4></div>
+						<div class="ab3t">${inbodyDTO.bodyShape}</div>
+					</div><br><br>
+				</div>
+			</div>
+		</div>
+		
+		<hr style="width: 1300px; margin:auto;"><br>
+				
 		<div class="bt_box">
 			<button type="submit" class="inbody_insert">입력</button>
 			<button type="button" class="inbody_update">수정</button>
 			<button onclick="location.href='/project/user/myPage'">뒤로</button>
 		</div>
-	</div>
 		
+	</div>
+	
 	<%@include file="../../include/footer.jsp"%>
