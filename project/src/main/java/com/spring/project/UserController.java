@@ -118,9 +118,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/findAccount", method = RequestMethod.POST)
-	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr, HttpServletResponse response) throws Exception {
-		
-		PrintWriter out = response.getWriter();
+	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
 		
 		UserDTO find = service.findAccount(dto);
 		if((find)!=null) {
@@ -128,14 +126,11 @@ public class UserController {
 			String findPW = find.getUserPW();
 			System.out.println(findID);
 			System.out.println(findPW);
-//			out.print("<script>alert('asd'); </script>");
-			model.addAttribute("findID", findID);
-			model.addAttribute("findPW", findPW);
 			rttr.addFlashAttribute("msg", "findAccount");
 		}else {
 			rttr.addFlashAttribute("msg", "fail1");
 		}
-		
+		 
 		return "redirect:/user/findAccount";
 		
 	}

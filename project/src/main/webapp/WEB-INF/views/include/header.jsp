@@ -17,39 +17,39 @@
 <script src="/project/resources/js/bootstrap.js"></script>
 <script src="/project/resources/js/include.js"></script>
 <script>
-	var result = '${msg}';
-	var ID = '${findID}';
-	var PW = '${findPW}';
-	if (result == 'success') {
-		alert("처리가 완료되었습니다.");
-	}
-	if (result == 'overlap') {
-		alert("중복되었습니다.");
-	}
-	if (result == 'fail1') {
-		alert("다시 확인해주세요.");
-	}
-	if (result == 'fail2') {
-		alert("입력안된 사항이 있습니다.");
-	}
-	if (result == 'fail3') {
-		alert("이미 입력 하셨습니다.");
-	}
-	if (result == 'LoginRequired') {
-		alert("로그인이 필요합니다.");
-	}
-	if (result == 'login') {
-		alert("로그인 되었습니다.");
-	}
-	if (result == 'logout') {
-		alert("로그아웃 되었습니다.");
-	}
-	if (result == 'findAccount') {
-		alert(ID);
-	}
-	
-	
 	$(document).ready(function(){
+		var result = '${msg}';
+		var ID = '${findID}';
+		var PW = '${findPW}';
+		if (result == 'success') {
+			alert("처리가 완료되었습니다.");
+		}
+		if (result == 'overlap') {
+			alert("중복되었습니다.");
+		}
+		if (result == 'fail1') {
+			alert("다시 확인해주세요.");
+		}
+		if (result == 'fail2') {
+			alert("입력안된 사항이 있습니다.");
+		}
+		if (result == 'fail3') {
+			alert("이미 입력 하셨습니다.");
+		}
+		if (result == 'LoginRequired') {
+			alert("로그인이 필요합니다.");
+		}
+		if (result == 'login') {
+			alert("로그인 되었습니다.");
+		}
+		if (result == 'logout') {
+			alert("로그아웃 되었습니다.");
+		}
+		if (result == 'findAccount') {
+			alert("ID : "+ID+"  PW : "+PW);
+		}
+		
+	
 		
 		$('#searchBtn').on("click",function(event){
 // 		  alert("select"+'${pageMaker.makePage(1)}'
