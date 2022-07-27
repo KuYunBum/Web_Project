@@ -2,8 +2,11 @@ package com.spring.project;
 
 
 
+import java.io.PrintWriter;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -115,21 +118,25 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/findAccount", method = RequestMethod.POST)
-	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr, HttpServletRequest rq) throws Exception {
+	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr, HttpServletResponse response) throws Exception {
+		
+		PrintWriter out = response.getWriter();
 		
 		UserDTO find = service.findAccount(dto);
 		if((find)!=null) {
-			System.out.println(find.getUserID());
-			System.out.println(find.getUserPW());
-			model.addAttribute("findID", find.getUserID());
-			model.addAttribute("findPW", find.getUserPW());
-			System.out.println(rq.getAttribute("findID"));
+			String findID = find.getUserID();
+			String findPW = find.getUserPW();
+			System.out.println(findID);
+			System.out.println(findPW);
+//			out.print("<script>alert('asd'); </script>");
+			model.addAttribute("findID", findID);
+			model.addAttribute("findPW", findPW);
 			rttr.addFlashAttribute("msg", "findAccount");
 		}else {
 			rttr.addFlashAttribute("msg", "fail1");
 		}
 		
-		return "redirect:/user/loginForm";
+		return "redirect:/user/findAccount";
 		
 	}
 	

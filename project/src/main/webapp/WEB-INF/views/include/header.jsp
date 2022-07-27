@@ -96,7 +96,6 @@
             <ul>
                 <!-- 상단 메뉴 -->
 	<%
-		UserDTO dto = new UserDTO();
 		String user = String.valueOf(session.getAttribute("user"));
 		if(session.getAttribute("user")==null){
 	%>	                

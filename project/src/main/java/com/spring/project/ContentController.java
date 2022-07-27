@@ -60,6 +60,11 @@ public class ContentController {
 		
 	}
 	
+	@RequestMapping(value = "/ex_recomm/ex_recomm3", method = RequestMethod.GET)
+	public void ex_recomm3() throws Exception {
+		
+	}
+	
 	@RequestMapping(value = "/membership", method = RequestMethod.GET)
 	public void membership() throws Exception {
 		

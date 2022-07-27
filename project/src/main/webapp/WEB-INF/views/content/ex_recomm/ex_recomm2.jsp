@@ -11,7 +11,7 @@
 		<div class="ex_content">
 			<div class="ex_content_title">
 				<p>AI 추천 플랜</p>
-				<button>...</button><br>
+				<button onclick="">...</button><br>
 				<p>Day 1   등 가슴 코어 유산소</p>
 				<p>55분</p>
 			</div>
@@ -22,7 +22,7 @@
 				<div class=ex_content_p2_2>
 					<img src="/project/resources/image/ex/health_3.JPG"><br>
 				</div>
-				<button>시작하기</button>
+				<button onclick="location.href='/project/content/ex_recomm/ex_recomm3'">시작하기</button>
 			</div>
 		</div>
 	</div>
