@@ -128,6 +128,7 @@ public class UserController {
 			model.addAttribute("findPW", findPW);
 		}else {
 			model.addAttribute("findID", "해당 정보가 없습니다 다시 확인해주세요.");
+			return "/user/findAccount";
 		}
 		 
 		return "/user/loginForm";
