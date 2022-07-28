@@ -19,6 +19,8 @@
 <script>
 	$(document).ready(function(){
 		var result = '${msg}';
+		var ID = '${findID}';
+		var PW = '${findPW}';
 		if (result == 'success') {
 			alert("처리가 완료되었습니다.");
 		}
@@ -42,6 +44,9 @@
 		}
 		if (result == 'logout') {
 			alert("로그아웃 되었습니다.");
+		}
+		if (result == 'findAccount') {
+			alert("ID : "+ID+"  PW : "+PW);
 		}
 		
 	

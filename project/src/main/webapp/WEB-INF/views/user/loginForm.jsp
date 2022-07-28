@@ -14,8 +14,8 @@
             </a><br><br>
 		    <form action="/project/user/loginForm" method="post">
 		        <div class="logInput">
-		            ID : <input type="text" name="userID" placeholder=" ID 입력" value="${findID }"><br>
-		            PW: <input type="password" name="userPW" placeholder=" PW 입력" value="${findPW }">
+		            ID : <input type="text" name="userID" placeholder=" ID 입력"><br>
+		            PW: <input type="password" name="userPW" placeholder=" PW 입력">
 		        </div>
 		        <div class="logBtn">
 		        	<input type="submit" value="로그인">

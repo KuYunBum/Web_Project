@@ -15,7 +15,7 @@
 		   <form action="/project/user/findAccount" method="post">
 		        <div class="findAccount">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		        	<label for="userName">이름 :</label>
-		     		<input type="text" name="userName" placeholder=" 이름 입력" value="${findID }"><br>
+		     		<input type="text" name="userName" placeholder=" 이름 입력"><br>
 		        	<label for="userPhone">전화번호 :</label>
 		           	<input type="password" name="userPhone" placeholder=" 전화번호 입력">
 		        </div>

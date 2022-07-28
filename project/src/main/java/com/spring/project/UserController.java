@@ -116,7 +116,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/findAccount", method = RequestMethod.POST)
-	public String findAccountPOST(UserDTO dto, Model model) throws Exception {
+	public String findAccountPOST(UserDTO dto, Model model, RedirectAttributes rttr) throws Exception {
 		
 		UserDTO find = service.findAccount(dto);
 		if((find)!=null) {
@@ -124,14 +124,15 @@ public class UserController {
 			String findPW = find.getUserPW();
 			System.out.println(findID);
 			System.out.println(findPW);
-			model.addAttribute("findID", findID);
-			model.addAttribute("findPW", findPW);
+			rttr.addFlashAttribute("findID", findID);
+			rttr.addFlashAttribute("findPW", findPW);
+			rttr.addFlashAttribute("msg", "findAccount");
 		}else {
-			model.addAttribute("findID", "해당 정보가 없습니다 다시 확인해주세요.");
-			return "/user/findAccount";
+			rttr.addFlashAttribute("msg", "fail1");
+			return "redirect:/user/findAccount";
 		}
 		 
-		return "/user/loginForm";
+		return "redirect:/user/loginForm";
 		
 	}
 	
