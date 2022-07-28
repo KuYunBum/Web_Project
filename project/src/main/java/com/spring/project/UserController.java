@@ -124,7 +124,7 @@ public class UserController {
 			String findPW = find.getUserPW();
 			System.out.println(findID);
 			System.out.println(findPW);
-			rttr.addFlashAttribute("findID", findID);
+			rttr.addFlashAttribute("findIDs", findID);
 			rttr.addFlashAttribute("findPW", findPW);
 			rttr.addFlashAttribute("msg", "findAccount");
 		}else {
