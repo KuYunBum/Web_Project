@@ -7,7 +7,6 @@
 	<%@include file="include/header.jsp"%>
 	
 	
-	
 		
 		<div class="main2">
 			<div class="center_content">
