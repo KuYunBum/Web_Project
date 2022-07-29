@@ -15,25 +15,6 @@ public class ContentServiceImpl implements ContentService{
 	private SqlSession sqlSession;
 	
 	
-	//인바디
-	@Override
-	public void insert(InbodyDTO dto) throws Exception {
-		ContentDAO dao = sqlSession.getMapper(ContentDAO.class);
-		dao.insert(dto);
-	}
-
-	@Override
-	public InbodyDTO detail(int userNum) throws Exception {
-		ContentDAO dao = sqlSession.getMapper(ContentDAO.class);
-		return dao.detail(userNum);
-	}
-
-	@Override
-	public void update(InbodyDTO dto) throws Exception {
-		ContentDAO dao = sqlSession.getMapper(ContentDAO.class);
-		dao.update(dto);
-	}
-
 
 
 }

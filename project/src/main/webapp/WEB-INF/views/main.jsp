@@ -122,18 +122,6 @@
 			</div>
 		</div>
 		
-<!-- 		pt 이미지 -->
-<!-- 		<div class="main" style="margin-top: -100px;"> -->
-<!-- 			<div class="main_content"> -->
-<!-- 				<div class="content_1"> -->
-<!-- 					<img src="/project/resources/image/main1.JPG" style="width: 630px;height: 600px;"> -->
-<!-- 				</div>	 -->
-<!-- 				<div class="content_2"> -->
-<!-- 					<img src="/project/resources/image/main2.JPG" style="width: 630px;height: 600px;"> -->
-<!-- 				</div>	 -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-		
 		
 		<!-- 		미디어 컨텐츠  제목-->
 		<div class="center_content_M">
@@ -148,24 +136,24 @@
 			<!-- 		미디어 컨텐츠 -->
 			<div class="media_content">
 				<div class="content_m_right">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/aRz0QZc8TDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/aRz0QZc8TDE" title="YouTube video player"></iframe>
 					<p>로니쌤의 무겁지만 가볍게 드는법!!</p>
 				</div>
 				
 				<div class="content_m_left">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/itx3udN1HJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/itx3udN1HJ0" title="YouTube video player"></iframe>
 					<p>로니쌤 매드무비</p>
 				</div>
 			</div>
 			
 			<div class="media_content">
 				<div class="content_m_right">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/qluZcZ7vfLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/qluZcZ7vfLQ" title="YouTube video player" ></iframe>
 					<p>설명글  (없어도 될거같음)</p>
 				</div>
 				
 				<div class="content_m_left">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Iazno8QPDOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Iazno8QPDOg" title="YouTube video player"></iframe>
 					<p>설명글  (없어도 될거같음)</p>
 				</div>
 			</div>

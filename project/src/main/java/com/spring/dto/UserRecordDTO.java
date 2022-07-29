@@ -2,13 +2,27 @@ package com.spring.dto;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class UserRecordDTO {
+	private int recordNum;
 	private int userNum;
+	@DateTimeFormat(pattern = "hh:mm:ss")
 	private Date startTime;
+	@DateTimeFormat(pattern = "hh:mm:ss")
 	private Date endTime;
+	@DateTimeFormat(pattern = "hh:mm:ss")
 	private Date totalTime;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date useDate;
+	
+	public int getRecordNum() {
+		return recordNum;
+	}
+	public void setRecordNum(int recordNum) {
+		this.recordNum = recordNum;
+	}
 	public int getUserNum() {
 		return userNum;
 	}
@@ -41,9 +55,9 @@ public class UserRecordDTO {
 	}
 	@Override
 	public String toString() {
-		return "UserRecord [userNum=" + userNum + ", startTime=" + startTime + ", endTime=" + endTime + ", totalTime="
-				+ totalTime + ", useDate=" + useDate + "]";
+		return "UserRecordDTO [recordNum=" + recordNum + ", userNum=" + userNum + ", startTime=" + startTime
+				+ ", endTime=" + endTime + ", totalTime=" + totalTime + ", useDate=" + useDate + "]";
 	}
-	
-	
+
+
 }

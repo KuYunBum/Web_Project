@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.spring.vo.PageMaker;
 import com.spring.dto.BoardDTO;
-import com.spring.dto.ReplyDTO;
 
 public interface BoardDAO {
 	

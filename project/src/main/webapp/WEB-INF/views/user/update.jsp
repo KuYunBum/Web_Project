@@ -9,22 +9,9 @@
 	
 	<div class="main">
 		<h1>내용 수정</h1><br><br>
-		<div class="myPageNav">
-			<ul>
-				<li>
-					<a href="/project/user/myPage?userNum=${userNum }">내 프로필</a>
-				</li>
-				<li>
-					<a href="/project/content/inbody/detail?userNum=${userNum }">인바디</a>
-				</li>
-				<li>
-					<a href="/project/user/routineBox?userNum=${userNum }">내 루틴 커스텀</a>
-				</li>
-				<li>
-					<a href="#">운동기록</a>
-				</li>					
-			</ul>
-	</div>
+		
+		<%@include file="../include/myPageNav.jsp"%>
+		
 		<hr style="width: 1300px; margin:auto;">
 		
 		<form role="form" method="post">

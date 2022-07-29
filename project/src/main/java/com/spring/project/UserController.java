@@ -136,46 +136,5 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
-	public void myPage(int userNum, Model model) throws Exception {
-		
-		model.addAttribute(service.userDetail(userNum));
-	}
-	
-	@RequestMapping(value = "/routineBox", method = RequestMethod.GET)
-	public void routineBox() throws Exception {
-		
-	}
-	
-	@RequestMapping(value = "/update", method = RequestMethod.GET)
-	public void updateGET(int userNum, Model model) throws Exception {
-		model.addAttribute(service.userDetail(userNum));
-		System.out.println(userNum);
-	}		
-	
-	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String updatePOST(UserDTO dto,int userNum, Model model, RedirectAttributes rttr) throws Exception {
-		
-		service.userUpdate(dto);
-		rttr.addFlashAttribute("msg", "success");
-
-		return "redirect:/user/myPage?userNum="+userNum;
-	}
-	
-	@RequestMapping(value = "/delete", method = RequestMethod.POST)
-	public String delete(int userNum, HttpServletRequest request, RedirectAttributes rttr) throws Exception {
-		
-		service.userDelete(userNum);
-		
-		HttpSession session = request.getSession();
-		session.removeAttribute("user");
-		session.removeAttribute("userNum");
-		
-		rttr.addFlashAttribute("msg", "success");
-		
-		return "redirect:/";
-	}
-	
-	
 	
 }

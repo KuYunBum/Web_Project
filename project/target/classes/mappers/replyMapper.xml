@@ -46,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="count" resultType="int">
 	<![CDATA[
 	select 
-	  count(bno) 
+	  count(rno) 
 	from 
 	  tbl_reply 
 	where 

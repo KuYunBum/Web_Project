@@ -17,7 +17,7 @@
 		        	<label for="userName">이름 :</label>
 		     		<input type="text" name="userName" placeholder=" 이름 입력"><br>
 		        	<label for="userPhone">전화번호 :</label>
-		           	<input type="password" name="userPhone" placeholder=" 전화번호 입력">
+		           	<input type="text" name="userPhone" placeholder=" 전화번호 입력">
 		        </div>
 		        <div class="logBtn">
 		        	<input type="submit" value="ID/PW찾기">

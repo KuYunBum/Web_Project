@@ -10,12 +10,15 @@
 	<div class="main">
 		<div class="ex_content">
 			<div class="ex_content_title">
-				<p>다리 근육 스트레칭</p>
+				<p>운동 전 스트레칭</p>
 				<button type="button">...</button><br>
-				<p>준비운동</p>
 			</div>
 			<div class="ex_content_p3">
-					<img src="/project/resources/image/ex/stretching.jpg"><br>
+				<video muted autoplay loop>
+					<source src="/project/resources/videos/test.mp4" type="video/mp4">
+				</video>
+<!-- 					<iframe width="350" height="250" src="https://www.youtube.com/embed/gMKrEgAdmmo"  -->
+<!-- 					title="YouTube video player"></iframe><br> -->
 			</div>
 			<div class="ex_content_p4">
 				<p>다리 근육 스트레칭 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 / 5:00</p>

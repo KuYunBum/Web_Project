@@ -69,7 +69,10 @@
         });
         
         
-        
-        
+		var video = document.getElementById("video"); 
+
+		function pauseVideo() { 
+			video.pause(); 
+		} 
         
 	});
