@@ -38,7 +38,7 @@
     content: '';
     width: 0;
     height: 5px;
-    background: #af3;
+    background: rgba(32,54,138);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -55,7 +55,7 @@
     content: '';
     width: 0;
     height: 5px;
-    background: #af3;
+    background: rgba(32,54,138);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
