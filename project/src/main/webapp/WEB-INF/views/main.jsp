@@ -6,7 +6,7 @@
 
 	<%@include file="include/header.jsp"%>
 	
-		<div class="main2">s
+		<div class="main2">
 			<div class="center_content">
 				<div class="center-text">
 					<h1>You must be healthy.</h1>
