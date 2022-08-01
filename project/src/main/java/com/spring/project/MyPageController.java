@@ -34,7 +34,6 @@ public class MyPageController {
 
 	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
 	public void myPage(int userNum, Model model) throws Exception {
-
 		model.addAttribute(us.userDetail(userNum));
 	}
 
@@ -114,14 +113,49 @@ public class MyPageController {
 
 	}
 
-	@RequestMapping(value = "record/record", method = RequestMethod.GET)
+	@RequestMapping(value = "/record/record", method = RequestMethod.GET)
 	public void record(int userNum, Model model) throws Exception {
 		model.addAttribute("list", ms.recordList(userNum));
-		for (int i = 0; i < ms.chartData(userNum).size(); i++) {
-			model.addAttribute("chartData", ms.chartData(userNum).get(i).getSetCount());
-		}
+		int arm = 0;
+		int upper = 0;
+		int back = 0;
+		int lower = 0;
+		int core = 0;
 
-		// model.addAttribute("chartData", list);
+//		for (int i = 0; i < ms.chartData(userNum).size(); i++) {
+//			for (int j = i + 1; j < ms.chartData(userNum).size(); j++) {
+//				if (ms.chartData(userNum).get(i).getExpartCode().equals(ms.chartData(userNum).get(j).getExpartCode())) {
+//					arm += ms.chartData(userNum).get(i).getSetCount();
+//					arm += ms.chartData(userNum).get(j).getSetCount();
+//				}
+//			}
+//		}
+		try {
+			for (int i = 0; i < ms.chartData(userNum).size(); i++) {
+				String kind = ms.chartData(userNum).get(i).getExpartCode();
+				int count = ms.chartData(userNum).get(i).getSetCount();
+				if (kind.equals("userBack")) {
+					back += count;
+				} else if (kind.equals("userUpper")) {
+					upper += count;
+				} else if (kind.equals("userArm")) {
+					arm += count;
+				} else if (kind.equals("userLower")) {
+					lower += count;
+				} else if (kind.equals("userCore")) {
+					core += count;
+				}
+			}
+			model.addAttribute("arm", arm);
+			model.addAttribute("upper", upper);
+			model.addAttribute("back", back);
+			model.addAttribute("lower", lower);
+			model.addAttribute("core", core);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+//		model.addAttribute("chartData", list);
+
 		System.out.println(ms.chartData(userNum));
 	}
 
