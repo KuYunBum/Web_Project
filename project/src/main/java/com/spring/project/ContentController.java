@@ -65,6 +65,27 @@ public class ContentController {
 		
 	}
 	
+	@RequestMapping(value = "/tr/tr_main", method = RequestMethod.GET)
+	public void tr_main() throws Exception {
+		
+	}
+	@RequestMapping(value = "/tr/tr_main", method = RequestMethod.POST)
+	public String tr_mainPOST(HttpServletRequest request, RedirectAttributes rttr) throws Exception {
+		
+		HttpSession session = request.getSession();
+		System.out.println(session.getAttribute("user"));
+		
+		if(session.getAttribute("user")!= null) {
+			return "/content/tr/tr_loading";
+		}
+		rttr.addFlashAttribute("msg", "LoginRequired");
+		return "redirect:/user/loginForm";
+	}
+
+	@RequestMapping(value = "/tr/tr_loading", method = RequestMethod.GET)
+	public void tr_loading() throws Exception {
+		
+	}
 	@RequestMapping(value = "/trainer", method = RequestMethod.GET)
 	public void trainer() throws Exception {
 		

@@ -96,7 +96,7 @@
 					</a>
 	            	<li><a href="/project/content/ex_recomm/ex_recomm">AI 운동 추천</a></li>
 	                <li><a href="/project/content/membership">멤버쉽</a></li>
-<!-- 	                <li><a href="/project/content/trainer">트레이너</a></li> -->
+ 					<li><a href="/project/content/tr/tr_main">트레이너 매칭</a></li>
 	                <li><a href="/project/board/list">자유게시판</a></li>
 	                <li><a href="/project/content/gym">내 주변 헬스장 찾기</a></li>
 	                 <li><a href="/project/content/help">고객센터</a></li>

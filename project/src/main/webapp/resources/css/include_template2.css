@@ -42,7 +42,7 @@
     color: #000;
     padding: 0 10px;
     position: relative;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .navbar1 ul li a:hover{
@@ -96,7 +96,7 @@
     /* nav a 간의 떨어지는값 일단 30으로 해봤습니다. */
     padding: 0 10px; 
     position: relative;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 

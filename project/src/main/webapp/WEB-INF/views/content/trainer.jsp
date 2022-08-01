@@ -6,7 +6,8 @@
 
 	<%@include file="../include/header.jsp"%>
 	
-	
+	<div class="re_tr"><%out.print(String.valueOf(session.getAttribute("user"))+" 님"); %>의 추천 트레이너
+	</div>
 	<div class="main">
 		<div class="trainer">
 			<div class="trainer_1">
