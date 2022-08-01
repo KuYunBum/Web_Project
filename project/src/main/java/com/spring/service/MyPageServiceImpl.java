@@ -1,6 +1,5 @@
 package com.spring.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -8,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.dao.MyPageDAO;
+import com.spring.dto.ExerciseChartDTO;
 import com.spring.dto.InbodyDTO;
 import com.spring.dto.UserRecordDTO;
-import com.spring.vo.PageMaker;
 
 @Service
 public class MyPageServiceImpl implements MyPageService{
@@ -69,6 +68,13 @@ public class MyPageServiceImpl implements MyPageService{
 		List<UserRecordDTO> dtos = dao.recordList(userNum);
 		return dtos;
 	};
+	
+	@Override
+	public List<ExerciseChartDTO> chartData(int userNum) throws Exception {
+		MyPageDAO dao = sqlSession.getMapper(MyPageDAO.class);
+		List<ExerciseChartDTO> dtos = dao.chartData(userNum);
+		return dtos;
+	}
 
 //	@Override
 //	public List<UserRecordDTO> listCriteria(PageMaker pm) throws Exception {
