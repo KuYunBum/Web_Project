@@ -28,7 +28,7 @@
 			<div class="ex_content_p5">
 				<img src="/project/resources/image/ex/skip_button.jpg">
 				<img src="/project/resources/image/ex/play_button.jpg">
-				<a href="/project/content/ex_recomm/ex_recomm2"><img src="/project/resources/image/ex/skip2_button.jpg"></a>
+				<a href="/project/content/ex_recomm/ex_recomm4"><img src="/project/resources/image/ex/skip2_button.jpg"></a>
 			</div>
 		</div>
 	</div>

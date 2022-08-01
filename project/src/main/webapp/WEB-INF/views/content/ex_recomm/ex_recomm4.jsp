@@ -15,11 +15,11 @@
 				<p>Day 1   등 가슴 코어 유산소</p>
 				<p>55분</p>
 			</div>
-			<div class="ex_content_p2">
+			<div class="ex_content_p6">
 				<div class="container">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<div id="myCarousel" class="carousel slide" >
 						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 							<li data-target="#myCarousel" data-slide-to="3"></li>
 							<li data-target="#myCarousel" data-slide-to="4"></li>
@@ -46,7 +46,12 @@
 						</a>
 					</div>
 				</div>
-				<button onclick="location.href='/project/content/ex_recomm/ex_recomm3'">시작하기</button>
+			</div>
+			<div class="ex_content_p6">
+				<p>1.바를 끝까지 내립니다.<br><br>
+				2.어깨 너비보다 약간 더 넓은 손과 오버 핸드 그립으로 바를 잡습니다.<br><br>
+				3.등을 똑바로 유지하고 무릎을 약간 구부린 다음<br> 체중을 몸쪽으로 당깁니다.<br><br>
+				4.천천히 무릎까지 낮추고 반복하십시오.</p>
 			</div>
 		</div>
 	</div>
