@@ -102,7 +102,7 @@
     		userCore == arr.setCount;
     	}    		
     }
-    
+   
     */
     
     var ability = [userArm, userUpper, userBack, userLower, userCore];
