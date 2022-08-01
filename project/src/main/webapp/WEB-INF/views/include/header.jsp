@@ -11,8 +11,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="stylesheet" href="/project/resources/css/include_template.css">
-<link rel="stylesheet" href="/project/resources/css/template.css" />
+<link rel="stylesheet" href="/project/resources/css/include_template2.css">
+<link rel="stylesheet" href="/project/resources/css/template2.css" />
 <!-- <link rel="stylesheet" href="/project/resources/css/bootstrap.css"> -->
 <script src="/project/resources/js/bootstrap.js"></script>
 <script src="/project/resources/js/include.js"></script>
@@ -87,61 +87,46 @@
 <body>
 
 	<div class="header">
-        <div class="navbar1">
-
-            <a href="/project/">
-                <img src="/project/resources/image/logo.png" style="width:300px;height:250px;"> <!-- 로고 -->
-            </a>
-
-            <ul>
-                <!-- 상단 메뉴 -->
-	<%
-		String user = String.valueOf(session.getAttribute("user"));
-		if(session.getAttribute("user")==null){
-	%>	                
-                <li><a href="/project/user/loginForm">로그인</a></li>
-                <li><a href="/project/user/joinForm">회원가입</a></li>
-    <%
-		}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
-		out.print(String.valueOf(session.getAttribute("user"))+" 님");
-    %>
-                <li><a href="/project/admin/list">회원 관리</a></li>
-                <li><a href="/project/user/logout">로그아웃</a></li>
-    <%
-		}else{
-		out.print(String.valueOf(session.getAttribute("user"))+" 님");
-    %>
-                <li><a href="/project/user/myPage?userNum=${userNum }">마이페이지</a></li>
-                <li><a href="/project/user/logout">로그아웃</a></li>
-    <%
-		}
-    %>            
-                <li><a href="/project/content/help">고객센터</a></li>
+        	<div class="navbar1">
+           	 <ul>
+            	<div class="navLi">
+            	
+	            	<a href="/project/" style="text-decoration: none;"> 
+						<img src="/project/resources/image/logo.png" style="width:200px;height:150px;">
+					</a>
+	            	<li><a href="/project/content/ex_recomm/ex_recomm">AI 운동 추천</a></li>
+	                <li><a href="/project/content/membership">멤버쉽</a></li>
+<!-- 	                <li><a href="/project/content/trainer">트레이너</a></li> -->
+	                <li><a href="/project/board/list">자유게시판</a></li>
+	                <li><a href="/project/content/gym">내 주변 헬스장 찾기</a></li>
+	                 <li><a href="/project/content/help">고객센터</a></li>
+	                <!-- 상단 메뉴 -->
+					<%
+						String user = String.valueOf(session.getAttribute("user"));
+						if(session.getAttribute("user")==null){
+					%>	                
+				                <li><a href="/project/user/loginForm">로그인</a></li>
+				                <li><a href="/project/user/joinForm">회원가입</a></li>
+				    <%
+						}else if(String.valueOf(session.getAttribute("userNum")).equals("1")){
+						out.print(String.valueOf(session.getAttribute("user"))+" 님");
+				    %>
+				                <li><a href="/project/admin/list">회원 관리</a></li>
+				                <li><a href="/project/user/logout">로그아웃</a></li>
+				    <%
+						}else{
+						out.print(String.valueOf(session.getAttribute("user"))+" 님");
+				    %>
+				                <li><a href="/project/user/myPage?userNum=${userNum }">마이페이지</a></li>
+				                <li><a href="/project/user/logout">로그아웃</a></li>
+				    <%
+						}
+				    %>            
+				               
+                </div>
             </ul>
         </div>
-
-        <div class="navbar2">
-            <ul>
-                <!-- 메인 메뉴 -->
-                <li><a href="/project/">홈</a></li>
-                <li><a href="/project/content/ex_recomm/ex_recomm">AI 운동 추천</a></li>
-                <li><a href="/project/content/membership">멤버쉽</a></li>
-                <li><a href="/project/content/trainer">트레이너</a></li>
-                <li><a href="/project/board/list">자유게시판</a></li>
-                <li><a href="/project/content/gym">내 주변 헬스장 찾기</a></li>
-                <li>
-<!--                     <div class="searchBox"> -->
-<!--                         수정해야함 -->
-<!--                         <div class="search"> -->
-<!--                             <label> -->
-<!--                                 <input type="text" name="searchBar " placeholder="검색어 입력"> -->
-<!--                                 <span class="material-symbols-outlined">search</span> -->
-<!--                             </label> -->
-<!--                         </div> -->
-<!--                     </div> -->
-                </li>
-            </ul>
-        </div>
-    </div>
+	</div>
+	
     
     </body>

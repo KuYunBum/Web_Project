@@ -6,7 +6,7 @@
 
 	<%@include file="include/header.jsp"%>
 	
-	
+<!-- 	main img slide -->
 				<div class="container">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
@@ -19,7 +19,7 @@
 						<div class="carousel-inner">
 							<div class="item active">
 <!-- 							<a href="#"> -->
-								<div class="tesssst" >
+								<div class="img-slide" >
 									<div class="center_content2">
 										<div class="c_c2_left">
 										<ul style="margin-top:100px;">
@@ -40,7 +40,7 @@
 							
 							<div class="item">
 <!-- 							<a href="#"> -->
-								<div class="tesssst2" >
+								<div class="img-slide2" >
 									<div class="center_content2">
 										<div class="c_c2_left">
 										<ul style="margin-top:100px;">
@@ -59,7 +59,7 @@
 							</div>
 							<div class="item">
 <!-- 							<a href="#"> -->
-								<div class="tesssst3" >
+								<div class="img-slide3" >
 									<div class="center_content2">
 										<div class="c_c2_left">
 										<ul style="margin-top:100px; color:#fff;">
@@ -78,7 +78,7 @@
 							</div>
 							<div class="item">
 <!-- 							<a href="#"> -->
-								<div class="tesssst4" >
+								<div class="img-slide4" >
 									<div class="center_content2">
 										<div class="c_c2_left">
 										<ul style="margin-top:100px; color:#fff;">
@@ -89,7 +89,7 @@
 									</div>
 									
 									<div class="c_c2_Right">
-<!-- 										<img src="/project/resources/image/ex/sss.jpg" style="width:100%; height:100%;"> -->
+										<img src="/project/resources/image/ex/gogo.jpg" style="width:100%; height:100%; display:flex">
 									</div>
 									</div>
 								</div>

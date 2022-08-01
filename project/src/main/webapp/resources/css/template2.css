@@ -183,22 +183,22 @@
 
 
 /*사진 슬라이드*/
-.tesssst, .tesssst2, .tesssst3,.tesssst4{
+.img-slide, .img-slide2, .img-slide3,.img-slide4{
 	background-color: #d2d9dd; 
 	width: 100%; 
 	height: 350px; 
 	display:flex;
 }
-.tesssst{
+.img-slide{
 	background-color: #d2d9dd; 
 }
-.tesssst2{
+.img-slide2{
 	background-color: #38e5ff;  
 }
-.tesssst3{
+.img-slide3{
 	background-color: #ff7836; 
 }
-.tesssst4{
+.img-slide4{
 	background-color: #096394; 
 }
 .center_content2{
@@ -1010,8 +1010,8 @@ border-radius: 5px;
     font-size: 18px;
 }
 
-
-.myPageNav > ul > li > a:hover{
+tesssst
+.myPageNav > ul > li >a:hover{
    color:rgb(0, 177, 56);
 }
 /* 마이페이지 네비 부분 END */
