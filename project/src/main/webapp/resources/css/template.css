@@ -659,14 +659,14 @@ border-radius: 5px;
 	color: white;
 	width: 350px;
 	height: 50px;
-	background-color: purple; 
+	background-color: gray; 
 	margin-left: -170px;
 	margin-top: 100px;
-	border-radius: 50px;
+	border-radius: 5px 5px;
 }
 
 .ex_content button:hover{
-	background-color: rgba(31,57,141);;
+	background-color: purple;
 	cursor: pointer;
 }
 
@@ -728,6 +728,35 @@ border-radius: 5px;
 	display: flex;
 }
 
+.ex_content_p2_1{
+	width: 500px;
+	height: 500px;
+/* 	border: 1px solid white; */
+}
+
+.ex_content_p2_2{
+	width: 500px;
+	height: 500px;
+/* 	border: 1px solid white; */
+}
+
+.ex_content_p2_1 > img{
+	position: relative;
+	width: 495px;
+	height: 490px;
+	border: 1px solid white;
+	border-radius: 0;
+	top: -65px;
+}
+
+.ex_content_p2_2 > img{
+	position: relative;
+	width: 495px;
+	height: 490px;
+	border: 1px solid white;
+	border-radius: 0;
+	top: -65px;
+}
 
 .ex_content_p2 > button {
 	position: absolute;	
@@ -737,7 +766,7 @@ border-radius: 5px;
 	height: 50px;
 	top: 1330px;
 	left: 820px;
-	border-radius: 50px;
+	border-radius: 10px;
 }
 
 .ex_content_p3 {
@@ -790,21 +819,6 @@ border-radius: 5px;
 	margin: 50px 30px;
 }
 
-.ex_content_p6 {
-	width: 550px;
-	height: 250px;
-	margin: auto;
-	margin-top: 50px;
-	display: flex;
-}
-
-.ex_content_p6 p {
-	position: relative;	
-	margin: auto;
-	color: white;
-	top: 120px;
-	font-size: 18px;
-}
 
 
 /* 로그인 */
