@@ -90,7 +90,7 @@
         <div class="navbar1">
 
             <a href="/project/">
-                <img src="/project/resources/image/logo.png" style="width:200px;height:150px;"> <!-- 로고 -->
+                <img src="/project/resources/image/logo.png" style="width:300px;height:250px;"> <!-- 로고 -->
             </a>
 
             <ul>
