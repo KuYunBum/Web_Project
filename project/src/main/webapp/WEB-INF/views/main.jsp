@@ -6,7 +6,7 @@
 
 	<%@include file="include/header.jsp"%>
 	
-	<h1>Github TEST 2</h1>
+	<h1>Github TEST 3</h1>
 		<div class="main2">
 			<div class="center_content">
 				<div class="center-text">
