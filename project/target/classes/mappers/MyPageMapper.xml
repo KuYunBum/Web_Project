@@ -59,7 +59,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	update 
 		userrecord 
 	set 
-		startTime = #{startTime}, endTime = #{endTime}, totalTime = #{totalTime}
+		startTime = #{startTime}, endTime = #{endTime}, totalTime = #{endTime}-#{startTime}
 	where 
 		recordNum = #{recordNum} 
 </update>

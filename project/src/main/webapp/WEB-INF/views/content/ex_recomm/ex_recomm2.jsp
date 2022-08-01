@@ -11,7 +11,7 @@
 		<div class="ex_content">
 			<div class="ex_content_title">
 				<p>AI 추천 플랜</p>
-				<button onclick="">...</button><br>
+				<button type="button" class="more_bt">...</button><br>
 				<p>Day 1   등 가슴 코어 유산소</p>
 				<p>55분</p>
 			</div>

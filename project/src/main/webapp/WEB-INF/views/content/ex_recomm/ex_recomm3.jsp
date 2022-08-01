@@ -17,18 +17,18 @@
 				<video muted autoplay loop>
 					<source src="/project/resources/videos/test1.mp4" type="video/mp4">
 				</video>
-<!-- 					<iframe width="350" height="250" src="https://www.youtube.com/embed/gMKrEgAdmmo"  -->
-<!-- 					title="YouTube video player"></iframe><br> -->
 			</div>
 			<div class="ex_content_p4">
-				<p>다리 근육 스트레칭 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 / 5:00</p>
-				<p>목 주변 근육 스트레칭  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 / 5:00</p>
-				<p>트레드밀 러닝 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  0:00 / 10:00</p>
+				<table>
+					<tr><td><p>다리 근육 스트레칭</p></td><td><p>&emsp;&emsp;0:00 / 5:00</p></td></tr>
+					<tr><td><p>목 주변 근육 스트레칭</p></td><td><p>&emsp;&emsp;0:00 / 5:00</p></td></tr>
+					<tr><td><p>트레드밀 러닝</p></td><td><p>&emsp;&emsp;0:00 / 10:00</p></td></tr>
+				</table>
 			</div>
 			<div class="ex_content_p5">
 				<img src="/project/resources/image/ex/skip_button.jpg">
 				<img src="/project/resources/image/ex/play_button.jpg">
-				<img src="/project/resources/image/ex/skip2_button.jpg">
+				<a href="/project/content/ex_recomm/ex_recomm2"><img src="/project/resources/image/ex/skip2_button.jpg"></a>
 			</div>
 		</div>
 	</div>

@@ -637,7 +637,7 @@ border-radius: 5px;
 	width: 300px;
 	height: 40px;
 	border-radius: 10px;
-	top: 100px;
+	top: 80px;
 	display: inline-block;
 	margin-bottom: 5px;
 	padding-top: 3px;
@@ -745,6 +745,10 @@ border-radius: 5px;
 	margin-top: 50px;
 }
 
+.ex_content_p4 table {
+	margin: auto;
+}
+
 .ex_content_p4 p {
 	font-size: 20px;
 	margin-bottom: 15px;
@@ -761,6 +765,8 @@ border-radius: 5px;
 	height: 50px;
 	margin: 50px 30px;
 }
+
+
 
 /* 로그인 */
 
