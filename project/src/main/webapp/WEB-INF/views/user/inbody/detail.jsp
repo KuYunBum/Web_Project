@@ -27,7 +27,7 @@
 				<div class="rcText" >
 					<div class="ab3p">
 						<div class="ab3q"><h4>측정 날짜</h4></div>
-						<div class="ab3t"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+						<div class="ab3t"><fmt:formatDate pattern="yyyy-MM-dd"
 							value="${inbodyDTO.inbodyDate}" /></div>
 					</div><br><br>
 					<div class="ab3p">

@@ -51,7 +51,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <insert id="recordInsert">
 	insert into 
 		userrecord (recordNum, userNum, startTime, endTime, totalTime, useDate)
-	values (seq_record.nextval, #{userNum}, #{startTime}, #{endTime}, #{totalTime}, #{sysdate})
+	values (seq_record.nextval, #{userNum}, #{startTime}, #{endTime}, #{endTime}-#{startTime}, #{useDate})
 </insert>
 
 

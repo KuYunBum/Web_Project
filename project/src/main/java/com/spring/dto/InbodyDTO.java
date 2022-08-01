@@ -2,10 +2,13 @@ package com.spring.dto;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class InbodyDTO {
 	private	int userNum;
 	private	String userGender;
 //	private	Date userBirth;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private	Date inbodyDate;
 	private	double height;				//키
 	private	double weight;				//몸무게
