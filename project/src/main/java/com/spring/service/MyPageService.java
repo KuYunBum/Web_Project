@@ -1,9 +1,8 @@
 package com.spring.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.spring.vo.PageMaker;
+import com.spring.dto.ExerciseChartDTO;
 import com.spring.dto.InbodyDTO;
 import com.spring.dto.UserRecordDTO;
 
@@ -24,6 +23,8 @@ public interface MyPageService {
 	public void recordDelete(int userNum) throws Exception;
 	
 	public List<UserRecordDTO> recordList(int userNum) throws Exception;
+	
+	public List<ExerciseChartDTO> chartData(int userNum) throws Exception;
 	
 //	public List<UserRecordDTO> listCriteria(PageMaker pm) throws Exception;
 //	  

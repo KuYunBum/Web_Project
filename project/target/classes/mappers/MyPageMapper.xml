@@ -106,6 +106,42 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	  userNum =#{userNum} 
 	]]>
 	</select>
+	
+	<!--  차트 데이터 -->
+<select id="chartData" resultType="com.spring.dto.ExerciseChartDTO">
+	SELECT
+	    AA.USERNUM, 
+	    SUM(AA.SETCOUNT) as SETCOUNT,    
+	    AA.EXPART,
+	    (CASE 
+	        WHEN EXPART = '전신' THEN 'userAll'
+	        WHEN EXPART = '삼두' THEN 'userArm'
+	        WHEN EXPART = '이두' THEN 'userArm'
+	        WHEN EXPART = '전완' THEN 'userArm'
+	        WHEN EXPART = '가슴' THEN 'userUpper'
+	        WHEN EXPART = '어깨' THEN 'userUpper'
+	        WHEN EXPART = '등' THEN 'userBack'
+	        WHEN EXPART = '허벅지' THEN 'userLower'
+	        WHEN EXPART = '엉덩이' THEN 'userLower'
+	        WHEN EXPART = '종아리' THEN 'userLower'
+	        WHEN EXPART = '복근' THEN 'userCore'
+	        WHEN EXPART = '코어' THEN 'userCore'
+	        ELSE NULL
+	    END) EXPARTCODE
+	FROM (
+	    select
+	        A.USERNUM,    
+	        A.EXID,
+	        A.EXDATE,
+	        A.SETCOUNT,
+	        B.EXNAME,
+	        B.EXPART
+	    from USEREX A
+	    inner join EXERCISE B on A.EXID = B.EXID
+	) AA
+	WHERE AA.USERNUM = #{userNum}
+	group by AA.USERNUM, AA.SETCOUNT, AA.EXPART
+</select>
 
 
 

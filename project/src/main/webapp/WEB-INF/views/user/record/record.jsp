@@ -43,6 +43,9 @@
 							</tr>
 						</c:forEach>
 					</table>
+					<div class="container" style="width: 400px; height: 400px;"><!--차트가 그려질 부분--> 
+		                <canvas id="myChart" ></canvas>
+		           </div>
 				</div>
 			</div>
 		</div>
@@ -59,4 +62,86 @@
 	
 	<%@include file="../../include/footer.jsp"%>
 	
-				
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>  
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script type="text/javascript">   
+    var context = document.getElementById("myChart")
+    var labelNames = ["삼두,이두,전완", "가슴,어깨", "등", "허벅지,엉덩이,종아리", "복근,코어"];
+    
+    var userArm = 10;
+    var userUpper = 0;
+    var userBack = 100;
+    var userLower = 0;
+    var userCore = 0;	
+    
+    
+    //var ability = [${userExDAO.userArm},${userExDAO.userUpper}, ${userExDAO.userBack}, ${userExDAO.userLower}, ${userExDAO.userCore}];
+    var getData = '${chartData}';
+    console.log(getData);
+    
+    var arr = getData.split("],");
+    
+    
+    
+    /*    
+    
+    for (var i=0; i<arr.length; i++){
+    	if(arr.expartCode == "userArm"){
+    		userArm = arr.setCount;
+    	}
+    	if(arr.expartCode == "userUpper"){
+    		userUpper = arr.setCount;    		
+    	}
+    	if(arr.expartCode == "userBack"){
+    		userBack == arr.setCount;
+    	}
+    	if(arr.expartCode == "userLower"){
+    		userLower == arr.setCount;
+    	}
+    	if(arr.expartCode == "userCore"){
+    		userCore == arr.setCount;
+    	}    		
+    }
+   
+    */
+    
+    var ability = [userArm, userUpper, userBack, userLower, userCore];
+    var myChart = new Chart(context, {
+        type: 'radar', // 차트의 형태
+        data: {
+            labels: labelNames,
+            datasets: [
+                {
+                    fill: true,
+                    backgroundColor: "rgba(32,140,236,0.7)",
+                    borderColor: "rgba(32,140,236,1)",
+                    pointBorderColor: "#fff",
+                    pointBackgroundColor: "rgba(179,181,198,1)",
+                    data: ability
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: { display: false }, // 차트 데이터 이름 숨기기
+            scale: { //// <= radar 타입 차트 처럼 축이 한개인 차트는 scales 를 쓰면 안됩니다.
+                ticks: {
+                    beginAtZero: true,
+                    min: 0, // 축 최소 값
+                    max: 100, // 축 최대 값
+                    stepSize: 20, // 그리드 간격 값
+                    display: false, // 그리드 숫자 숨기기
+                },
+
+                pointLabels: {
+                    fontSize: 18,
+                    fontColor: "rgba(128,128,128,1)"
+                }
+            },
+
+            title: {
+                display: false
+            }
+        }
+    });
+</script>			
