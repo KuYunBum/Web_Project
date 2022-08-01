@@ -15,7 +15,7 @@
 			</div>
 			<div class="ex_content_p3">
 				<video muted autoplay loop>
-					<source src="/project/resources/videos/test.mp4" type="video/mp4">
+					<source src="/project/resources/videos/test1.mp4" type="video/mp4">
 				</video>
 <!-- 					<iframe width="350" height="250" src="https://www.youtube.com/embed/gMKrEgAdmmo"  -->
 <!-- 					title="YouTube video player"></iframe><br> -->

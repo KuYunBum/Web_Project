@@ -671,7 +671,7 @@ border-radius: 5px;
 	height: 500px;
 /* 	border: 1px solid white; */
 	margin: auto;
-	margin-top: 150px;
+	margin-top: 50px;
 	display: flex;
 }
 
@@ -711,7 +711,7 @@ border-radius: 5px;
 	margin: auto;
 	width: 280px;
 	height: 50px;
-	top: 1300px;
+	top: 1330px;
 	left: 820px;
 	border-radius: 10px;
 }
@@ -991,7 +991,7 @@ border-radius: 5px;
     margin-top: 40px;
     width: 70%;
     height: 100%;
-      text-align:left;
+    text-align:left;
 }
 .rcText{
     margin: 70px 5%;
