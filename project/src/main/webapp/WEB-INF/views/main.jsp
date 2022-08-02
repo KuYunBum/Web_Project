@@ -106,12 +106,6 @@
 					</div>
 				</div>
 				
-				
-		<div class="main2">
-			<div class="center_content">
-				
-			</div>
-		</div>
 		
 		<div class="main2">
 			<div class="center_content">
@@ -206,8 +200,8 @@
 	                    <li> <img src="/project/resources/image/ex/2705.png" style="width: 18px;height: 18px;"> <span>내 몸에 맞는 </span> 영양식단,보충제 <span>추천</span></li>
 	                </div>
 	                <div style="margin: 0 140px;">
-	                <img src="/project/resources/image/ex/aiChu.png" style="width: 300px;height: 400px;">
-	                <img src="/project/resources/image/ex/letFull.png" style="width: 300px;height: 400px;">
+	                <img src="/project/resources/image/ex/aiChu.png" style="width: 300px;height: 300px;">
+	                <img src="/project/resources/image/ex/letFull.png" style="width: 300px;height: 300px;">
 	                </div>
 	            </div>
 	            
@@ -247,7 +241,7 @@
 			<div class="widthLine" style="margin-top: 30px;"></div>
 		
 	
-			<div class="main">
+		<div class="main">
 		
 			<!-- 		미디어 컨텐츠 -->
 			<div class="media_content">
