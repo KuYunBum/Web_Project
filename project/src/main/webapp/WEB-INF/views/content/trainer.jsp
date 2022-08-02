@@ -14,10 +14,11 @@
 				<img src="/project/resources/image/kimegg.png" style="width: 390px;height: 400px;">
 						<br><br><h2>Kim Egg</h2>
 						<div class="trainer_info"><br>
-							<p>대한민국 최고의 헬스 유튜버</p>
-							<p>300만 구독자 보유중</p>
-							<p>대한민국 UDT/SEAL 전역</p>
 							<p>3대 600</p>
+							<p>300만 구독자를 보유한</p>
+							<p>대한민국 최고의 헬스 유튜버</p>
+							<p>대한민국 UDT/SEAL 전역</p>
+							
 							<input type="button" class="retr_btn" value="상담하기">
 						</div>
 			</div>
