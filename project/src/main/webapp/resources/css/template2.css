@@ -1240,9 +1240,37 @@ tesssst
 
 
 /* 트레이너 */
+.re_tr_box{
+	width: 500px;
+	height:700px;
+	margin: 0 auto;
+	margin-top: 40px;
+	box-sizing:border-box;
+	border:2px solid black;
+}
 .re_tr{
 	text-align:center;
+	font-size:25px;
+	margin-top:-100px;
 }
+.re_trinaer{
+	width: 1300px;
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+.re_trainer img{
+	justify-content:center;
+	align-items:center;
+	margin-top:20px;
+}
+.other_tr h2{
+	text-align:center;
+	color:blue;
+	margin-top:100px;
+	margin-bottom:120px;
+}
+
 .trainer {
 	width: 1300px;
 	margin: auto;
@@ -1252,31 +1280,38 @@ tesssst
 
 .trainer_1 {
 	width: 305px;
-	height: 500px;
+	height: 600px;
 	border: 0.5px solid;
 	margin: 10px; 
 } 
 
 .trainer_2 {
 	width: 305px;
-	height: 500px;
+	height: 600px;
 	border: 0.5px solid;
 	margin: 10px;  
 } 
 
 .trainer_3 {
 	width: 305px;
-	height: 500px;
+	height: 600px;
 	border: 0.5px solid;
 	margin: 10px;  
 } 
 
 .trainer_4 {
 	width: 305px;
-	height: 500px;
+	height: 600px;
 	border: 0.5px solid;
 	margin: 10px;  
-} 
+}
+
+.re_trainer p{
+	text-align:center;	
+	position:relative;
+	top:50%;
+	font-size:15px;
+}
 
 .trainer_1 p, 
 .trainer_2 p, 
@@ -1286,6 +1321,21 @@ tesssst
  	top: 50%;
 }
 
+.retr_btn{
+	margin:auto;
+	margin-top:30px;
+	width: 350px;
+	height: 80px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.tr_btn{
+	margin:auto;
+	margin-top:30px;
+	width: 280px;
+	height: 80px;
+	cursor: pointer;
+}
 
 
 
