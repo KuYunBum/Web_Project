@@ -7,104 +7,104 @@
 	<%@include file="include/header.jsp"%>
 	
 <!-- 	main img slide -->
-				<div class="container">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
-							<li data-target="#myCarousel" data-slide-to="3"></li>
-							<li data-target="#myCarousel" data-slide-to="4"></li>
-						</ol>
-						
-						<div class="carousel-inner">
-							<div class="item active">
-<!-- 							<a href="#"> -->
-								<div class="img-slide" >
-									<div class="center_content2">
-										<div class="c_c2_left">
-										<ul style="margin-top:100px;">
-											<h1>누적 다운로드 1위👏</h1>
-											<h1>사용자 만족도 1위👏</h1><br>
-											<h3><span>감사합니다!!</span></h3>
-											<h3><p>더 좋은 서비스로 보답하겠습니다!!</p></h3>
-										</ul>
-										</div>
-										
-										<div class="c_c2_Right">
-											<img src="/project/resources/image/ex/intop.gif" style="width:100%; height:100%;">
-										</div>
-									</div>
+		<div class="container">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+				</ol>
+				
+				<div class="carousel-inner">
+					<div class="item active">
+<!-- 					<a href="#"> -->
+						<div class="img-slide" >
+							<div class="center_content2">
+								<div class="c_c2_left">
+								<ul style="margin-top:100px;">
+									<h1>누적 다운로드 1위👏</h1>
+									<h1>사용자 만족도 1위👏</h1><br>
+									<h3><span>감사합니다!!</span></h3>
+									<h3><p>더 좋은 서비스로 보답하겠습니다!!</p></h3>
+								</ul>
 								</div>
-<!-- 							</a> -->
-							</div>
-							
-							<div class="item">
-<!-- 							<a href="#"> -->
-								<div class="img-slide2" >
-									<div class="center_content2">
-										<div class="c_c2_left">
-										<ul style="margin-top:100px;">
-											<h1>한단계 한단계📈</h1><br>
-											<h3><span>처음부터 잘할수는 없죠!</span></h3>
-											<h3><p>기초부터 차근차근 시작 하는 슬기로운 헬스생활!!</p></h3>
-										</ul>
-									</div>
-									
-									<div class="c_c2_Right">
-										<img src="/project/resources/image/ex/intest.gif" style="width:100%; height:100%;">
-									</div>
-									</div>
+								
+								<div class="c_c2_Right">
+									<img src="/project/resources/image/ex/intop.gif" style="width:100%; height:100%;">
 								</div>
-<!-- 							/a> -->
-							</div>
-							<div class="item">
-<!-- 							<a href="#"> -->
-								<div class="img-slide3" >
-									<div class="center_content2">
-										<div class="c_c2_left">
-										<ul style="margin-top:100px; color:#fff;">
-											<h1>매달 이벤트가 펑펑😍</h1><br>
-											<h3><span>노력하는 당신! 아름답다!</span></h3>
-											<h3><p>매달 우수 사용자 50분에게 무료 PT권 증정!!</p></h3>
-										</ul>
-										</div>
-										
-										<div class="c_c2_Right">
-											<img src="/project/resources/image/ex/ingift.gif" style="width:100%; height:100%;">
-										</div>
-									</div>
-								</div>
-<!-- 							</a> -->
-							</div>
-							<div class="item">
-<!-- 							<a href="#"> -->
-								<div class="img-slide4" >
-									<div class="center_content2">
-										<div class="c_c2_left">
-										<ul style="margin-top:100px; color:#fff;">
-											<h1>한단계 한단계📈</h1><br>
-											<h3><span>처음부터 잘할수는 없죠!</span></h3>
-											<h3><p>기초부터 차근차근 시작 하는 슬기로운 헬스생활!!</p></h3>
-										</ul>
-									</div>
-									
-									<div class="c_c2_Right">
-										<img src="/project/resources/image/ex/gogo.jpg" style="width:100%; height:100%; display:flex">
-									</div>
-									</div>
-								</div>
-<!-- 							/a> -->
 							</div>
 						</div>
-						
-						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left"></span>
-						</a>
-						<a class="right carousel-control" href="#myCarousel" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right"></span>
-						</a>
+<!-- 					</a> -->
+					</div>
+					
+					<div class="item">
+<!-- 					<a href="#"> -->
+						<div class="img-slide2" >
+							<div class="center_content2">
+								<div class="c_c2_left">
+								<ul style="margin-top:100px;">
+									<h1>한단계 한단계📈</h1><br>
+									<h3><span>처음부터 잘할수는 없죠!</span></h3>
+									<h3><p>기초부터 차근차근 시작 하는 슬기로운 헬스생활!!</p></h3>
+								</ul>
+							</div>
+							
+							<div class="c_c2_Right">
+								<img src="/project/resources/image/ex/intest.gif" style="width:100%; height:100%;">
+							</div>
+							</div>
+						</div>
+<!-- 					/a> -->
+					</div>
+					<div class="item">
+<!-- 					<a href="#"> -->
+						<div class="img-slide3" >
+							<div class="center_content2">
+								<div class="c_c2_left">
+								<ul style="margin-top:100px; color:#fff;">
+									<h1>매달 이벤트가 펑펑😍</h1><br>
+									<h3><span>노력하는 당신! 아름답다!</span></h3>
+									<h3><p>매달 우수 사용자 50분에게 무료 PT권 증정!!</p></h3>
+								</ul>
+								</div>
+								
+								<div class="c_c2_Right">
+									<img src="/project/resources/image/ex/ingift.gif" style="width:100%; height:100%;">
+								</div>
+							</div>
+						</div>
+<!-- 					</a> -->
+					</div>
+					<div class="item">
+<!-- 					<a href="#"> -->
+						<div class="img-slide4" >
+							<div class="center_content2">
+								<div class="c_c2_left">
+								<ul style="margin-top:100px; color:#fff;">
+									<h1>한단계 한단계📈</h1><br>
+									<h3><span>처음부터 잘할수는 없죠!</span></h3>
+									<h3><p>기초부터 차근차근 시작 하는 슬기로운 헬스생활!!</p></h3>
+								</ul>
+							</div>
+							
+							<div class="c_c2_Right">
+								<img src="/project/resources/image/ex/gogo.jpg" style="width:100%; height:100%; display:flex">
+							</div>
+							</div>
+						</div>
+<!-- 					/a> -->
 					</div>
 				</div>
+				
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
 				
 		
 		<div class="main2">
@@ -241,35 +241,35 @@
 			<div class="widthLine" style="margin-top: 30px;"></div>
 		
 	
-		<div class="main">
-		
-			<!-- 		미디어 컨텐츠 -->
-			<div class="media_content">
-				<div class="content_m_right">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/aRz0QZc8TDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>로니쌤의 무겁지만 가볍게 드는법!!</p>
-				</div>
-				
-				<div class="content_m_left">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/itx3udN1HJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>로니쌤 매드무비</p>
-				</div>
-			</div>
+			<div class="media_main">
 			
-			<div class="media_content">
-				<div class="content_m_right">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/qluZcZ7vfLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>설명글  (없어도 될거같음)</p>
+				<!-- 		미디어 컨텐츠 -->
+				<div class="media_content">
+					<div class="content_m_right">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/aRz0QZc8TDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>로니쌤의 무겁지만 가볍게 드는법!!</p>
+					</div>
+					
+					<div class="content_m_left">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/itx3udN1HJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>로니쌤 매드무비</p>
+					</div>
 				</div>
 				
-				<div class="content_m_left">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Iazno8QPDOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>설명글  (없어도 될거같음)</p>
+				<div class="media_content">
+					<div class="content_m_right">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/qluZcZ7vfLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>설명글  (없어도 될거같음)</p>
+					</div>
+					
+					<div class="content_m_left">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Iazno8QPDOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p>설명글  (없어도 될거같음)</p>
+					</div>
 				</div>
+			<!-- 		미디어 컨텐츠 -->
 			</div>
-		<!-- 		미디어 컨텐츠 -->
 		</div>
-</div>
 	
 	
 
