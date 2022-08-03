@@ -18,7 +18,7 @@
 <!-- 		            <button> 중복확인 </button><br> -->
 		            
 		            <label id="labelID" for="userPW"> 비밀번호 </label>
-		            <input type="password" name="userPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요.">
+		            <input type="password" name="userPW" placeholder="8~20자리 사이의 비밀번호를 입력해주세요." autocomplete="off">
 		            
 <!-- 		            <label for="userPWCheck"> 비밀번호 확인 </label> -->
 <!-- 		            <input type="password" id="userPWCheck" name="userPWCheck" placeholder="비밀번호를 다시 한 번 입력해주세요."> -->
