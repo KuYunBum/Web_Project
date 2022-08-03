@@ -13,8 +13,8 @@
 				<div class="consult_ment">
 					 <%out.print(String.valueOf(session.getAttribute("user"))+" 님"); %> 반갑습니다.</div>
 				<div>
-					<input type="text" name="test" placeholder="상담할 내용을 입력해주세요.">
-					<input type="button" value="1">
+					<input type="text" name="test" placeholder="상담할 내용">
+					<input type="button" value="submit">
 				</div>
 				
 				<!-- <fieldset>
