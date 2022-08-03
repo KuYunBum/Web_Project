@@ -799,17 +799,17 @@ border-radius: 5px;
 	width: 550px;
 	height: 250px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 30px;
 	display: flex;
 }
 
-.ex_content_p6 p {
-	position: relative;	
-	margin: auto;
-	color: white;
-	top: 120px;
-	font-size: 18px;
-}
+/* .ex_content_p6_text { */
+/* 	position: relative;	 */
+/* 	margin: auto; */
+/* 	color: white; */
+/* 	top: 220px; */
+/* 	font-size: 18px; */
+/* } */
 
 
 /* 로그인 */
