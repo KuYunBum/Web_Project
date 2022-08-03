@@ -20,11 +20,11 @@
     display: flex;
     margin:auto;
 }
-.navLi{
-	text-align: end;
-    width: 1500px;
-    margin: auto;
-}
+/* .navLi{ */
+/* 	text-align: end; */
+/*     width: 1500px; */
+/*     margin: auto; */
+/* } */
 .navbar1 ul {
     flex: 1;
     height: 120px;

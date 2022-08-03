@@ -89,8 +89,7 @@
 	<div class="header">
         	<div class="navbar1">
            	 <ul>
-            	<div class="navLi">
-            	
+<!--             	<div class="navLi"> -->
 	            	<a href="/project/" style="text-decoration: none;"> 
 						<img src="/project/resources/image/logo.png" style="width:200px;height:150px;">
 					</a>
@@ -122,8 +121,7 @@
 				    <%
 						}
 				    %>            
-				               
-                </div>
+<!--                 </div> -->
             </ul>
         </div>
 	</div>

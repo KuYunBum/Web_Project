@@ -69,11 +69,11 @@
         });
         
         
-		var video = document.getElementById("video"); 
-
-		function pauseVideo() { 
-			video.pause(); 
-		} 
+//		var video = document.getElementById("video"); 
+//
+//		function pauseVideo() { 
+//			video.pause(); 
+//		} 
 		
 		
 //		tr_matching
